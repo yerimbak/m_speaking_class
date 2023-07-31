@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="CompleteContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li class="on"></li> <!-- 활성화 된건 on 추가 -->
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+
+        </div>
+
+        <div id="CommunityPopup">
+          <div class="modal-cont">
+
+            <div id="CommunityMain">
+              <div class="community-header">
+                <div class="title">커뮤니티</div>
+                <button class="btn-back"></button>
+                <button class="btn-write"></button>
+              </div>
+              <div class="community-cont">
+                <div class="inner">
+                  <div class="tabNav-wrap">
+                    <ul>
+                      <li class="on">FAQ</li> <!-- 활성화 on -->
+                      <li>문의</li>
+                      <li>개선 제안</li>
+                      <li>나의 글</li>
+                    </ul>
+                  </div>
+                  <div class="tabCont-wrap">
+                    <!-- FAQ -->
+                    <div class="tabCont on">
+                      <div class="inner">
+                        <div class="scroll-wrap">
+                          <div class="categoryList">
+                            <ul>
+                              <li class="search-wrap">
+                                <div class="search-before">
+                                  <span>검색</span>
+                                </div>
+                                <div class="search-after">
+                                  <div class="selectBox-wrap">
+                                    <select>
+                                      <option value="">제목</option>
+                                      <option value="">내용</option>
+                                      <option value="">제목+내용</option>
+                                    </select>
+                                  </div>
+                                  <div class="bar"></div>
+                                  <div class="input-wrap">
+                                    <input type="text" placeholder="검색어를 입력해주세요.">
+                                  </div>
+                                  <div class="btn-wrap">
+                                    <button class="btn-search">검색</button>
+                                    <button class="btn-search-after-close"></button>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="on">전체</li> <!-- 활성화 on -->
+                              <li>회원</li>
+                              <li>클래스</li>
+                              <li>학습</li>
+                              <li>리포트</li>
+                              <li>스피킹 배틀</li>
+                            </ul>
+                          </div>
+                          <div class="empty-wrap">
+                            <p>등록된 FAQ가 없습니다.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 문의 -->
+                    <div class="tabCont">
+                      <div class="inner">
+                        <div class="scroll-wrap">
+                          <div class="categoryList">
+                            <ul>
+                              <li class="search-wrap">
+                                <div class="search-before">
+                                  <span>검색</span>
+                                </div>
+                                <div class="search-after">
+                                  <div class="selectBox-wrap">
+                                    <select>
+                                      <option value="">제목</option>
+                                      <option value="">내용</option>
+                                      <option value="">제목+내용</option>
+                                    </select>
+                                  </div>
+                                  <div class="bar"></div>
+                                  <div class="input-wrap">
+                                    <input type="text" placeholder="검색어를 입력해주세요.">
+                                  </div>
+                                  <div class="btn-wrap">
+                                    <button class="btn-search">검색</button>
+                                    <button class="btn-search-after-close"></button>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="on">전체</li> <!-- 활성화 on -->
+                              <li>회원</li>
+                              <li>클래스</li>
+                              <li>학습</li>
+                              <li>리포트</li>
+                              <li>스피킹 배틀</li>
+                            </ul>
+                          </div>
+                          <div class="sort-wrap">
+                            <div class="checkbox-wrap">
+                              <input type="checkbox" id="show-only-complete-1">
+                              <label for="show-only-complete-1">답변 완료만 보기</label>
+                            </div>
+                            <div class="select-wrap">
+                              <select>
+                                <option value="">댓글 많은 순</option>
+                                <option value="">최신 순</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="empty-wrap">
+                            <p>등록된 문의가 없습니다.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 개선 제안 -->
+                    <div class="tabCont">
+                      <div class="inner">
+                        <div class="scroll-wrap">
+                          <div class="categoryList">
+                            <ul>
+                              <li class="search-wrap">
+                                <div class="search-before">
+                                  <span>검색</span>
+                                </div>
+                                <div class="search-after">
+                                  <div class="selectBox-wrap">
+                                    <select>
+                                      <option value="">제목</option>
+                                      <option value="">내용</option>
+                                      <option value="">제목+내용</option>
+                                    </select>
+                                  </div>
+                                  <div class="bar"></div>
+                                  <div class="input-wrap">
+                                    <input type="text" placeholder="검색어를 입력해주세요.">
+                                  </div>
+                                  <div class="btn-wrap">
+                                    <button class="btn-search">검색</button>
+                                    <button class="btn-search-after-close"></button>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="on">전체</li> <!-- 활성화 on -->
+                              <li>회원</li>
+                              <li>클래스</li>
+                              <li>학습</li>
+                              <li>리포트</li>
+                              <li>스피킹 배틀</li>
+                            </ul>
+                          </div>
+                          <div class="sort-wrap">
+                            <div class="checkbox-wrap">
+                              <input type="checkbox" id="show-only-complete-1">
+                              <label for="show-only-complete-1">답변 완료만 보기</label>
+                            </div>
+                            <div class="select-wrap">
+                              <select>
+                                <option value="">댓글 많은 순</option>
+                                <option value="">최신 순</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="empty-wrap">
+                            <p>등록된 개선 제안이 없습니다.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 나의 글 제안 -->
+                    <div class="tabCont">
+                      <div class="inner">
+                        <div class="scroll-wrap">
+                          <div class="categoryList">
+                            <ul>
+                              <li class="search-wrap">
+                                <div class="search-before">
+                                  <span>검색</span>
+                                </div>
+                                <div class="search-after">
+                                  <div class="selectBox-wrap">
+                                    <select>
+                                      <option value="">제목</option>
+                                      <option value="">내용</option>
+                                      <option value="">제목+내용</option>
+                                    </select>
+                                  </div>
+                                  <div class="bar"></div>
+                                  <div class="input-wrap">
+                                    <input type="text" placeholder="검색어를 입력해주세요.">
+                                  </div>
+                                  <div class="btn-wrap">
+                                    <button class="btn-search">검색</button>
+                                    <button class="btn-search-after-close"></button>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="on">전체</li> <!-- 활성화 on -->
+                              <li>회원</li>
+                              <li>클래스</li>
+                              <li>학습</li>
+                              <li>리포트</li>
+                              <li>스피킹 배틀</li>
+                            </ul>
+                          </div>
+                          <div class="sort-wrap">
+                            <div class="checkbox-wrap">
+                              <input type="checkbox" id="show-only-complete-1">
+                              <label for="show-only-complete-1">답변 완료만 보기</label>
+                            </div>
+                            <div class="select-wrap">
+                              <select>
+                                <option value="">댓글 많은 순</option>
+                                <option value="">최신 순</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="empty-wrap">
+                            <p>등록된 글이 없습니다.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    // tabNav - tabCont
+    const tabNav = document.querySelectorAll('.tabNav-wrap ul li');
+    const tabCont = document.querySelectorAll('.tabCont-wrap .tabCont');
+
+    function tabNavChange() {
+      tabNav.forEach(item => item.classList.remove('on'));
+      this.classList.add('on');
+
+      const selectTabNavIndex = Array.prototype.indexOf.call(this.parentNode.children, this);
+      tabContChange(selectTabNavIndex);
+    }
+
+    function tabContChange(selectTabNavIndex) {
+      tabCont.forEach(item => item.classList.remove('on'));
+      tabCont[selectTabNavIndex].classList.add('on');
+    }
+    tabNav.forEach(item => item.addEventListener('click', tabNavChange));
+
+
+    // 댓글 textarea
+    const replyTextarea = document.querySelectorAll('.inputReply-wrap textarea');
+
+    function replyTextareaFocus() {
+      this.classList.add('on');
+    }
+
+    function replyTextareaBlur() {
+      const textareaValue = this.value;
+
+      if (textareaValue.length == 0 || textareaValue.trim().length == 0) {
+        this.value = '';
+        this.classList.remove('on');
+      } else {
+        this.classList.add('on');
+      }
+    }
+    replyTextarea.forEach(item => item.addEventListener('focus', replyTextareaFocus));
+    replyTextarea.forEach(item => item.addEventListener('blur', replyTextareaBlur));
+
+
+    // 점3개 버튼
+    const btnEdit = document.querySelectorAll('.etc-info .edit-wrap .btn-edit');
+
+    function btnEditToggle() {
+      this.parentNode.classList.toggle('on');
+    }
+
+    function btnEditClose(e) {
+      btnEdit.forEach(item => {
+        if (!item.contains(e.target)) {
+          item.parentNode.classList.remove('on');
+        }
+      })
+    }
+    btnEdit.forEach(item => item.addEventListener('click', btnEditToggle));
+    window.addEventListener('mouseup', btnEditClose);
+
+    // categoryList 검색버튼 On
+    const categoryListSearch = document.querySelectorAll('.categoryList .search-wrap .search-before');
+
+    function categoryListSearchOn(e) {
+      this.parentNode.classList.add('on');
+    }
+    categoryListSearch.forEach(item => item.addEventListener('click', categoryListSearchOn));
+
+    // categoryList 검색버튼 Off
+    const categoryListSearchClose = document.querySelectorAll('.categoryList .search-wrap .btn-search-after-close');
+
+    function categoryListSearchOff() {
+      this.parentNode.parentNode.parentNode.classList.remove('on');
+    }
+    categoryListSearchClose.forEach(item => item.addEventListener('click', categoryListSearchOff));
+
+    // FAQ 아코디언
+    const CommunityMainAccordion = document.querySelectorAll(
+      '#CommunityMain .accordion-list-wrap .accordion-wrap .accordion-title');
+
+    function CommunityMainAccordionOnOff() {
+      this.parentNode.classList.toggle('open')
+    }
+    CommunityMainAccordion.forEach(item => item.addEventListener('click', CommunityMainAccordionOnOff));
+  </script>
+</body>
+
+</html>

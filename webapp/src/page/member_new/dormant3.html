@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="0_member.css">
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '휴면 계정 해제 안내',
+          btnBack: true,
+          btnClose: false
+        })
+        <div id="ContentsBox">
+          <div class="dormant">
+            <div class="innerWrap">
+              <p class="title"><strong>휴면 계정이 해제</strong>되었습니다!<br>
+                지금부터 스피킹클래스 서비스를<br>
+                다시 이용할 수 있습니다.</p>
+                <div class="complete-img"></div>
+            </div>
+            
+            <div class="buttons is-fixed">
+              <button class="button is-full is-large is-light" >로그인하기</button>
+              <!-- disabled 추가시 비활성화 스타일 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script>
+    function selectAll(selectAll)  {
+      const checkboxes 
+          = document.getElementsByName('agree');
+      
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked;
+      })
+    }
+    function isVisible(target) {
+      const ele = document.querySelector(target);
+      ele.classList.add('is-visible');
+    }
+    function isHidden(target) {
+      const ele = document.querySelector(target);
+      ele.classList.remove('is-visible');
+    }
+  </script> 
+</body>
+
+</html>

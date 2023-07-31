@@ -1,0 +1,19 @@
+<!-- step-box : class에서 id로 변경 0725 -->
+<div id="step-box">
+  <!-- 
+    li의 전체 갯수 data-max-step
+    현재 진행중인 li data-active-step
+  -->
+  <ol data-max-step="@@itemLength" data-active-step="@@activeStep">
+    <!--
+      완료시 class="is-complete"
+      진행중 class="is-active"
+    -->
+    @@for(var i=0;i<items.length;i++){
+    <li class="item @@if(`+items[i].className+`){`+items[i].className+`}">
+      <i class="icon"><span>STEP</span>`+items[i].no+`</i>
+      <strong class="title">`+items[i].title+`</strong>
+    </li>
+    }
+  </ul>
+</div>

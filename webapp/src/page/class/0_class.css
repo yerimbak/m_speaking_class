@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/* class-list-box-wrap */
+.class-list-box-wrap .list-box { padding:1.6rem; border-radius:1.2rem; color:#fff; box-shadow:0 0.4rem 1.2rem rgba(0,0,0,0.2); } 
+.class-list-box-wrap .list-box + .list-box { margin:2rem 0 0 0; } 
+.class-list-box-wrap .list-box.theme-orange { background-color:#f19d5f; } 
+.class-list-box-wrap .list-box.theme-pink { background-color:#f28688; } 
+.class-list-box-wrap .list-box.theme-green { background-color:#40a9b1; } 
+.class-list-box-wrap .list-box.theme-purple { background-color:#8b73d0; } 
+.class-list-box-wrap .list-box .learning-info-wrap { display:flex; flex-direction:column; justify-content:center; position:relative; min-height:6rem; padding:0 6.4rem 0 0; } 
+.class-list-box-wrap .list-box .learning-info-wrap .class-title { font-size:2.2rem; line-height:2.2rem; font-weight:bold; overflow:hidden; text-overflow:ellipsis; } 
+.class-list-box-wrap .list-box .learning-info-wrap .type-badge { margin:0 0 0.4rem 0; font-size:0; line-height:1; } 
+.class-list-box-wrap .list-box .learning-info-wrap .type-badge span { display:inline-block; height:1.8rem; padding:0.1rem 0.8rem 0; border-radius:0.4rem; background:rgba(0,0,0,0.4); font-size:1rem; line-height:1.8rem; vertical-align:top; } 
+.class-list-box-wrap .list-box .learning-info-wrap .etc-info { display:flex; align-items:flex-start; margin:0.8rem 0 0 0; } 
+.class-list-box-wrap .list-box .learning-info-wrap .etc-info .date { color:rgba(255,255,255,0.6); } 
+.class-list-box-wrap .list-box .learning-info-wrap .etc-info .pass-standard { position:relative; margin:0 0 0 1.7rem; color:rgba(255,255,255,0.6); } 
+.class-list-box-wrap .list-box .learning-info-wrap .etc-info .pass-standard:before { content:''; position:absolute; top:48%; left:-0.8rem; width:0.1rem; height:1.2rem; border-radius:0.1rem; background:rgba(0,0,0,0.12); transform:translateY(-50%); } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap { display:flex; justify-content:center; align-items:center; position:absolute; top:50%; right:0; transform:translateY(-50%); } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .guage-wrap { width:6rem; height:6rem; margin:auto; } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .guage-wrap svg { width:6rem; height:6rem; stroke-linecap:round; transform:rotate(-90deg); transform-origin:center; } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .guage-wrap svg .bar { fill:none; stroke-width:8px; } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .guage-wrap svg .bar.outside-bar { stroke:rgba(255,255,255,0.2); } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .guage-wrap svg .bar.inside-bar { stroke:#fff; } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .fraction-wrap { position:absolute; text-align:center; line-height:1.4rem; } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .fraction-wrap strong { display:block; } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .fraction-wrap .bar { width:2.4rem; height:0.1rem; margin:0.1rem 0; background:rgba(255,255,255,0.2); } 
+.class-list-box-wrap .list-box .learning-info-wrap .perfection-wrap .fraction-wrap span { display:block; font-size:1.2rem; } 
+.class-list-box-wrap .list-box .lately-learning-wrap { margin:1.6rem 0 0 0; padding:1.4rem 4.8rem 1.4rem 1.6rem; border-radius:0.8rem; background:rgba(0,0,0,0.12) url('../../img/icon_classContainer_lately_arr.png') center right 1.6rem no-repeat; background-size:2.4rem; } 
+.class-list-box-wrap .list-box .lately-learning-wrap .class-title { padding:0 0 0 2.2rem; font-weight:bold; background-image:url('../../img/icon_classContainer_lately_clock.png'); background-position:top left; background-repeat:no-repeat; background-size:2rem; } 
+.class-list-box-wrap .list-box .lately-learning-wrap .content-title { margin:0.4rem 0 0 0; line-height:1.6rem; } 
+.class-list-box-wrap .list-box.theme-openClass { padding:1.4rem; border:0.2rem solid #2cb1bc; background:#fff; } 
+.class-list-box-wrap .list-box.theme-openClass .learning-info-wrap .openClassLogo { width:9rem; height:1.8rem; margin:0 0 0.4rem 0; background-image:url('../../img/img_openClass.png'); background-size:100%; background-repeat:no-repeat; } 
+.class-list-box-wrap .list-box.theme-openClass .learning-info-wrap .class-title { color:#2cb1bc; } 
+.class-list-box-wrap .list-box.theme-openClass .learning-info-wrap .etc-info .date { color:rgba(51,51,51,0.6); } 
+.class-list-box-wrap .list-box.theme-openClass .learning-info-wrap .perfection-wrap .guage-wrap svg .bar.outside-bar { stroke:rgba(67,133,170,0.2); } 
+.class-list-box-wrap .list-box.theme-openClass .learning-info-wrap .perfection-wrap .guage-wrap svg .bar.inside-bar { stroke:#2cb1bc; } 
+.class-list-box-wrap .list-box.theme-openClass .learning-info-wrap .perfection-wrap .fraction-wrap { color:#2cb1bc; } 
+.class-list-box-wrap .list-box.theme-openClass .learning-info-wrap .perfection-wrap .fraction-wrap .bar { background:rgba(67,133,170,0.2); } 
+.class-list-box-wrap .list-box.theme-openClass .lately-learning-wrap { background-color:rgba(44,177,188,0.12); background-image:url('../../img/icon_classContainer_lately_arr_black.png'); color:#333; } 
+.class-list-box-wrap .list-box.theme-openClass .lately-learning-wrap .class-title { background-image:url('../../img/icon_classContainer_lately_clock_black.png'); } 
+
+/* Class */
+#ClassContainer #ContentsBox { padding:0; } 
+#Class { padding:1.6rem; overflow:auto; } 
+
+/* ClassSearch */
+#ClassSearchContainer #ContentsBox { padding:0; } 
+#ClassSearch { display:flex; flex-direction:column; height:100%; padding:1.6rem; overflow:auto; } 
+#ClassSearch .search-ready-wrap { width:100%; margin:auto; padding:0 0 5.4rem 0; text-align:center; } 
+#ClassSearch .search-ready-wrap .img { width:16rem; height:14rem; margin:0 auto 0.6rem; background-image:url('../../img/img_search_ready.png'); background-size:100%; } 
+#ClassSearch .search-ready-wrap p { color:#3f5062; } 
+#ClassSearch .result-empty-wrap { width:100%; margin:auto; padding:0 0 5.4rem 0; text-align:center; } 
+#ClassSearch .result-empty-wrap .img { width:16rem; height:14rem; margin:0 auto 0.6rem; background-image:url('../../img/img_list_empty.png'); background-size:100%; } 
+#ClassSearch .result-empty-wrap p { color:#3f5062; } 
+#ClassSearch .result-list-wrap .list-title { margin:0 0 2rem 0; padding:0 0.8rem; font-size:1.8rem; font-weight:bold; color:#3f5062; } 
+#ClassSearch .result-list-wrap .list-title span { color:#4385aa; } 
+
+/* ClassMain */
+#ClassMainContainer #ContentsBox { padding:0; } 
+#ClassMain { height:100%; padding:1.6rem; overflow:auto; } 
+#ClassMain .title-area { position:relative; padding:0 0 2.6rem 0; } 
+#ClassMain .title-area .title-wrap { padding:0 0.8rem 0 2.8rem; } 
+#ClassMain .title-area .title-wrap .class-title { font-size:2rem; line-height:3rem; font-weight:bold; } 
+#ClassMain .title-area .title-wrap .type-badge { margin:0 0 1rem 0; font-size:0; line-height:1; } 
+#ClassMain .title-area .title-wrap .type-badge span { display:inline-block; height:1.8rem; padding:0.1rem 0.8rem 0; border-radius:0.4rem; background:rgba(0,0,0,0.4); font-size:1rem; line-height:1.8rem; vertical-align:top; color:#fff; } 
+#ClassMain .title-area .title-wrap .etc-info { display:flex; align-items:flex-start; margin:0.4rem 0 0 0; color:#3F5062;} 
+#ClassMain .title-area .title-wrap .etc-info .pass-standard { position:relative; margin:0 0 0 1.7rem; } 
+#ClassMain .title-area .title-wrap .etc-info .pass-standard:before { content:''; position:absolute; top:48%; left:-0.8rem; width:0.1rem; height:1.2rem; border-radius:0.1rem; background:rgba(63,80,98,0.4); transform:translateY(-50%); } 
+#ClassMain .title-area .perfection-wrap { position:relative; z-index:2; } 
+#ClassMain .title-area .perfection-wrap .guage-wrap { position:relative; width:22rem; height:12rem; margin:0 auto; } 
+#ClassMain .title-area .perfection-wrap .guage-wrap svg { width:100%; height:100%; fill:none; stroke-linecap:round; } 
+#ClassMain .title-area .perfection-wrap .guage-wrap svg .bar { stroke-width:18px; } 
+#ClassMain .title-area .perfection-wrap .completed-lessons-wrap { position:absolute; bottom:1.3rem; left:0; right:0; margin:0 auto; text-align:center; } 
+#ClassMain .title-area .perfection-wrap .completed-lessons-wrap .title { font-size:1.4rem; line-height:2.2rem; color:#3f5062; font-weight:bold; } 
+#ClassMain .title-area .perfection-wrap .completed-lessons-wrap .turn-area { margin:0.6rem 0 0 0; font-size:0; } 
+#ClassMain .title-area .perfection-wrap .completed-lessons-wrap .turn-area > * { display:inline-block; line-height:1.9rem; vertical-align:middle; } 
+#ClassMain .title-area .perfection-wrap .completed-lessons-wrap .turn-area .complete-count { font-size:3.4rem; } 
+#ClassMain .title-area .perfection-wrap .completed-lessons-wrap .turn-area .bar { margin:0 0.6rem; font-size:2.4rem; text-shadow:0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25); color:rgba(63, 80, 98, 0.2); } 
+#ClassMain .title-area .perfection-wrap .completed-lessons-wrap .turn-area .total-count { font-size:2.6rem; line-height:2.2rem; color:#3f5062; } 
+#ClassMain .title-area .bg-circle { position:absolute; top:17px; right:-1.6rem; width:22.2rem; height:22.2rem; border-radius:50%; } 
+#ClassMain .title-area .bg-people { position:absolute; bottom:-3.9rem; right:-1.6rem; width:17.4rem; height:15.8rem; background:url('../../img/bg_classList_people.png'); background-size:100%; } 
+#ClassMain .speakingBattle-wrap { position:relative; margin:2rem 0 2rem 0; z-index:2; } 
+#ClassMain .speakingBattle-wrap button { width:100%; height:6.4rem; border-radius:0.6rem; background-image:url('../../img/img_start_speakingBattle.png'); background-size:auto 6.4rem; vertical-align:top; box-shadow:0 0.4rem 1.2rem rgba(0,0,0,0.2); } 
+#ClassMain .speakingBattle-wrap button:active { background-position:-100% 0; } 
+#ClassMain .accordion-wrap .accordion { border:0; margin:0 0 1.2rem 0; padding:1.4rem 1.8rem 1.1rem; background:#ffffff; box-shadow:0px 0px 0.2rem rgba(0, 0, 0, 0.08), 0px 0.6rem 1.2rem rgba(0, 0, 0, 0.12); border-radius:0.6rem; } 
+#ClassMain .accordion-wrap .accordion .accordion-title { position:relative; background:url('../../img/icon_classList_accordion.png') center right 0.6rem no-repeat; background-size:2rem; padding:0 6.5rem 0 0; } 
+#ClassMain .accordion-wrap .accordion .accordion-title .title { display:block; font-size:1.5rem; line-height:2.4rem; font-weight:bold; color:#3f5062; letter-spacing:-0.04em; } 
+#ClassMain .accordion-wrap .accordion .accordion-title .turn-area { position:absolute; top:0; right:3.2rem; font-size:1.2rem; font-weight:normal; line-height:2.4rem; color:#3f5062; } 
+#ClassMain .accordion-wrap .accordion .accordion-title .turn-area > * { display:inline; } 
+#ClassMain .accordion-wrap .accordion .accordion-title .turn-area .complete-count { font-size:1.6rem; font-weight:bold; color:#4385aa; } 
+#ClassMain .accordion-wrap .accordion .accordion-title .turn-area .total-count { color:#3f5062; } 
+#ClassMain .accordion-wrap .accordion .accordion-cont { display:none; padding: 0; } 
+#ClassMain .accordion-wrap .accordion .accordion-cont .study-area { display:flex; align-items:center; padding: 1.4rem 0 1rem; border-bottom: 0.1rem solid rgba(0, 0, 0, 0.06); } 
+#ClassMain .accordion-wrap .accordion .accordion-cont .study-area:last-child { border: 0; } 
+#ClassMain .accordion-wrap .accordion .accordion-cont .study-area .num { width: 3rem; font-weight: bold; color: #777; } 
+#ClassMain .accordion-wrap .accordion .accordion-cont .study-area .text-wrap { position: relative; flex:1; min-width:0; width:100%; padding: 0 3.8rem 0 0; } 
+#ClassMain .accordion-wrap .accordion .accordion-cont .study-area .text-wrap .top-text { line-height: 1.8rem; font-weight: bold; color: #333; } 
+#ClassMain .accordion-wrap .accordion .accordion-cont .study-area .text-wrap .btm-text { margin: 0.4rem 0 0 0; line-height: 2rem; color: #777; letter-spacing: -0.04em; } 
+#ClassMain .accordion-wrap .accordion .accordion-cont .study-area.complete .grade { position: absolute; display: table-cell; vertical-align: middle; top: 50%; right: 0; width: 3rem; height: 3rem; background-image: url("../../img/icon_classList_accordion_grade.png"); background-size: 100%; text-align: center; color: rgba(0, 0, 0, 0.6); line-height: 3.3rem; font-weight: bold; transform: translateY(-50%); } 
+#ClassMain .accordion-wrap .accordion.show .accordion-title { background-image: url('../../img/icon_classList_accordion_open.png'); } 
+#ClassMain .accordion-wrap .accordion.show .accordion-cont { display:block; } 
+#ClassMain.theme-pink .title-area .class-title { color:#f28688; } 
+#ClassMain.theme-pink .title-area .completed-lessons-wrap .turn-area .complete-count { color:#f28688; } 
+#ClassMain.theme-pink .title-area .guage-wrap svg .inside-bar { stroke:rgba(242,134,136,0.2); } 
+#ClassMain.theme-pink .title-area .guage-wrap svg .outside-bar { stroke:rgba(242,134,136,1); } 
+#ClassMain.theme-pink .title-area .bg-circle { background:rgba(242,134,136,0.1); } 
+#ClassMain.theme-orange .title-area .class-title { color:#f19d5f; } 
+#ClassMain.theme-orange .title-area .completed-lessons-wrap .turn-area .complete-count { color:#f19d5f; } 
+#ClassMain.theme-orange .title-area .guage-wrap svg .inside-bar { stroke:rgba(241,157,95,0.2); } 
+#ClassMain.theme-orange .title-area .guage-wrap svg .outside-bar { stroke:rgba(241,157,95,1); } 
+#ClassMain.theme-orange .title-area .bg-circle { background:rgba(241,157,95,0.1); } 
+#ClassMain.theme-green .title-area .class-title { color:#40a9b1; } 
+#ClassMain.theme-green .title-area .completed-lessons-wrap .turn-area .complete-count { color:#40a9b1; } 
+#ClassMain.theme-green .title-area .guage-wrap svg .inside-bar { stroke:rgba(64,169,177,0.2); } 
+#ClassMain.theme-green .title-area .guage-wrap svg .outside-bar { stroke:rgba(64,169,177,1); } 
+#ClassMain.theme-green .title-area .bg-circle { background:rgba(64,169,177,0.1); } 
+#ClassMain.theme-purple .title-area .class-title { color:#8b73d0; } 
+#ClassMain.theme-purple .title-area .completed-lessons-wrap .turn-area .complete-count { color:#8b73d0; } 
+#ClassMain.theme-purple .title-area .guage-wrap svg .inside-bar { stroke:rgba(139,115,208,0.2); } 
+#ClassMain.theme-purple .title-area .guage-wrap svg .outside-bar { stroke:rgba(139,115,208,1); } 
+#ClassMain.theme-purple .title-area .bg-circle { background:rgba(139,115,208,0.1); } 
+
+/* class-guide-wrap */
+.class-guide-wrap {margin:6.2rem 0;}
+.class-guide-wrap .guide-box-wrap {border-radius:1.2rem;background-color:#F3FAFC;background-position:top right;background-repeat:no-repeat;}
+.class-guide-wrap .guide-box-wrap:nth-child(1) {background-image:url('../../img/img_classList_guide_box_bg_1.png');background-size:19.3rem 13.8rem;}
+.class-guide-wrap .guide-box-wrap:nth-child(2) {background-image:url('../../img/img_classList_guide_box_bg_2.png');background-size:12rem 15rem;}
+.class-guide-wrap .guide-box-wrap + .guide-box-wrap {margin:2rem 0 0 0;}
+.class-guide-wrap .guide-box-wrap .guide-title {display:flex;align-items:center;height:8rem;padding:0 1.2rem;background:url('../../img/icon_classList_guide_accordion_arr.png') right 1.6rem center no-repeat;background-size:1.6rem;}
+.class-guide-wrap .guide-box-wrap .guide-title dl dt {font-size:1.6rem;font-weight:bold;}
+.class-guide-wrap .guide-box-wrap .guide-cont {display:none;padding:0.8rem 1.3rem 2rem;}
+.class-guide-wrap .guide-box-wrap .guide-cont ul li {display:flex;align-items:flex-start;word-break:keep-all;}
+.class-guide-wrap .guide-box-wrap .guide-cont ul li + li {margin:1.6rem 0 0 0;}
+.class-guide-wrap .guide-box-wrap .guide-cont ul li .num {display:flex;align-items:center;justify-content:center;width:2rem;height:2rem;margin:-0.3rem 1rem 0 0;padding:0.2rem 0 0 0;background-color:#91C0DB;border-radius:50%;color:#fff;}
+.class-guide-wrap .guide-box-wrap .guide-cont ul li .text-wrap {flex:1;min-width:0;width:100%;}
+.class-guide-wrap .guide-box-wrap .guide-cont ul li .text-wrap p {line-height:1.6rem;}
+.class-guide-wrap .guide-box-wrap .guide-cont ul li .text-wrap p .icon-plus {display:inline-block;width:1.5rem;height:1.5rem;margin:-0.4rem 0.3rem 0 0;background-image:url('../../img/icon_classList_guide_text_plus.png');background-size:100%;vertical-align:middle;}
+.class-guide-wrap .guide-box-wrap .guide-cont ul li .text-wrap .btn-sclass-join-link {float:right;width:9.8rem;height:3.2rem;margin:0.8rem 0 0 0;border-radius:3rem;background:#4385AA;font-size:1.2rem;font-weight:bold;color:#fff;}
+.class-guide-wrap .guide-box-wrap .guide-cont ul li .text-wrap .btn-sclass-join-link:after {content:'';display:inline-block;width:1.6rem;height:1.6rem;margin:-0.2rem 0 0 0.4rem;background-image:url('../../img/icon_classList_guide_join_link_arr.png');background-size:100%;vertical-align:middle;}
+.class-guide-wrap .guide-box-wrap .guide-cont .mission-english-intro-wrap {display:flex;align-items:flex-start;margin:1.6rem 0.6rem 0;padding:1.4rem 0.2rem 0;border-top:1px solid #E3E9EF;}
+.class-guide-wrap .guide-box-wrap .guide-cont .mission-english-intro-wrap .thumbnail-wrap {margin:0 1.7rem 0 0;}
+.class-guide-wrap .guide-box-wrap .guide-cont .mission-english-intro-wrap .thumbnail-wrap .thumbnail {width:6.9rem;height:6.9rem;background-size:cover;background-position:center;}
+.class-guide-wrap .guide-box-wrap .guide-cont .mission-english-intro-wrap .text-wrap {flex:1;min-width:0;width:100%;}
+.class-guide-wrap .guide-box-wrap .guide-cont .mission-english-intro-wrap .text-wrap dl dt {font-size:1.6rem;line-height:2.4rem;font-weight:bold;}
+.class-guide-wrap .guide-box-wrap .guide-cont .mission-english-intro-wrap .text-wrap dl dd {margin:0.7rem 0 0 0;line-height:1.6rem;}
+.class-guide-wrap .guide-box-wrap .guide-cont .mission-english-intro-wrap .text-wrap dl dd .link-wrap {display:flex;align-items:center;margin:1.3rem 0 0 0;}
+.class-guide-wrap .guide-box-wrap .guide-cont .mission-english-intro-wrap .text-wrap dl dd .link-wrap a {flex:1;text-align:center;font-size:1.2rem;line-height:1.2rem;font-weight:bold;text-decoration:underline;}
+.class-guide-wrap .guide-box-wrap.on .guide-title {background-image:url('../../img/icon_classList_guide_accordion_arr_on.png');}
+.class-guide-wrap .guide-box-wrap.on .guide-cont {display:block;}
+.class-guide-wrap .guide-floating-btn-wrap {position:fixed;bottom:1.6rem;right:1.6rem;}
+.class-guide-wrap .guide-floating-btn-wrap button {width:5.6rem;height:5.6rem;background:#4385AA url('../../img/icon_classList_guide_floating_btn.png') center no-repeat;background-size:2.4rem;border-radius:50%;box-shadow:0 0.4rem 1.2rem rgba(13, 77, 98, 0.3);vertical-align:top;}
+

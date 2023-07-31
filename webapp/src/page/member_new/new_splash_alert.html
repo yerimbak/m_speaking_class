@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+        <div id="CommonLayout">
+          <div id="ContentsBox">
+            <div class="newSplash">
+              <!-- 장애공지일 경우 notice 추가 -->
+              <div class="logoWrap notice">
+                  <img src="../../img/memberNew/splash_txt.png" alt="쉽게 만들고 재미있게 학습하는 영어말하기">
+                  <img src="../../img/memberNew/splash_logo.png" alt="스피킹클래스 AI Tutor Platform">
+              </div>
+            </div>
+          </div>
+
+          <!-- 공지 -->
+          <div id="NewAlertPopup" class="modal">
+            <div class="modal-inner">
+                <div class="modal-cont">
+                    <div class="title-wrap">
+                        <div class="title">알림</div>
+                    </div>
+                    <div class="text-wrap">
+                        <p>현재 데이터 연결 상태가 양호하지 않습니다. <br> 
+                          네트워크 연결 상태를 확인 해 주세요.
+                        </p>
+                    </div>
+                    <div id="CommonButton">
+                        <button>종료</button>
+                        <button>재시도</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>

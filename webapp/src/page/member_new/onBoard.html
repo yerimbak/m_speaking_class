@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+
+<body>
+  <div id="root">
+    <!-- container id추가 0725 : OnBoarding -->
+    <div class="container" data-contents="new" id="OnBoarding">
+      <div class="hero-contents">
+        <div class="hero-banner">
+          <!-- swiper이미지 수정 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide is-active">
+                <div class="swiper-item">
+                  <div class="txt-ani">
+                    <p><strong>스피킹클래스</strong>는 쉽고 편리하게</p>
+                    <p>영어 말하기 서비스를</p>
+                    <p><strong>직접 만들 수 있는 플랫폼!</strong></p>
+                  </div>
+                  <div class="ani-img">
+                    <img src="../../img/memberNew/slide_ani_1.gif" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-item">
+                  <div class="txt-ani">
+                    <p><strong>영어 콘텐츠</strong>를 가지고 있나요?</p>
+                    <p><strong>학교 선생님</strong> 이세요?</p>
+                    <p>다 준비했어요. <strong>클래스</strong>만 만드세요!</p>
+                  </div>
+                  <div class="ani-img">
+                    <img src="../../img/memberNew/slide_ani_2.gif" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-item">
+                  <div class="txt-ani">
+                    <p>학생들은 클래스를 선택한 후</p>
+                    <p><strong>리스닝, 리딩, 스피킹</strong> 학습을</p>
+                    <p>할 수 있어요</p>
+                  </div>
+                  <div class="ani-img">
+                    <img src="../../img/memberNew/slide_ani_3.gif" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-item">
+                  <div class="txt-ani">
+                    <p>누가 누가 빠르고 정확하게</p>
+                    <p>말할 수 있나?</p>
+                    <p><strong>재미있게 즐기는 말하기 게임!</strong></p>
+                  </div>
+                  <div class="ani-img">
+                    <img src="../../img/memberNew/slide_ani_4.gif" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-item">
+                  <div class="txt-ani">
+                    <p>코딩을 몰라도 <strong>쉽고 재미있게</strong></p>
+                    <p><strong>스피킹 과정을 만들 수 있는</strong></p>
+                    <p><strong>스피킹클래스</strong></p>
+                  </div>
+                  <div class="ani-img">
+                    <img src="../../img/memberNew/slide_ani_5.gif" alt="">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"> </div>
+          </div>
+        </div>
+
+        <!-- div bottom-box 추가 0725 -->
+        <div class="bottom-box">
+          <div class="buttons">
+            <button type="button" class="button is-rounded is-kakao">카카오톡으로 시작하기</button>
+            <button type="button" class="button is-rounded is-outline">다른 방법으로 가입 &#47; 로그인</button>
+            <div class="join-balloon">3초 만에 빠른 가입</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+      var mySwiper = new Swiper('.swiper', {
+        pagination: { // 페이징 설정
+          el: '.swiper-pagination',
+        },
+      })
+      mySwiper.on('slideChange', function (swiper) {
+        var targets = swiper.el.querySelectorAll('.swiper-slide')
+        console.log('slide changed', swiper.activeIndex, targets);
+        targets.forEach((target, idx) => {
+          if (idx === swiper.activeIndex)
+          target.classList.add('is-active')
+        });
+      });
+    </script>
+</body>
+
+</html>

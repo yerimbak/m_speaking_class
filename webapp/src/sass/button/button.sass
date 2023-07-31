@@ -1,0 +1,281 @@
+[data-contents='new']
+  .buttons
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    &.is-center
+      justify-content: center
+    &.is-right
+      justify-content: flex-end
+    &.is-between
+      justify-content: space-between
+      margin: rem(-5px)
+      > div
+        width: 50%
+        padding: rem(5px)
+    &.is-fixed
+      position: fixed
+      bottom: 0
+      left: 0
+      padding: rem(32px) rem(16px)
+      width: 100%
+      background: linear-gradient(to bottom, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%)
+      .is-between
+        width: calc( 100% + #{rem(10px)} )
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin: rem(-5px)
+        > div
+          width: 50%
+          padding: rem(5px)
+      .is-center-full
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        width: 100%
+    &.is-pdl
+      padding: rem(32px)
+
+  .button
+    height: auto
+    background:
+      color: #FFF
+    border:
+      color: $border-color
+      width: 1px
+    color: #363636
+    cursor: pointer
+    justify:
+      content: center
+    padding:
+      bottom: rem(12px)
+      left: 1em
+      right: 1em
+      top: rem(12px)
+    text:
+      align: center
+    white:
+      space: nowrap
+    font:
+      weight: 700
+      size: rem(14px)
+    border-radius: rem(8px)
+    &.is-large
+      font:
+        size: rem(16px)
+        weight: 700
+      border-radius: rem(12px)
+    &.is-result
+      background:
+        color: $point-color
+      border:
+        color: transparent
+      color: $white-color
+    &.is-rounded
+      border:
+        radius: 9999px
+      padding:
+        left: calc(1em + .25em)
+        right: calc(1em + .25em)
+    &.is-full
+      width: 100%
+    &.is-light
+      background:
+        color: $point-color
+      color: $white-color
+    &[disabled],
+    &.is-gray
+      background:
+        color: $disabled-background-color
+      color: $disabled-font-color
+      border-color: $disabled-background-color
+    
+    &.is-kakao
+      width: 100%
+      background-color: $kakao-color  
+      border:
+        color: transparent
+      color: $black-color
+      font: 
+        size: rem(16px)
+      padding: rem(14px) 0 
+    &.is-apple
+      width: 100%
+      background-color: #000 
+      border:
+        color: transparent
+      color: $white-color
+      padding: rem(14px) 0 
+    &.is-outline
+      width: 100%
+      background-color: $white-color
+      border:
+        style: solid
+        width: 1px
+        color: #BFBFBF
+      color: $black-color
+      font: 
+        size: rem(16px)
+    &.is-light-outline
+      border:
+        color: $point-color
+      background:
+        color: $white-color
+      color: $point-color
+      &[disabled]
+        background:
+          color: $read-only-background-color
+        color: $disabled-background-color
+        border-color: $disabled-background-color
+
+    &.is-icon
+      background-color: $white-color
+      border:
+        style: solid
+        width: 1px
+        color: #BFBFBF
+      border-radius: rem(4px)
+      padding: rem(5px) rem(8px)
+      color: $black-color
+      font: 
+        size: rem(14px)
+        weight: 400
+      span
+        width: rem(20px)
+        height: rem(20px)
+        display: inline
+        &.copy
+          background: url(../../img/memberNew/icon_copy2.png) 0 0 / 100% auto no-repeat
+  
+  .imgbutton
+    text-indent: -9999px
+    width: rem(167px)
+    height: rem(64px)
+    &.is-seapking
+      background: url(../../img/memberNew/button_seapking.png) 0 0 / 100% auto no-repeat
+    &.is-listening
+      background: url(../../img/memberNew/button_listening.png) 0 0 / 100% auto no-repeat
+  .is-seapking-large
+    text-indent: -9999px
+    width: rem(343px)
+    height: rem(64px)
+    background: url(../../img/memberNew/btn_start_speaking.png) center / 100% auto no-repeat
+  .is-listening-large
+    text-indent: -9999px
+    width: rem(343px)
+    height: rem(64px)
+    background: url(../../img/memberNew/btn_start_listening.png) center / 100% auto no-repeat
+
+
+  .class-menu
+    .dimmed
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background:
+        color: rgba(0,0,0,.6)
+      display: none
+    .btn-class-make
+      position: fixed
+      bottom: rem(40px)
+      right: rem(20px)
+      width: rem(64px)
+      height: rem(64px)
+      background:
+        color: #2B2B2B
+      border:
+        radius: 100%
+      transform: rotate(0deg)
+      transition: all .3s
+      z-index: 2
+      span
+        font:
+          size: 0
+        &::before,
+        &::after
+          content: ''
+          position: absolute
+          width: rem(26px)
+          height: rem(2px)
+          border:
+            radius: rem(1px)
+          position: absolute
+          top: 50%
+          left: 50%
+          background:
+            color: rgba(255,255,255,.9)
+          transform: translate(-50%, -50%)
+        &::after
+          width: rem(2px)
+          height: rem(26px)
+    .class-menu-list
+      position: fixed
+      right: rem(27px)
+      bottom: rem(120px)
+      visibility: hidden
+      .item
+        visibility: hidden
+        transition: all 0.2s ease-in-out
+        transform: scale(0)
+        transform-origin: bottom right
+        opacity: 0
+        height: 0
+        a
+          display: block
+          color: $white-color
+          font:
+            size: rem(16px)
+          line:
+            height: rem(24px)
+    &.is-current
+      .dimmed
+        display: block
+        z-index: 1
+      .class-menu-list
+        z-index: 2
+        .item
+          visibility: visible
+          transform: scale(1)
+          opacity: 1
+          height: auto
+        .class-vist,
+        .class-make
+          display: flex
+          justify-content: flex-end
+          align-items: center
+          padding: rem(5px) 0
+          i
+            display: flex
+            content: ''
+            width: rem(48px)
+            height: rem(48px)
+            border-radius: 50%
+            vertical-align: middle
+            margin-left: rem(10px)
+            justify-content: center
+            align-items: center
+            &::after
+              display: block
+              content: ''
+              width: rem(24px)
+              height: rem(24px)
+        .class-vist
+          i
+            background-color: $white-color
+            &::after
+              background: url(../../img/memberNew/icon_visit.png) 0 0 no-repeat
+              background-size: 100% auto
+        .class-make
+          i
+            background-color: $point-color
+            &::after
+              background: url(../../img/memberNew/icon_make.png) 0 0 no-repeat
+              background-size: 100% auto
+      .btn-class-make
+        transform: rotate(45deg)
+  
+  

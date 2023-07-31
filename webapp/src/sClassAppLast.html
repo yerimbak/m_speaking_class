@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  #portal_wrap {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  section {
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  section h1 {
+    font-size: 30px;
+    color: #008fff;
+  }
+
+  section .portal_box {
+    width: 285px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 15px 0 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    text-align: center;
+  }
+
+  section .portal_box.preview {
+    border-color: #f79646;
+    background: rgba(240, 150, 70, 0.3);
+  }
+
+  section .portal_box.review {
+    border-color: #77933c;
+    background: rgba(120, 150, 70, 0.3);
+  }
+
+  section .portal_box.skill {
+    border-color: #44a3cb;
+    background: #b4daea;
+  }
+
+  section .portal_box h2 {
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px dashed #333;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  section .portal_box ul {
+    padding: 0;
+  }
+
+  section .portal_box ul li {
+    list-style: none;
+    text-align: center;
+  }
+
+  section .portal_box ul li+li {
+    margin: 7px 0 0 0;
+  }
+
+  section .portal_box ul li a {
+    display: block;
+    width: 100%;
+    padding: 5px 5px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 12px;
+    background: #fff;
+  }
+
+  section .portal_box ul li a:hover {
+    background: #ccc;
+  }
+
+  section .portal_box ul li.ing a {
+    border-color: #fdb900;
+    background: #fef8e7;
+  }
+
+  section .portal_box ul li.ing a:hover {
+    background: #fdb900;
+  }
+
+  section .portal_box ul li.comp a {
+    border-color: #00bd0d;
+    background: #eaf8e9;
+  }
+
+  section .portal_box ul li.comp a:hover {
+    background: #00bd0d;
+  }
+
+  section .portal_box ul li.comp2 a {
+    border-color: #F61919;
+    background: #f3cece;
+  }
+
+  section .portal_box ul li.comp2 a:hover {
+    background: #F61919;
+  }
+
+  section .portal_box ul li.comp3 a {
+    border-color: #8B72D0;
+    background: #d5caf5;
+  }
+  section .portal_box ul li.comp3 a:hover {
+    background: #8B72D0;
+  }
+
+  section .portal_box ul li.change a {
+    border-color: #333;
+    background: #ff6d6d;
+  }
+
+  section .portal_box ul+h2 {
+    margin-top: 30px;
+  }
+
+  section+section {
+    margin: 30px 0 0 0;
+    padding: 20px 0 0 0;
+    border-top: 1px dashed #ccc;
+  }
+</style>
+
+<body>
+  <div id="portal_wrap">
+    <section>
+      <h1>신규</h1>
+      <div class="portal_box">
+        <h2>이벤트</h2>
+        <ul>
+          <li class="comp"><a href="page/sclass/mschoolAttack.html" target="_blank">10월 이벤트</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>내 정보</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/myinfo_pwd.html" target="_blank">비밀번호 확인</a></li>
+          <li class="change"><a href="page/member_new/myinfo1.html" target="_blank">학생 - 일반</a></li>
+          <li class="change"><a href="page/member_new/myinfo3.html" target="_blank">학생 - 14세 미만</a></li>
+          <li class="change"><a href="page/member_new/myinfo2.html" target="_blank">선생님 - 학원/학교</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>휴면 계정</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/dormant1.html" target="_blank">휴면 계정 해제 - 안내</a></li>
+          <li class="comp"><a href="page/member_new/dormant2.html" target="_blank">휴면 계정 해제 - 본인인증</a></li>
+          <li class="comp"><a href="page/member_new/dormant3.html" target="_blank">휴면 계정 해제 - 완료</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>공통</h1>
+      <div class="portal_box">
+        <h2>App Guide</h2>
+        <ul>
+          <li class="comp"><a href="page/common/AppGuide.html" target="_blank">시작 가이드</a></li>
+        </ul>
+        <h2>Member</h2>
+        <ul>
+          <li class="comp"><a href="page/member/Splash.html" target="_blank">스플래시</a></li>
+          <li class="comp"><a href="page/member/Login.html" target="_blank">로그인</a></li>
+          <li class="comp"><a href="page/member/FindId.html" target="_blank">ID 찾기</a></li>
+          <li class="comp"><a href="page/member/FindPwd.html" target="_blank">Pwd 찾기</a></li>
+          <li class="comp"><a href="page/member/Terms.html" target="_blank">이용약관</a></li>
+          <li class="comp"><a href="page/member/SignUpBirth.html" target="_blank">회원가입 - 생년월일</a></li>
+          <li class="comp"><a href="page/member/SignUp.html" target="_blank">회원가입 - 정보입력</a></li>
+          <li class="comp"><a href="page/member/SignUpEmail.html" target="_blank">회원가입 - 미성년자</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>Menu</h2>
+        <ul>
+          <li class="comp"><a href="page/common/SettingMenu.html" target="_blank">메뉴</a></li>
+          <li class="comp"><a href="page/common/SettingMenu_changePwd.html" target="_blank">비밀번호 변경</a></li>
+          <li class="comp"><a href="page/common/SettingMenu_changeName.html" target="_blank">이름,닉네임 변경</a></li>
+          <li class="comp"><a href="page/common/SettingMenu_classRegister.html" target="_blank">클래스 등록</a></li>
+          <li class="comp"><a href="page/common/SettingMenu_changeSpeed.html" target="_blank">속도 조절</a></li>
+          <li class="comp"><a href="page/common/SettingMenu_SignOut.html" target="_blank">회원 탈퇴</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>커뮤니티</h2>
+        <ul>
+          <li class="comp"><a href="page/community/Community_main.html" target="_blank">서비스 개선 제안</a></li>
+          <li class="comp"><a href="page/community/Community_main_empty.html" target="_blank">서비스 개선 제안 - 내용 없음</a></li>
+          <li class="comp"><a href="page/community/Community_write.html" target="_blank">글쓰기</a></li>
+          <li class="comp"><a href="page/community/Community_write_edit.html" target="_blank">글쓰기 - 수정</a></li>
+          <li class="comp"><a href="page/community/Community_reply.html" target="_blank">댓글 상세</a></li>
+          <li class="comp"><a href="page/community/Community_reply_empty.html" target="_blank">댓글 상세 - 내용 없음</a></li>
+          <li class="comp"><a href="page/community/Community_popup_reportReply.html" target="_blank">댓글 신고</a></li>
+          <li class="comp"><a href="page/community/Community_popup_reportReply_complete.html" target="_blank">댓글 신고
+              완료</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>Class</h2>
+        <ul>
+          <li class="comp"><a href="page/class/Class.html" target="_blank">클래스</a></li>
+          <li class="comp"><a href="page/class/Class_guide.html" target="_blank">클래스 - 가이드</a></li>
+          <li class="comp"><a href="page/class/ClassMain.html" target="_blank">클래스 메인</a></li>
+          <li class="comp"><a href="page/class/ClassSearch.html" target="_blank">클래스 검색</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>학습 공통</h2>
+        <ul>
+          <li class="comp"><a href="page/common/TutorGuideSection.html" target="_blank">상단 가이드</a></li>
+          <li class="comp"><a href="page/common/feedback.html" target="_blank">피드백</a></li>
+          <li class="comp"><a href="page/common/complete.html" target="_blank">학습 완료 가이드</a></li>
+          <li class="comp"><a href="page/common/popup_more.html" target="_blank">더보기 메뉴</a></li>
+          <li class="comp"><a href="page/common/loading.html" target="_blank">로딩</a></li>
+          <li class="comp"><a href="page/common/popup_alert.html" target="_blank">확인팝업</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>대화학습</h1>
+      <div class="portal_box">
+        <h2>Let's Talk</h2>
+        <ul>
+          <li class="comp"><a href="page/contents/conversation/LetsTalk.html" target="_blank">Lets Talk</a></li>
+          <li class="comp"><a href="page/contents/conversation/LetsTalk_start_all.html" target="_blank">Lets Talk - 전체학습
+              시작하기</a></li>
+          <li class="comp"><a href="page/contents/conversation/LetsTalk_start_step.html" target="_blank">Lets Talk - 단계별
+              학습 시작하기</a></li>
+          <li class="comp"><a href="page/contents/conversation/LetsTalkSpeaking.html" target="_blank">말하기 학습</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>DialoguePractice</h2>
+        <ul>
+          <li class="comp"><a href="page/contents/conversation/DialoguePractice_cover.html" target="_blank">Cover</a>
+          </li>
+          <li class="comp"><a href="page/contents/conversation/DialoguePracticeGuide_1.html" target="_blank">시작 가이드
+              1</a></li>
+          <li class="comp"><a href="page/contents/conversation/DialoguePracticeGuide_2.html" target="_blank">시작 가이드
+              2</a></li>
+          <li class="comp"><a href="page/contents/conversation/DialoguePracticeSpeaking_1.html" target="_blank">말하기</a>
+          </li>
+          <li class="comp"><a href="page/contents/conversation/DialoguePracticeSpeaking_2.html" target="_blank">말하기 -
+              빈칸</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>RolePlay</h2>
+        <ul>
+          <li class="comp"><a href="page/contents/conversation/RolePlay_cover.html" target="_blank">Cover</a></li>
+          <li class="comp"><a href="page/contents/conversation/RolePlayResult.html" target="_blank">결과</a></li>
+          <li class="comp"><a href="page/contents/conversation/RolePlayReview.html" target="_blank">리뷰</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>AI Clinic</h2>
+        <ul>
+          <li class="comp"><a href="page/contents/conversation/AIClinic_cover.html" target="_blank">Cover</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>패턴학습</h1>
+      <div class="portal_box">
+        <h2>Let's Talk</h2>
+        <ul>
+          <li class="comp"><a href="page/contents/pattern/LetsTalkPattern.html" target="_blank">Lets Talk</a></li>
+          <li class="comp"><a href="page/contents/pattern/LetsTalkPattern_start_all.html" target="_blank">Lets Talk -
+              전체학습 시작하기</a></li>
+          <li class="comp"><a href="page/contents/pattern/LetsTalkPattern_start_step.html" target="_blank">Lets Talk -
+              단계별 학습 시작하기</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>Intro</h2>
+        <ul>
+          <li class="comp"><a href="page/contents/pattern/PatternIntro_1.html" target="_blank">Intro 1</a></li>
+          <li class="comp"><a href="page/contents/pattern/PatternIntro_2.html" target="_blank">Intro 2</a></li>
+          <li class="comp"><a href="page/contents/pattern/PatternIntro_3.html" target="_blank">Intro 3</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>Pattern Practice</h2>
+        <ul>
+          <li class="comp"><a href="page/contents/pattern/PatternPractice_cover.html" target="_blank">Cover</a></li>
+          <li class="comp"><a href="page/contents/pattern/PatternPracticeGuide.html" target="_blank">시작 가이드</a></li>
+          <li class="comp"><a href="page/contents/pattern/PatternPracticeSpeaking.html" target="_blank">말하기</a></li>
+          <li class="comp"><a href="page/contents/pattern/PatternPracticeGuide_list.html" target="_blank">연습 문장 선택</a>
+          </li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>Pattern Dialogue</h2>
+        <ul>
+          <li class="comp"><a href="page/contents/pattern/PatternDialogue_cover.html" target="_blank">Cover</a></li>
+          <li class="comp"><a href="page/contents/pattern/PatternDialogueSpeaking.html" target="_blank">말하기</a></li>
+          <li class="comp"><a href="page/contents/pattern/PatternDialogueResult.html" target="_blank">결과</a></li>
+          <li class="comp"><a href="page/contents/pattern/PatternDialogueReview.html" target="_blank">리뷰</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>스피킹 배틀</h1>
+      <div class="portal_box">
+        <h2>소개 페이지</h2>
+        <ul>
+          <li class="comp"><a href="page/speakingBattle/speakingBattle_intro.html" target="_blank">소개 페이지</a></li>
+          <li class="comp"><a href="page/speakingBattle/speakingBattle_intro_empty.html" target="_blank">순위 없음</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>게임 시작</h2>
+        <ul>
+          <li class="comp"><a href="page/speakingBattle/speakingBattle_game_count.html" target="_blank">카운트</a></li>
+          <li class="comp"><a href="page/speakingBattle/speakingBattle_game_start.html" target="_blank">시작</a></li>
+          <li class="comp"><a href="page/speakingBattle/speakingBattle_game_correct.html" target="_blank">정답</a></li>
+          <li class="comp"><a href="page/speakingBattle/speakingBattle_game_missed.html" target="_blank">Missed</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>결과</h2>
+        <ul>
+          <li class="comp"><a href="page/speakingBattle/speakingBattle_finish_clear.html" target="_blank">클리어</a></li>
+          <li class="comp"><a href="page/speakingBattle/speakingBattle_finish_gameOver.html" target="_blank">게임오버</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>리스닝 클래스 (임시)</h1>
+      <!-- 임시 listening class -->
+      <div class="portal_box">
+        <h2>리스닝 클래스 (임시)</h2>
+        <ul>
+          <li class="comp"><a href="page/class/ListenClassMain_v1.html" target="_blank">half-width 버튼</a></li>
+          <li class="comp"><a href="page/class/ListenClassMain_v2.html" target="_blank">full-width 버튼</a></li>
+          <li class="comp"><a href="page/speakingBattle/listeningBattle_intro.html" target="_blank">리스닝배틀 인트로</a></li>
+          <li class="comp"><a href="page/speakingBattle/listeningBattle_game_start_v1.html" target="_blank">시작 (왼쪽 안붙은 ver)</a></li>
+          <li class="comp"><a href="page/speakingBattle/listeningBattle_game_start_v2.html" target="_blank">시작 (왼쪽 붙은 ver)</a></li>
+          <li class="comp"><a href="page/speakingBattle/listeningBattle_game_correct.html" target="_blank">클리어</a></li>
+          <li class="comp"><a href="page/speakingBattle/listeningBattle_game_missed.html" target="_blank">미스</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h1>회원가입</h1>
+      <!-- 임시 listening class -->
+      <div class="portal_box">
+        <h2>온보딩 메인화면</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/onBoard.html" target="_blank">온보딩 메인</a></li>
+          <li class="comp"><a href="page/member_new/onBoard_App.html" target="_blank">온보딩 메인 - 앱진입(0825)</a></li>
+          <li class="comp"><a href="page/member_new/new_splash.html" target="_blank">스플레쉬</a></li>
+          <li class="comp"><a href="page/member_new/new_splash_alert.html" target="_blank">스플레쉬 - 장애공지(0906)</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>로그인</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/new_login.html" target="_blank">로그인</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>회원가입 정보 입력</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/new_join_info1.html" target="_blank">선생님</a></li>
+          <li class="comp"><a href="page/member_new/new_join_info2.html" target="_blank">학생(기본)</a></li>
+          <li class="comp"><a href="page/member_new/new_join_info3.html" target="_blank">학생(중, 고등학생)</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>인증 섹션</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/phone_verification.html" target="_blank">휴대폰 인증</a></li>
+          <li class="comp"><a href="page/member_new/email_verification.html" target="_blank">이메일 인증</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>학생,선생님 체크</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/check_member_type.html" target="_blank">학교,학원 체크</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>클래스만들기</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/class_make.html" target="_blank">클래스 만들기<br>
+          선생님/학생 유형 추가(0804)</a></li>
+          <li class="comp"><a href="page/member_new/class_make_popup.html" target="_blank">알림팝업</a></li>
+          <li class="comp"><a href="page/member_new/class_make_popup2.html" target="_blank">창작클래스 알림팝업 (0804)</a></li>
+          <li class="comp"><a href="page/member_new/class_list.html" target="_blank">클래스 리스트<br>삭제버튼동적Ui 변경(0826)</a></li>
+          <li class="comp"><a href="page/member_new/email_verification2.html" target="_blank">공직자 이메일 인증하기</a></li>
+          <li class="comp"><a href="page/member_new/class_complete.html" target="_blank">공직자 이메일 인증 완료</a></li>
+          <li class="comp"><a href="page/member_new/class_make2.html" target="_blank">스피킹 클래스 만들기2</a></li>
+          <li class="comp"><a href="page/member_new/class_make3.html" target="_blank">스피킹 클래스 만들기3</a></li>
+          <li class="comp"><a href="page/member_new/bottomsheet_layer_popup.html" target="_blank">bottomsheet_layer_popup</a></li>
+          <li class="comp"><a href="page/member_new/class_delete_popup.html" target="_blank">클래스 삭제 팝업(0825)</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>클래스 코드로 클래스입장하기</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/SettingMenu2.html" target="_blank">설정 메뉴</a></li>
+          <li class="comp"><a href="page/member_new/class_code.html" target="_blank">클래스 코드 입력</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>클래스 코드로 가입하기</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/class_code_join.html" target="_blank">클래스 코드로 가입하기 상세</a></li>
+          <li class="comp"><a href="page/member_new/class_code_open.html" target="_blank">클래스 코드로 가입하기openclass 상세</a></li>
+          <li class="comp"><a href="page/member_new/class_code_view.html" target="_blank">클래스 코드로 가입하기</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>비밀번호 찾기</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/password_find.html" target="_blank">비밀번호 찾기</a></li>
+          <li class="comp"><a href="page/member_new/password_find_phone.html" target="_blank">휴대폰 번호 인증</a></li>
+          <li class="comp"><a href="page/member_new/password_find_email.html" target="_blank">이메일 주소 인증</a></li>
+          <li class="comp"><a href="page/member_new/password_find_id.html" target="_blank">재설정 아이디 선택</a></li>
+          <li class="comp"><a href="page/member_new/password_find_fail.html" target="_blank">비밀번호 찾기 실패</a></li>
+          <li class="comp"><a href="page/member_new/password_reset.html" target="_blank">비밀번호 재설정</a></li>
+          <li class="comp"><a href="page/member_new/password_reset_complete.html" target="_blank">비밀번호 재설정 완료</a></li>
+        </ul>
+      </div>
+      <div class="portal_box">
+        <h2>약관동의</h2>
+        <ul>
+          <li class="comp"><a href="page/member_new/terms_marketing_popup.html" target="_blank">기존회원_마케팅 수신(0831)</a></li>
+          <li class="comp"><a href="page/member_new/terms_agree_popup.html" target="_blank">가계정(0831)</a></li>
+          <li class="comp"><a href="page/member_new/terms_youngagree_popup.html" target="_blank">14세 미만 법정대리인 인증(0831)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h1>학습이력</h1>
+      <!-- 임시 listening class -->
+      <div class="portal_box">
+        <h2>학습 콘텐츠</h2>
+        <ul>
+          <li class="comp"><a href="page/studypreview/StudyPreview.html" target="_blank">학습콘텐츠 - 학습 횟수 코치마크 (0907)</a></li>
+          <li class="comp3"><a href="page/studypreview/StudyStep.html" target="_blank">일반클래스 - 학습 횟수 코치마크 (0915)</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

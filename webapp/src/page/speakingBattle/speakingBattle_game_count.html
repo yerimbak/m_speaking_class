@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="speakingBattle.css">
+</head>
+
+<body ontouchstart="">
+
+  <div id="speakingBattle-game">
+    <div class="header">
+      <div class="timer-wrap">
+        <div class="icon"></div>
+        <p>59:59</p>
+      </div>
+      <div class="progress-wrap">
+        <strong>14</strong>
+        <span>/ 30</span>
+      </div>
+      <div class="btn-wrap">
+        <button class="btn-exit"></button>
+      </div>
+    </div>
+    <div class="contents">
+      <div class="game-screen-cont-wrap">
+        <div class="bgBar-wrap">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="game-screen-wrap">
+
+          <!-- 시작 전 카운트 다운 -->
+          <div class="countDown-wrap">
+            <div class="countDown">
+              <p>3</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="life-wrap">
+        <div class="life"></div> <!-- off 추가시 라이프 깎임표시 -->
+        <div class="life"></div>
+        <div class="life"></div>
+        <div class="life"></div>
+        <div class="life"></div>
+      </div>
+      <div class="btn-mic-wrap">
+        <button class="btn-mic"></button> <!-- on 추가시 말할 준비된 상태 -->
+        <span></span>
+      </div>
+      <div class="missed-toast"></div> <!-- show 클래스 추가시 보임 -->
+    </div>
+  </div>
+  <script>
+    // mic 
+    document.querySelector('.btn-mic-wrap .btn-mic').addEventListener('click', function (e) {
+      this.classList.toggle('on');
+    })
+  </script>
+
+</body>
+
+</html>

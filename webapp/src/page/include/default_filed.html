@@ -1,0 +1,27 @@
+<div class="field @@if(context.className){@@className}">
+  <!-- 
+    성공시 class="is-success",
+    실패시 class="is-error"
+    input line으로 적용 class="is-line"
+  -->
+  <label class="label">@@label @@if(context.required){<span class="required">필수입력</span>}</label>
+  <div class="control">
+    <input class="input " type="@@inputType" @@if(context.placeholder){placeholder="@@placeholder"}  @@if(context.readonly){readonly="readonly"}  @@if(context.value){value="@@value"}>
+    @@if(context.searchBtn){
+    <button type="button" class="btn-search"></button>
+    }
+  </div>
+  @@if(context.validation != false){
+  <p class="help"><i></i>validation</p>
+  }
+  @@if(context.layer){
+  <div class="help-layer" style="display: none;">
+    <ul>
+      <li class="is-success"><i></i>8 – 20자 사이</li>
+      <li class="is-error"><i></i>영문 (대, 소문자 구분)</li>
+      <li class="is-error"><i></i>특수문자 (~, !, @, #, $, %, ^, *)</li>
+      <li class="is-error"><i></i>숫자 한 개 이상</li>
+    </ul>
+  </div>
+  }
+</div>

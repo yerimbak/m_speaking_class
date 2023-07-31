@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+/* speakingBattle-finish */
+#speakingBattle-finish {height:100%;background:#F0F6FD url('../../img/speakingBattle/bg_game_finish.png');background-position:top center;background-size:100% auto;}
+#speakingBattle-finish .contents {display:flex;flex-direction:column;height:100%;padding:10.3rem 3.2rem 3.2rem;}
+
+#speakingBattle-finish .center-wrap {flex:1;min-height:0;height:100%;}
+
+#speakingBattle-finish .title-wrap {margin:0 -3.2rem 5.4rem;text-align:center;}
+#speakingBattle-finish .title-wrap .title {height:8.2rem;background-size:100%;}
+#speakingBattle-finish .title-wrap .title.clear {background-image:url('../../img/speakingBattle/img_game_finish_clear.png');}
+#speakingBattle-finish .title-wrap .title.gameOver {background-image:url('../../img/speakingBattle/img_game_finish_gameOver.png');}
+#speakingBattle-finish .title-wrap p {margin:0.1rem 0 0 0;font-size:1.4rem;line-height:2rem;}
+
+#speakingBattle-finish .score-box-wrap {height:12rem;padding:2.4rem 2.8rem 0;background:#0eb8c2;border-radius:2.4rem;text-align:center;box-shadow:0 0.8rem 0 #0C828A;font-size:0;}
+#speakingBattle-finish .score-box-wrap dl {display:inline-block;position:relative;width:calc(50% - 0.7rem);vertical-align:top;}
+#speakingBattle-finish .score-box-wrap dl dt {font-size:1.4rem;line-height:2rem;color:rgba(255,255,255,0.72);font-weight:bold;}
+#speakingBattle-finish .score-box-wrap dl dd {font-weight:bold;color:#fff;}
+#speakingBattle-finish .score-box-wrap dl + dl {margin:0 0 0 1.4rem;}
+#speakingBattle-finish .score-box-wrap dl + dl:before {content:'';position:absolute;top:0.5rem;left:-0.7rem;width:0.2rem;height:6rem;border-radius:0.1rem;background:rgba(255,255,255,0.16);}
+#speakingBattle-finish .score-box-wrap dl.time dd {margin:1.6rem 0 0 0;font-size:2.6rem;line-height:2.6rem;}
+#speakingBattle-finish .score-box-wrap dl.ranking dd {margin:0.8rem 0 0 0;font-size:4.8rem;line-height:4.8rem;}
+#speakingBattle-finish .score-box-wrap dl.correct-count dd {margin:0.8rem 0 0 0;font-size:3rem;line-height:4.8rem;color:rgba(255,255,255,0.72);}
+#speakingBattle-finish .score-box-wrap dl.correct-count dd strong {font-size:4.8rem;font-weight:bold;color:#fff;}
+
+#speakingBattle-finish .btm-btn-wrap {display:flex;}
+#speakingBattle-finish .btm-btn-wrap button {flex:1;min-width:0;width:100%;height:5.2rem;border-radius:0.8rem;font-size:1.6rem;font-weight:bold;}
+#speakingBattle-finish .btm-btn-wrap button + button {margin:0 0 0 1.1rem;}
+#speakingBattle-finish .btm-btn-wrap button.btn-retry {border:0.1rem solid #0EB8C2;background-color:#fff;color:#0EB8C2;box-shadow:0px 4px 12px rgba(39, 42, 46, 0.12);}
+#speakingBattle-finish .btm-btn-wrap button.btn-retry:active {background-color:#EBEBEB;}
+#speakingBattle-finish .btm-btn-wrap button.btn-finish {background-color:#0EB8C2;color:#fff;box-shadow:0 0.4rem 1.2rem rgba(7, 79, 89, 0.36);}
+#speakingBattle-finish .btm-btn-wrap button.btn-finish:active {background-color:#0B8C94;}
+
+
+/* speakingBattle-intro */
+#speakingBattle-intro {display:flex;flex-direction:column;height:100%;background:#fff;}
+
+#speakingBattle-intro .header {display:flex;position:relative;height:5.4rem;}
+#speakingBattle-intro .header p {margin:auto;font-size:1.6rem;color:#3F5062;font-weight:bold;}
+#speakingBattle-intro .header .btn-close {position:absolute;top:50%;right:1.2rem;width:3.2rem;height:3.2rem;background-image:url('../../img/speakingBattle/icon_header_close.png');background-size:100%;transform:translateY(-50%);}
+
+#speakingBattle-intro .contents {display:flex;flex-direction:column;flex:1;min-height:0;height:100%;}
+
+#speakingBattle-intro .tab-nav-wrap {border-bottom:0.1rem solid rgba(0,0,0,0.08);}
+#speakingBattle-intro .tab-nav-wrap ul {font-size:0;}
+#speakingBattle-intro .tab-nav-wrap ul li {position:relative;display:inline-block;width:50%;height:4.8rem;line-height:4.7rem;font-size:1.8rem;color:rgba(0,0,0,0.6);text-align:center;vertical-align:top;}
+#speakingBattle-intro .tab-nav-wrap ul li.on {font-weight:bold;color:#0EB8C2;}
+#speakingBattle-intro .tab-nav-wrap ul li.on:after {content:'';position:absolute;bottom:-0.1rem;left:0;width:100%;height:0.4rem;background:#0EB8C2;}
+
+#speakingBattle-intro .tab-cont-wrap {flex:1;min-height:0;height:100%;}
+#speakingBattle-intro .tab-cont-wrap .tab-cont {display:none;height:100%;}
+#speakingBattle-intro .tab-cont-wrap .tab-cont > * {height:100%;overflow:auto;}
+#speakingBattle-intro .tab-cont-wrap .tab-cont.on {display:block;}
+
+#speakingBattle-intro .game-cont-wrap {display:flex;flex-direction:column;padding:2rem 3.2rem 3.2rem 3.2rem;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap {flex:1;min-height:0;height:100%;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap {position:relative;margin:0 -3.2rem;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-container {position:relative;padding:0 3.2rem;overflow:hidden;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-slide .slide-item {position:relative;height:36rem;background:#E7F8F9;padding:6rem 1.5rem 0;border-radius:0.6rem;border:0.1rem solid rgba(0, 0, 0, 0.06);overflow:hidden;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-slide .title {height:4rem;background-size:100%;background-position:top center;background-repeat:no-repeat;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-slide p {margin:2rem 0 0 0;font-size:1.4rem;line-height:2rem;text-align:center;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-slide .gif-img {position:absolute;bottom:0;left:0;width:100%;background-size:100%;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-slide:last-child {margin:0;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .slide-1 .title {background-image:url('../../img/speakingBattle/img_game_intro_slide_1_title.png');}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .slide-2 .title {background-image:url('../../img/speakingBattle/img_game_intro_slide_2_title.png');}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .slide-3 .title {background-image:url('../../img/speakingBattle/img_game_intro_slide_3_title.png');}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .slide-4 .title {background-image:url('../../img/speakingBattle/img_game_intro_slide_4_title.png');}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .slide-1 .gif-img {height:15rem;background-image:url('../../img/speakingBattle/img_game_intro_slide_1_motion.gif');}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .slide-2 .gif-img {height:18.3rem;background-image:url('../../img/speakingBattle/img_game_intro_slide_2_motion.gif');}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .slide-3 .gif-img {height:16rem;background-image:url('../../img/speakingBattle/img_game_intro_slide_3_motion.gif');}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .slide-4 .gif-img {height:18rem;background-image:url('../../img/speakingBattle/img_game_intro_slide_4_motion.gif');}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-pagination {bottom:-2rem;line-height:1;font-size:0;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-pagination .swiper-pagination-bullet {width:1rem;height:1rem;border-radius:50%;background:rgba(0,0,0,0.2);margin:0 0.4rem;vertical-align:top;opacity:1;}
+#speakingBattle-intro .game-cont-wrap .intro-slide-wrap .slide-wrap .swiper-pagination .swiper-pagination-bullet-active {background:#F28688;}
+#speakingBattle-intro .game-cont-wrap .btn-start {height:5.2rem;background:#0EB8C2;color:#fff;font-size:1.6rem;font-weight:bold;border-radius:0.8rem;box-shadow:0 0.4rem 1.2rem rgba(7, 79, 89, 0.36);}
+#speakingBattle-intro .game-cont-wrap .btn-start:active {background:#0B8C94;}
+
+#speakingBattle-intro .ranking-cont-wrap {padding:2rem 1.6rem 8rem;background:#FBFBFB;}
+#speakingBattle-intro .my-last-ranking {margin:0 0 2.4rem 0;}
+#speakingBattle-intro .my-last-ranking .title {margin:0 0 0.8rem 0;padding:0 0 0 0.8rem;font-size:1.4rem;line-height:2rem;font-weight:bold;color:#3f5062;}
+#speakingBattle-intro .my-ranking-box-wrap {display:flex;height:8.4rem;padding:0 1.8rem;background:#fff;border-radius:0.4rem;box-shadow:0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);}
+#speakingBattle-intro .my-ranking-box-wrap .ranking {width:4.6rem;margin:0 1.4rem 0 0;padding:1.4rem 0 0 0;text-align:center;font-size:2.4rem;line-height:2.8rem;font-weight:bold;color:#fff;background-image:url('../../img/speakingBattle/bg_myRanking_flag.png');background-size:contain;background-repeat:no-repeat;}
+#speakingBattle-intro .my-ranking-box-wrap .my-info {flex:1;min-width:0;width:100%;padding:1.6rem 0 0 0;}
+#speakingBattle-intro .my-ranking-box-wrap .my-info .top-text {font-size:0;}
+#speakingBattle-intro .my-ranking-box-wrap .my-info .top-text > * {display:inline-block;max-width:50%;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#speakingBattle-intro .my-ranking-box-wrap .my-info .top-text strong {font-size:2rem;line-height:2.8rem;}
+#speakingBattle-intro .my-ranking-box-wrap .my-info .top-text span {padding:0 0 0 0.4rem;font-size:1.4rem;color:#777;}
+#speakingBattle-intro .my-ranking-box-wrap .my-info .btm-text {margin:0.6rem 0 0 0;font-size:1.4rem;line-height:1.4rem;color:#999;}
+#speakingBattle-intro .my-ranking-box-wrap .complete-status {width:4rem;margin:0 0 0 3rem;padding:2.5rem 0 0 0;text-align:center;font-size:1.4rem;line-height:1.4rem;}
+#speakingBattle-intro .my-ranking-box-wrap .complete-status strong {display:block;color:#bbb;}
+#speakingBattle-intro .my-ranking-box-wrap .complete-status span {display:block;margin:1.1rem 0 0 0;}
+#speakingBattle-intro .my-ranking-box-wrap.complete .ranking {background-image:url('../../img/speakingBattle/bg_myRanking_flag_complete.png');}
+#speakingBattle-intro .my-ranking-box-wrap.complete .ranking.ranking-1 {background-image:url('../../img/speakingBattle/bg_myRanking_1.png');font-size:0;}
+#speakingBattle-intro .my-ranking-box-wrap.complete .ranking.ranking-2 {background-image:url('../../img/speakingBattle/bg_myRanking_2.png');font-size:0;}
+#speakingBattle-intro .my-ranking-box-wrap.complete .ranking.ranking-3 {background-image:url('../../img/speakingBattle/bg_myRanking_3.png');font-size:0;}
+#speakingBattle-intro .my-ranking-box-wrap.complete .complete-status strong {color:#0EB8C2;}
+
+#speakingBattle-intro .total-ranking-list {border-radius:4px;box-shadow:0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);background:#fff;overflow:hidden;}
+#speakingBattle-intro .total-ranking-list table {table-layout:fixed;width:100%;}
+#speakingBattle-intro .total-ranking-list .list-title table tr th {height:4rem;font-size:1.2rem;color:#777;font-weight:bold;}
+#speakingBattle-intro .total-ranking-list .list-title table tr th:first-child {padding:0 0 0 2rem;text-align:left;}
+#speakingBattle-intro .total-ranking-list .list-title table tr th:last-child {padding:0 2rem 0 0;}
+#speakingBattle-intro .total-ranking-list .list-title table tr th:nth-child(2) {width:23%;}
+#speakingBattle-intro .total-ranking-list .list-title table tr th:nth-child(3) {width:20%;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td {height:4.8rem;text-align:center;font-size:1.4rem;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td:first-child {padding:0 0 0 1.2rem;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td:last-child {padding:0 2rem 0 0;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td .ranking-info {display:flex;align-items:center;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td .ranking-info .ranking {width:4.8rem;height:4.8rem;padding:1.4rem 0 0 0;text-align:center;font-size:1.4rem;line-height:2.2rem;color:#fff;font-weight:bold;background-image:url('../../img/speakingBattle/bg_ranking_flag.png');background-size:100%;background-repeat:no-repeat;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td .ranking-info .user-info {flex:1;min-width:0;width:100%;font-size:0;text-align:left;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td .ranking-info .user-info > * {display:inline-block;max-width:50%;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td .ranking-info .user-info strong {font-size:1.6rem;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td .ranking-info .user-info span {padding:0 0 0 0.4rem;font-size:1.2rem;color:#777;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td:nth-child(2) {width:23%;font-weight:bold;color:#bbb;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr td:nth-child(3) {width:20%;color:#888;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr.complete td .ranking-info .ranking {background-image:url('../../img/speakingBattle/bg_ranking_flag_complete.png');}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr.complete td .ranking-info .ranking.ranking-1 {background-image:url('../../img/speakingBattle/bg_ranking_1.png');font-size:0;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr.complete td .ranking-info .ranking.ranking-2 {background-image:url('../../img/speakingBattle/bg_ranking_2.png');font-size:0;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr.complete td .ranking-info .ranking.ranking-3 {background-image:url('../../img/speakingBattle/bg_ranking_3.png');font-size:0;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr.complete td:nth-child(2) {color:#0EB8C2;}
+#speakingBattle-intro .total-ranking-list .list-wrap table tr.complete:nth-child(1),
+#speakingBattle-intro .total-ranking-list .list-wrap table tr.complete:nth-child(2),
+#speakingBattle-intro .total-ranking-list .list-wrap table tr.complete:nth-child(3) {background:#FBF3FF;}
+
+#speakingBattle-intro .ranking-list-empty {display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:0 0 10rem 0;}
+#speakingBattle-intro .ranking-list-empty .empty-img {width:16rem;height:14rem;margin:0 auto 1.2rem;background-image:url('../../img/speakingBattle/img_ranking_empty.png');background-size:100%;}
+#speakingBattle-intro .ranking-list-empty p {font-size:1.4rem;line-height:2rem;color:#777;}
+
+#speakingBattle-intro .btn-top {position:fixed;bottom:2.4rem;right:3rem;width:4rem;height:4rem;padding:0.2rem 0 0 0;border-radius:50%;background-color:#0EB8C2;box-shadow:0 0.6rem 1.2rem rgba(0, 0, 0, 0.18);color:#fff;font-weight:bold;font-size:1.2rem;}
+#speakingBattle-intro .btn-top:active {background:#1A8E95;}
+
+
+/* speakingBattle-game */
+#speakingBattle-game {display:flex;flex-direction:column;height:100%;background:#F0F6FD url('../../img/speakingBattle/bg_game_start.png');background-position:top center;background-size:100% auto;overflow:hidden;}
+
+#speakingBattle-game .header {display:flex;align-items:center;height:6rem;padding:0.2rem 1.2rem 0 3rem;background:#0EB8C2;box-shadow:0 0.6rem 0 #238E95;border-radius:0 0 2.4rem 2.4rem;font-family:'Nunito', sans-serif;}
+#speakingBattle-game .header .timer-wrap {display:flex;align-items:center;flex:1;min-width:0;width:100%;}
+#speakingBattle-game .header .timer-wrap .icon {width:2.4rem;height:2.4rem;margin:0 0.8rem 0 0;background-image:url('../../img/speakingBattle/img_game_start_clock.png');background-size:100%;}
+#speakingBattle-game .header .timer-wrap p {padding:0.2rem 0 0 0;font-weight:800;color:#fff;font-size:3rem;line-height:3rem;}
+#speakingBattle-game .header .progress-wrap {color:rgba(255,255,255,0.6);}
+#speakingBattle-game .header .progress-wrap strong {color:#0A7076;font-size:2.4rem;font-weight:bold;}
+#speakingBattle-game .header .btn-wrap {margin:0 0 0 1.2rem;}
+#speakingBattle-game .header .btn-wrap button {width:3.2rem;height:3.2rem;background-image:url('../../img/speakingBattle/img_game_start_exit.png');background-size:auto 3.2rem;}
+#speakingBattle-game .header .btn-wrap button:active {background-position:-3.2rem 0;}
+
+#speakingBattle-game .contents {flex:1;min-height:0;height:100%;padding:0.6rem 0 0 0;}
+#speakingBattle-game .contents .game-screen-cont-wrap {position:relative;height:100%;}
+#speakingBattle-game .contents .bgBar-wrap {display:flex;flex-direction:column;justify-content:space-around;height:100%;padding:6rem 0;}
+#speakingBattle-game .contents .bgBar-wrap .bar {width:100%;height:0.2rem;background:rgba(35, 142, 149, 0.1);}
+#speakingBattle-game .contents .game-screen-wrap {position:absolute;top:0;left:0;width:100%;height:100%;}
+#speakingBattle-game .contents .game-screen-wrap .countDown-wrap {display:flex;height:100%;}
+#speakingBattle-game .contents .game-screen-wrap .countDown {display:flex;width:16rem;height:16rem;margin:auto;padding:0.8rem 0 0 0;border-radius:50%;background:rgba(249, 255, 11, 0.4);}
+#speakingBattle-game .contents .game-screen-wrap .countDown p {margin:auto;font-size:6.4rem;font-weight:bold;color:#0A7076;line-height:6.4rem;}
+#speakingBattle-game .contents .word-rain-wrap {position:relative;height:100%;overflow:hidden;}
+#speakingBattle-game .contents .word-rain-wrap .word {position:absolute;width:31rem;padding:0.8rem 1rem;text-align:center;border-radius:0.6rem;transition:background-color 0.5s, box-shadow 0.5s;transition-delay:0.3s;}
+#speakingBattle-game .contents .word-rain-wrap .word.position-1 {left:0.2rem;}
+#speakingBattle-game .contents .word-rain-wrap .word.position-2 {left:2.2rem;}
+#speakingBattle-game .contents .word-rain-wrap .word.position-3 {left:6rem;}
+#speakingBattle-game .contents .word-rain-wrap .word .top-text {font-size:0;line-height:1.6rem;}
+#speakingBattle-game .contents .word-rain-wrap .word .top-text span {display:inline-block;margin:0 0.3rem 0 0;font-size:1.6rem;line-height:1.6rem;vertical-align:middle;font-weight:bold;}
+#speakingBattle-game .contents .word-rain-wrap .word .top-text span:last-child {margin:0;}
+#speakingBattle-game .contents .word-rain-wrap .word .top-text span.success {color:#0eb8c2;}
+#speakingBattle-game .contents .word-rain-wrap .word .btm-text {margin:0.4rem 0 0 0;font-size:1.4rem;line-height:1.4rem;color:rgba(51, 51, 51, 0.8);font-weight:bold;}
+#speakingBattle-game .contents .word-rain-wrap .word.correct {background:#fff;box-shadow:0 0.2rem 2rem rgba(1, 255, 255, 0.4);animation:wordCorrectFadeOut 0.5s;animation-timing-function:ease-out;animation-fill-mode:both;animation-delay:1.7s;}
+#speakingBattle-game .contents .word-rain-wrap .word.correct .btm-text {opacity:0;transition:all 0.3s;}
+#speakingBattle-game .contents .word-rain-wrap .word.correct:after {content:'';position:absolute;top:-2.8rem;left:50%;width:9rem;height:4rem;margin:0 0 0 -4.5rem;background-image:url('../../img/speakingBattle/img_game_start_correct.png');background-size:100%;animation:wordCorrectMarkFadeIn 0.5s;animation-fill-mode:both;animation-delay:0.6s;}
+#speakingBattle-game .contents .word-rain-wrap .word.incorrect .top-text span {color:#F52012;}
+#speakingBattle-game .contents .word-rain-wrap .word.incorrect .btm-text {color:#F52012;}
+@keyframes wordCorrectFadeOut {100%{opacity:0;}}
+@keyframes wordCorrectMarkFadeIn {0%{transform:scale(0.4);opacity:0;} 60%{transform:scale(1);} 100%{opacity:1;}}
+
+#speakingBattle-game .footer {display:flex;align-items:center;position:relative;height:6.4rem;padding:0 0 1.2rem 0.8rem;z-index:2;}
+#speakingBattle-game .footer .life-wrap {display:flex;flex:1;min-width:0;width:100%;}
+#speakingBattle-game .footer .life-wrap .life {flex:1;min-width:0;width:100%;height:5.2rem;background-image:url('../../img/speakingBattle/img_game_start_life.png');background-size:auto 5.2rem;}
+#speakingBattle-game .footer .life-wrap .life + .life {margin:0 0 0 0.2rem;}
+#speakingBattle-game .footer .life-wrap .life.off {background-position:-5.8rem 0;}
+#speakingBattle-game .footer .btn-mic-wrap {position:relative;margin:0 1.2rem 0 0.9rem;z-index:2;}
+#speakingBattle-game .footer .btn-mic {position:relative;width:4.8rem;height:4.8rem;border-radius:50%;background-image:url('../../img/speakingBattle/img_game_start_mic.png');background-size:auto 4.8rem;z-index:1;vertical-align:top;box-shadow:0 0.4rem 1.2rem rgba(8, 52, 67, 0.3);}
+#speakingBattle-game .footer .btn-mic + span {position:absolute;top:0;left:0;width:100%;height:100%;border-radius:50%;background:rgba(0, 224, 255, 1);}
+#speakingBattle-game .footer .btn-mic.on {background-position:-4.8rem 0;}
+#speakingBattle-game .footer .btn-mic.on + span {animation:micWave 1s infinite;animation-timing-function: ease-out;border-radius:50%;}
+#speakingBattle-game .footer .missed-toast {display:none;position:absolute;top:-4rem;left:50%;width:11.2rem;height:3.6rem;margin:0 0 0 -5.6rem;background-image:url('../../img/speakingBattle/img_game_start_missed.png');background-size:100%;animation:missedFadeInOut 1.2s;animation-fill-mode:both;z-index:-1;}
+#speakingBattle-game .footer .missed-toast.show {display:block;}
+@keyframes micWave {0% {transform:scale(1);opacity:1;} 100% {transform:scale(3);opacity:0;}}
+@keyframes missedFadeInOut {0%{transform:translateY(2rem);opacity:0;} 30%{transform:translateY(0);opacity:1;} 70%{opacity:1;} 100%{opacity:0;}}
+
+
+

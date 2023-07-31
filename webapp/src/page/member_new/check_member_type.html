@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <!-- container id추가 0725 : CheckSignUpContainer -->
+    <div class="container" data-contents="new" id="CheckSignUpContainer">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '회원가입',
+          btnClose: true
+        })
+        <div id="ContentsBox">
+          <!-- 스탭 id CheckSignUp 추가 및 스탭번호 추가 0725 -->
+          <div id="CheckSignUp">
+            @@include('../include/step.html', {
+              itemLength: 3,
+              activeStep: 1,
+              items: [
+                {
+                  no: '1',
+                  title: '유형 선택',
+                  className: 'icon1 is-active'
+                },
+                {
+                  no: '2',
+                  title: '계정 인증',
+                  className: 'icon4'
+                },
+                {
+                  no: '3',
+                  title: '정보 입력',
+                  className: 'icon3'
+                }
+              ]
+            })
+            <!-- div SignUpBox 추가 0725 -->
+            <div id="SignUpBox">
+              <div class="innerWrap">
+                <div class="field">
+                  <dl>
+                    <dt class="label">본인이 누구인지 선택해주세요.<span class="required">필수입력</span></dt>
+                    <dd>
+                      <div class="photo-list">
+                        <ul class="item-wrap">
+                          <li class="item mem-item">
+                            <div class="item-inner mem-inner">
+                              <input type="radio" name="test" id="text1">
+                              <label class="item-box" for="text1">
+                                <span>
+                                  <img src="../../img/memberNew/mem_student.png" alt="학생">
+                                </span>
+                                <p>학생</p>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="item mem-item">
+                            <div class="item-inner mem-inner">
+                              <input type="radio" name="test" id="text2">
+                              <label class="item-box" for="text2">
+                                <span>
+                                  <img src="../../img/memberNew/mem_teacher1.png" alt="학교 선생님">
+                                </span>
+                                <p>학교 선생님</p>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="item mem-item">
+                            <div class="item-inner mem-inner">
+                              <input type="radio" name="test" id="text3">
+                              <label class="item-box" for="text3">
+                                <span>
+                                  <img src="../../img/memberNew/mem_teacher2.png" alt="학원 선생님">
+                                </span>
+                                <p>학원 선생님</p>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="item mem-item">
+                            <div class="item-inner mem-inner">
+                              <input type="radio" name="test" id="text4">
+                              <label class="item-box" for="text4">
+                                <span>
+                                  <img src="../../img/memberNew/mem_general.png" alt="일반">
+                                </span>
+                                <p>일반</p>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <!-- buttons 수정 : is-fixed 추가 0725 -->
+              <div class="buttons is-fixed is-pdl">
+                <button class="button is-full is-large is-light">가입하기</button>
+              </div>
+            </div>
+            <!-- //div SignUpBox 추가 0725 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

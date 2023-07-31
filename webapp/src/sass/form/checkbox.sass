@@ -1,0 +1,130 @@
+$checkbox-default-background-color: #CACACA
+$checkbox-checked-background-color: $point-color
+
+[data-contents='new']
+  .checkbox
+    display: inline-block
+    vertical-align: top
+    padding: rem(5px) 0 rem(5px) rem(26px)
+    position: relative
+    input
+      //display: none
+      width: rem(22px)
+      height: rem(22px)
+      background: transparent
+      border: 0
+      outline: 0
+      opacity: 0
+      z-index: 2
+      position: absolute
+      left: rem(15px)
+      top: rem(15px)
+    i
+      width: rem(20px)
+      height: rem(20px)
+      border: 1px solid $border-color
+      position: absolute
+      top: rem(5px)
+      left: 0
+      transition: all .3s
+      &::before
+        content: ''
+        width: rem(9px)
+        height: rem(5px)
+        border: 2px solid $checkbox-default-background-color
+        border: 
+          right: 0
+          top: 0
+        position: absolute
+        top: rem(4px)
+        left: rem(4px)
+        transform: rotate(-45deg)
+        transition: all .3s
+    .title
+      font:
+        size: rem(14)
+        weight: 400
+      line:
+        height: rem(20)
+      display: block
+    input
+      &:disabled
+        + i
+          + strong
+            color: $read-only-font-color
+      &:checked
+        + i
+          border:
+            color: $checkbox-checked-background-color
+          &::before
+            border:
+              color: $checkbox-checked-background-color
+    + .checkbox
+      margin:
+        left: rem(10px)
+
+  .checkbox2
+    display: inline-block
+    vertical-align: top
+    padding: rem(5px) 0
+    position: relative
+    width: 100%
+    input
+      //display: none
+      width: rem(22px)
+      height: rem(22px)
+      background: transparent
+      border: 0
+      outline: 0
+      opacity: 0
+      z-index: 2
+      position: absolute
+      right: rem(2px)
+      top: rem(2px)
+    i
+      width: rem(20px)
+      height: rem(20px)
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      top: rem(5px)
+      right: 0
+      transition: all .3s
+      &::before
+        content: ''
+        width: rem(9px)
+        height: rem(5px)
+        border: 2px solid $checkbox-default-background-color
+        border: 
+          right: 0
+          top: 0
+        position: absolute
+        top: rem(4px)
+        left: rem(3px)
+        transform: rotate(-45deg)
+        transition: all .3s
+    .title
+      font:
+        size: rem(14)
+        weight: 400
+      line:
+        height: rem(20)
+      display: block
+      strong
+        font:
+          weight: 700
+    input
+      &:disabled
+        + i
+          + strong
+            color: $disabled-font-color
+      &:checked
+        + i
+          border:
+            color: $checkbox-checked-background-color
+          &::before
+            border:
+              color: $checkbox-checked-background-color
+    + .checkbox
+      margin:
+        left: rem(10px)

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="0_class.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" id="ClassContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <div class="title">Listening Class</div>
+          <button class="btn-menu"></button>
+          <button class="btn-search"></button>
+          <button class="btn-refresh"></button>
+        </div>
+
+        <div id="ContentsBox">
+
+          <div id="Class">
+            <div class="class-list-box-wrap">
+              <div class="list-box theme-openClass">
+                <!-- theme-* 클래스 추가로 색 및 타입 변경-->
+                <div class="inner">
+                  <div class="learning-info-wrap">
+                    <div class="openClassLogo"></div>
+                    <div class="class-title">윤선생 스피킹</div>
+                    <div class="etc-info">
+                      <div class="date">20-09-01~20-12-31</div>
+                    </div>
+                    <div class="perfection-wrap">
+                      <div class="guage-wrap">
+                        <svg viewBox="-2 -2 64 64" fill="none">
+                          <circle class="bar outside-bar" cx="30" cy="30" r="26"></circle>
+                          <circle class="bar inside-bar" cx="30" cy="30" r="26" stroke-dasharray="164"
+                            stroke-dashoffset="82"></circle>
+                          <!-- stroke-dashoffset 0% = 164 / 100% = 0 -->
+                        </svg>
+                      </div>
+                      <div class="fraction-wrap">
+                        <strong>4</strong>
+                        <div class="bar"></div>
+                        <span>8</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lately-learning-wrap">
+                    <div class="class-title">Level 6</div>
+                    <div class="content-title">What's on Your Bucket List?</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="class-guide-wrap">
+              <div class="guide-box-wrap">
+                <!-- on 추가시 열림 -->
+                <div class="guide-title">
+                  <dl>
+                    <dt>선생님이신가요</dt>
+                    <dd>우리 반 클래스를 만드세요.</dd>
+                  </dl>
+                </div>
+                <div class="guide-cont">
+                  <ul>
+                    <li>
+                      <div class="num">1</div>
+                      <div class="text-wrap">
+                        <p>스피킹클래스 스튜디오 (<a href="#">https://www.sclass.ai</a>)에서 회원가입을 해주세요.</p>
+                        <button class="btn-sclass-join-link">바로 가기</button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="num">2</div>
+                      <div class="text-wrap">
+                        <p>클래스 만들기를 선택하여 새 클래스 만들고 반 학생들을 등록해주세요.</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="mission-english-intro-wrap">
+                    <div class="thumbnail-wrap">
+                      <div class="thumbnail" style="background-image:url('../../img/icon_classList_guide_mLisa.png');">
+                      </div>
+                    </div>
+                    <div class="text-wrap">
+                      <dl>
+                        <dt>Mission English</dt>
+                        <dd>학생들과 함께 다양한 상황대화 학습이 가능합니다.</dd>
+                        <dd>
+                          <div class="link-wrap">
+                            <a href="#">가입 신청</a>
+                            <a href="#">앱 다운로드</a>
+                          </div>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-box-wrap">
+                <div class="guide-title">
+                  <dl>
+                    <dt>학생이신가요?</dt>
+                    <dd>담임 선생님이 만든 우리 반 클래스에 참여하세요.</dd>
+                  </dl>
+                </div>
+                <div class="guide-cont">
+                  <ul>
+                    <li>
+                      <div class="num">1</div>
+                      <div class="text-wrap">
+                        <p>선생님께 우리 반 클래스 초대코드를 안내 받으세요.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="num">2</div>
+                      <div class="text-wrap">
+                        <p>아래 <span class="icon-plus"></span>버튼 또는 메뉴> 클래스 추가 를 선택하고 초대코드를 등록하세요.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="guide-floating-btn-wrap">
+                <button></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    // guideBox
+    const guideBoxTitle = document.querySelectorAll('.class-guide-wrap .guide-title');
+
+    function guideBoxClick() {
+      if (!this.parentNode.classList.contains('on')) {
+        guideBoxTitle.forEach(e => e.parentNode.classList.remove('on'));
+      }
+      this.parentNode.classList.toggle('on');
+    }
+    guideBoxTitle.forEach(item => item.addEventListener('click', guideBoxClick))
+  </script>
+</body>
+
+</html>

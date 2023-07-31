@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="0_member.css">
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '휴면 계정 해제 안내',
+          btnBack: true,
+          btnClose: false
+        })
+        <div id="ContentsBox">
+          <div class="dormant">
+            <div class="innerWrap passwordCont">
+              <p class="title">회원님은 최근 1년 동안<br>스피킹클래스를 이용하지 않아<br>휴먼처리가 된 상태입니다.</p>
+              <p class="s-txt">본인 확인 절차 후 휴면 상태를 해제하실 수 있습니다.</p>
+              <div class="passwordBoxList">
+                <div>
+                  <a href="#" class="linkNext">
+                    <h3>휴대폰 번호 인증</h3>
+                    <p>현재 사용중인 번호로<br>
+                      인증할 수 있습니다.</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="#" class="linkNext">
+                    <h3>이메일 주소 인증</h3>
+                    <p>현재 사용중인 이메일로<br>
+                      인증할 수 있습니다.</p>
+                  </a>
+                </div>
+              </div>
+              <div class="mail-msg-box">
+                <p>휴면 계정 정책</p>
+                <p>최근 1년 이내 로그인 기록이 없는 계정은 휴면 계정으로<br>전환되며 회원님의 정보는 안전하게 분리 보관됩니다.<br>
+                  휴면 계정 해제 후 서비스를 다시 이용할 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script>
+    function selectAll(selectAll)  {
+      const checkboxes 
+          = document.getElementsByName('agree');
+      
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked;
+      })
+    }
+    function isVisible(target) {
+      const ele = document.querySelector(target);
+      ele.classList.add('is-visible');
+    }
+    function isHidden(target) {
+      const ele = document.querySelector(target);
+      ele.classList.remove('is-visible');
+    }
+  </script> 
+</body>
+
+</html>

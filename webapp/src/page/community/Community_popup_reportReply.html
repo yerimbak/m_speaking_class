@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="CompleteContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li class="on"></li> <!-- 활성화 된건 on 추가 -->
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+          <div id="CommonButton">
+            <button class="btn-confirm">완료</button>
+          </div>
+        </div>
+
+        <div id="CommunityPopup">
+          <div class="modal-cont">
+
+            <div id="CommuoitymunityReply">
+              <div class="community-header">
+                <div class="title">댓글 3</div>
+                <button class="btn-back"></button>
+              </div>
+              <div class="community-cont">
+                <div class="inner">
+                  <div class="inputReply-wrap">
+                    <textarea placeholder="댓글을 입력해주세요."></textarea>
+                    <div class="btn-wrap">
+                      <button class="btn-reply-cancel">취소</button>
+                      <button class="btn-reply-add">댓글</button>
+                    </div>
+                  </div>
+                  <div class="replyList-wrap">
+                    <div class="reply-item">
+                      <div class="write-info">
+                        <div class="user">@Hayden</div>
+                        <div class="bar"></div>
+                        <div class="date">1시간 전</div>
+                      </div>
+                      <div class="reply-cont">
+                        <p>AI 찬성이요</p>
+                      </div>
+                      <div class="etc-info">
+                        <div class="like">
+                          <dl class="on">
+                            <!-- on 추가시 하트 색 변경 -->
+                            <dt></dt>
+                            <dd>4</dd>
+                          </dl>
+                        </div>
+                        <div class="edit-wrap">
+                          <button class="btn-edit"></button>
+                          <div class="edit-popup-wrap">
+                            <button>신고하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reply-item">
+                      <div class="write-info">
+                        <div class="user">@Hayden</div>
+                        <div class="bar"></div>
+                        <div class="date">1시간 전</div>
+                      </div>
+                      <div class="reply-cont">
+                        <p>AI 찬성이요</p>
+                      </div>
+                      <div class="etc-info">
+                        <div class="like">
+                          <dl>
+                            <!-- on 추가시 하트 색 변경 -->
+                            <dt></dt>
+                            <dd>4</dd>
+                          </dl>
+                        </div>
+                        <div class="edit-wrap">
+                          <button class="btn-edit"></button>
+                          <div class="edit-popup-wrap">
+                            <button>신고하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reply-item">
+                      <div class="write-info">
+                        <div class="user">@Hayden</div>
+                        <div class="bar"></div>
+                        <div class="date">1시간 전</div>
+                      </div>
+                      <div class="reply-cont">
+                        <p>AI 찬성이요</p>
+                      </div>
+                      <div class="etc-info">
+                        <div class="like">
+                          <dl>
+                            <!-- on 추가시 하트 색 변경 -->
+                            <dt></dt>
+                            <dd>4</dd>
+                          </dl>
+                        </div>
+                        <div class="edit-wrap">
+                          <button class="btn-edit"></button>
+                          <div class="edit-popup-wrap">
+                            <button>신고하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="ReportReplyPopup" class="modal">
+          <div class="modal-inner">
+            <div class="modal-cont">
+              <div class="title-wrap">
+                <div class="title">신고사유</div>
+                <button class="btn-modal-close"></button>
+              </div>
+              <div class="checkbox-cont-wrap">
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="reportReply-check-1">
+                  <label for="reportReply-check-1">성적인 콘텐츠</label>
+                </div>
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="reportReply-check-2">
+                  <label for="reportReply-check-2">사기 또는 거짓</label>
+                </div>
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="reportReply-check-3">
+                  <label for="reportReply-check-3">스팸</label>
+                </div>
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="reportReply-check-4">
+                  <label for="reportReply-check-4">혐오 발언 또는 상징</label>
+                </div>
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="reportReply-check-5">
+                  <label for="reportReply-check-5">폭력 또는 위험한 단체</label>
+                </div>
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="reportReply-check-6">
+                  <label for="reportReply-check-6">불법 또는 규제 상품 판매</label>
+                </div>
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="reportReply-check-7">
+                  <label for="reportReply-check-7">따돌림 또는 괴롭힘</label>
+                </div>
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="reportReply-check-8" class="selfInput">
+                  <label for="reportReply-check-8">직접 입력하기</label>
+                  <div class="input-wrap" style="display:none;">
+                    <textarea placeholder="사유를 입력해주세요."></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="desc-wrap">
+                <p>신고하신 댓글은 운영정책에 따라 처리되며, 허위 신고 시 이용에 제한을 받을 수 있습니다.</p>
+              </div>
+              <div id="CommonButton">
+                <button class="btn-confirm">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelector('#ReportReplyPopup .selfInput').addEventListener('click', function () {
+      const _parentNode = this.parentNode;
+      let _checked = this.checked;
+
+      if (_checked == true) {
+        _parentNode.querySelector('.input-wrap').style.display = 'block';
+      } else {
+        _parentNode.querySelector('.input-wrap').style.display = 'none';
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+$radio-default-background-color: #CACACA
+$radio-checked-background-color: $point-color
+
+[data-contents='new']
+  .radio
+    display: inline-block
+    vertical-align: top
+    padding: rem(5px) 0 rem(5px) rem(26px)
+    position: relative
+    input
+      //display: none
+      width: rem(22px)
+      height: rem(22px)
+      background: transparent
+      border: 0
+      outline: 0
+      opacity: 0
+      z-index: 2
+      position: absolute
+      left: rem(15px)
+      top: rem(15px)
+    i
+      width: rem(20px)
+      height: rem(20px)
+      border: 1px solid $border-color
+      border:
+        radius: 100%
+      position: absolute
+      top: rem(5px)
+      left: 0
+      //transition: all .3s
+      &::before
+        content: ''
+        width: rem(20px)
+        height: rem(20px)
+        border: 1px solid $radio-default-background-color
+        border:
+          radius: 100%
+        position: absolute
+        top: rem(-1px)
+        left: rem(-1px)
+        //transition: all .3s
+        box-sizing: border-box
+    .title
+      font:
+        size: rem(14)
+        weight: 400
+      color: $base-color
+      line:
+        height: rem(20)
+      display: block
+    input
+      &:checked
+        + i
+          border:
+            color: $radio-checked-background-color
+          &::before
+            content: ''
+            width: rem(12px)
+            height: rem(12px)
+            border-radius: 50%
+            background-color: $radio-checked-background-color
+            border:
+              color: $radio-checked-background-color
+            top: rem(3px)
+            left: rem(3px)

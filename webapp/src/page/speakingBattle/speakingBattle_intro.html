@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="speakingBattle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body ontouchstart="">
+
+  <div id="speakingBattle-intro">
+    <div class="header">
+      <p>리스닝 배틀</p>
+      <button class="btn-close"></button>
+    </div>
+    <div class="contents">
+      <div class="tab-nav-wrap">
+        <ul>
+          <li class="on">게임</li> <!-- on 추가시 활성화 -->
+          <li>순위</li>
+        </ul>
+      </div>
+      <div class="tab-cont-wrap">
+        <div class="tab-cont on">
+          <!-- on 추가시 활성화 -->
+
+          <!-- 게임 탭 -->
+          <div class="game-cont-wrap">
+            <div class="intro-slide-wrap">
+              <div class="slide-wrap">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slide-item slide-1">
+                        <div class="slide-item-inner">
+                          <div class="title"></div>
+                          <p>한글 뜻에 맞는 영어 문장을 말하여<br>빠르게 Clear 시키는 게임입니다.</p>
+                          <div class="gif-img"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide-item slide-2">
+                        <div class="slide-item-inner">
+                          <div class="title"></div>
+                          <p>마이크를 선택하고 영어 문장을 말한 뒤<br>정지를 선택하면 AI 발화 분석 시작됩니다.</p>
+                          <div class="gif-img"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide-item slide-3">
+                        <div class="slide-item-inner">
+                          <div class="title"></div>
+                          <p>총 5개의 하트로 시작합니다.<br>문장이 바닥에 떨어지면 하트 하나가 줄어들고,<br>모든 하트를 소진하면 게임이 끝나요.</p>
+                          <div class="gif-img"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide-item slide-4">
+                        <div class="slide-item-inner">
+                          <div class="title"></div>
+                          <p>소요시간으로 순위를 산정합니다.<br>빠르고 정확하게 대화하는 것이 중요해요.</p>
+                          <div class="gif-img"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <button class="btn-start">Let’s Start!</button>
+          </div>
+
+        </div>
+        <div class="tab-cont">
+
+          <!-- 순위 탭 -->
+          <div class="ranking-cont-wrap">
+            <div class="my-last-ranking">
+              <div class="title">My Last Ranking</div>
+
+              <!-- 완료 예시 -->
+              <div class="my-ranking-box-wrap complete">
+                <!-- complete  / 완료 못했으면 추가클래스 없음 -->
+                <div class="ranking">6</div>
+                <div class="my-info">
+                  <div class="top-text">
+                    <strong>마학생</strong>
+                    <span>student06</span>
+                  </div>
+                  <div class="btm-text">
+                    2020-06-21 17:38
+                  </div>
+                </div>
+                <div class="complete-status">
+                  <strong>완료</strong>
+                  <span>28:55</span>
+                </div>
+              </div>
+
+              <!-- 1,2,3등 예시 -->
+              <div class="my-ranking-box-wrap complete">
+                <div class="ranking ranking-1">1</div> <!-- 랭킹1,2,3등이면 추가로 ranking-1 / ranking-2 / ranking-3 클래스 추가-->
+                <div class="my-info">
+                  <div class="top-text">
+                    <strong>마학생</strong>
+                    <span>student06</span>
+                  </div>
+                  <div class="btm-text">
+                    2020-06-21 17:38
+                  </div>
+                </div>
+                <div class="complete-status">
+                  <strong>완료</strong>
+                  <span>28:55</span>
+                </div>
+              </div>
+
+              <!-- 미완료 예시 -->
+              <div class="my-ranking-box-wrap">
+                <div class="ranking">-</div>
+                <div class="my-info">
+                  <div class="top-text">
+                    <strong>마학생</strong>
+                    <span>student06</span>
+                  </div>
+                  <div class="btm-text">
+                    2020-06-21 17:38
+                  </div>
+                </div>
+                <div class="complete-status">
+                  <strong>미완료</strong>
+                  <span>-</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="total-ranking-list">
+              <div class="list-title">
+                <table>
+                  <tr>
+                    <th>전체 순위</th>
+                    <th>구분</th>
+                    <th>소요시간</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="list-wrap">
+                <table>
+                  <tr class="complete">
+                    <!-- 완료된 라인은 complete -->
+                    <td>
+                      <div class="ranking-info">
+                        <div class="ranking ranking-1">1</div>
+                        <!-- 랭킹1,2,3등이면 추가로 ranking-1 / ranking-2 / ranking-3 클래스 추가-->
+                        <div class="user-info">
+                          <strong>김학생</strong>
+                          <span>student01</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>완료</td>
+                    <td>25:34</td>
+                  </tr>
+                  <tr class="complete">
+                    <td>
+                      <div class="ranking-info">
+                        <div class="ranking ranking-2">2</div>
+                        <div class="user-info">
+                          <strong>김학생</strong>
+                          <span>student01</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>완료</td>
+                    <td>25:34</td>
+                  </tr>
+                  <tr class="complete">
+                    <td>
+                      <div class="ranking-info">
+                        <div class="ranking ranking-3">3</div>
+                        <div class="user-info">
+                          <strong>김학생</strong>
+                          <span>student01</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>완료</td>
+                    <td>25:34</td>
+                  </tr>
+                  <tr class="complete">
+                    <td>
+                      <div class="ranking-info">
+                        <div class="ranking">4</div>
+                        <div class="user-info">
+                          <strong>김학생</strong>
+                          <span>student01</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>완료</td>
+                    <td>25:34</td>
+                  </tr>
+                  <tr class="complete">
+                    <td>
+                      <div class="ranking-info">
+                        <div class="ranking">5</div>
+                        <div class="user-info">
+                          <strong>김학생</strong>
+                          <span>student01</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>완료</td>
+                    <td>25:34</td>
+                  </tr>
+                  <tr class="">
+                    <td>
+                      <div class="ranking-info">
+                        <div class="ranking">-</div>
+                        <div class="user-info">
+                          <strong>김학생</strong>
+                          <span>student01</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>미완료</td>
+                    <td>-</td>
+                  </tr>
+                  <tr class="">
+                    <td>
+                      <div class="ranking-info">
+                        <div class="ranking">-</div>
+                        <div class="user-info">
+                          <strong>김학생</strong>
+                          <span>student01</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>미완료</td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <button class="btn-top">TOP</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 16,
+      pagination: { // 페이징 설정
+        el: '.swiper-pagination',
+      },
+    })
+
+    // tab 전환
+    document.querySelectorAll('.tab-nav-wrap ul li').forEach(function (item, index) {
+      item.addEventListener('click', function () {
+        // 탭
+        document.querySelectorAll('.tab-nav-wrap ul li').forEach(e => e.classList.remove('on'));
+        item.classList.add('on');
+
+        // 콘텐츠
+        document.querySelectorAll('.tab-cont-wrap .tab-cont').forEach(e => e.classList.remove('on'));
+        document.querySelectorAll('.tab-cont-wrap .tab-cont')[index].classList.add('on');
+      })
+    })
+  </script>
+</body>
+
+</html>

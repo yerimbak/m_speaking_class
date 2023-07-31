@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../css/reset.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../0_contents.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="RolePlayReviewContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li></li> <!-- 활성화 된건 on 추가 -->
+              <li></li>
+              <li class="on"></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="TutorGuideSection">
+          <div class="char-wrap">
+            <div class="char default-male"></div>
+            <div class="bg"></div>
+          </div>
+          <div class="text-wrap">
+            <p>내가 잘 말했는지 하나씩 확인해 보세요.</p>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+
+          <div id="RolePlayReview">
+            <div id="ReviewSlide">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+
+                    <div class="slide-item">
+                      <div class="slide-item-inner">
+                        <div class="talk-exam-wrap talk-you">
+                          <div class="talker">You</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to meet you</div>
+                            <div class="accuracy">100%</div>
+                          </div>
+                        </div>
+                        <div class="talk-exam-wrap talk-ai">
+                          <div class="talker">AI</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to meet you too</div>
+                            <div class="btm-text">나도 만나서 반가워</div>
+                          </div>
+                        </div>
+                        <div class="talk-exam-wrap talk-answer">
+                          <div class="talker">정답</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to meet you too</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="swiper-slide">
+
+                    <div class="slide-item">
+                      <div class="slide-item-inner">
+                        <div class="talk-exam-wrap talk-you">
+                          <div class="talker">You</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to see you</div>
+                            <div class="accuracy">100%</div>
+                          </div>
+                        </div>
+                        <div class="talk-exam-wrap talk-ai">
+                          <div class="talker">AI</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to see you too</div>
+                            <div class="btm-text">나도 만나서 반가워</div>
+                          </div>
+                        </div>
+                        <div class="talk-exam-wrap talk-answer">
+                          <div class="talker">정답</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to see you too</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div id="CommonButton">
+              <button class="btn-normal">Previous</button>
+              <button class="btn-em">Next</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper', {
+      pagination: { // 페이징 설정
+        el: '.swiper-pagination',
+      },
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+<body>
+  <div id="root">
+    <!-- container id추가 : NewJoinStepContainer 0726 -->
+    <div class="container" data-contents="new" id="NewJoinStepContainer">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '회원가입',
+          btnClose: true
+        })
+        <div id="ContentsBox">
+          <div id="NewJoinStep">
+            @@include('../include/step.html', {
+              itemLength: 3,
+              activeStep: 3,
+              items: [
+                {
+                  no: '1',
+                  title: '유형 선택',
+                  className: 'icon1 is-complete'
+                },
+                {
+                  no: '2',
+                  title: '메일 인증',
+                  className: 'icon4 is-complete'
+                },
+                {
+                  no: '3',
+                  title: '정보 입력',
+                  className: 'icon3 is-active'
+                }
+              ]
+            })
+
+            <!-- div SignUpBox 추가 0725 -->
+            <div id="SignUpBox">
+              @@include('../include/default_filed.html', {
+              label: '이메일',
+              inputType: 'text',
+              readonly: true,
+              required: true,
+              value: 'test@test.com'
+              })
+              @@include('../include/default_filed.html', {
+              label: '이름',
+              placeholder: '이름을 입력해주세요.',
+              required: true,
+              inputType: 'text',
+              })
+              @@include('../include/default_filed.html', {
+              className: 'is-position',
+              label: '비밀번호',
+              placeholder: '비밀번호를 입력해주세요.',
+              required: true,
+              inputType: 'password',
+              layer: true
+              })
+              @@include('../include/select_filed.html', {
+
+              })
+              @@include('../include/school_search.html', {
+                className: 'is-search',
+                label: '학교/학원/교습소',
+                placeholder: '학교 기관의 이름을 입력해주세요.',
+                required: true,
+                inputType: 'text',
+              })
+              <div class="field">
+                <!-- 
+                  성공시 class="is-success",
+                  실패시 class="is-error"
+                  input line으로 적용 class="is-line"
+                -->
+                <label class="label">학년 / 반 (선택)</label>
+                <div class="control">
+                  <div class="level">
+                    <div class="is-left">
+                      <input class="input" type="tel"> <span>학년</span>
+                    </div>
+                    <div class="is-left">
+                      <input class="input" type="tel"> <span>반</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="help">validation</p>
+              </div>
+              @@include('../include/button_filed.html', {
+              label: '휴대폰 번호',
+              placeholder: 'ex &#41; 010-0000-0000',
+              required: true,
+              inputType: 'tel',
+              buttonDisabled: true,
+              btnText: '인증',
+              discription: '교과서 추가 및 업데이트 내역을 전송해드립니다.'
+              })
+              <div class="field agree-list">
+                <dl>
+                  <dt class="label">약관동의 <span class="required">필수입력</span></dt>
+                  <dd class="box agree-box">
+                    <div class="all">
+                      <div class="agree-item">
+                        <label class="checkbox2">
+                          <p class="title"><strong>모두 확인, 동의합니다.</strong> </p>
+                          <input type="checkbox">
+                          <i></i>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="agree-item-list">
+                      <ul>
+                        <!-- 필수일경우 class="required" -->
+                        <li class="agree-item required">
+                          <label class="checkbox2">
+                            <p class="title">스피킹클래스 이용약관 동의 <span>(필수)</span></p>
+                            <input type="checkbox">
+                            <i></i>
+                          </label>
+                        </li>
+                        <li class="agree-item required">
+                          <label class="checkbox2">
+                            <p class="title">개인정보 수집 및 이용 동의 <span>(필수)</span></p>
+                            <input type="checkbox">
+                            <i></i>
+                          </label>
+                        </li>
+                        <li class="agree-item">
+                          <label class="checkbox2">
+                            <p class="title">이벤트. 서비스 안내 수신 동의 <span>(선택)</span></p>
+                            <input type="checkbox">
+                            <i></i>
+                          </label>
+                        </li>
+                        <li class="agree-item">
+                          <label class="checkbox2">
+                            <p class="title">서비스 혜택 정보 수신 동의 <span>(선택)</span></p>
+                            <input type="checkbox">
+                            <i></i>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="buttons">
+                <button class="button is-full is-large is-light" disabled>가입하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

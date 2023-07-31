@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="0_member.css">
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '내 정보 수정',
+          btnBack: true,
+          btnClose: false
+        })
+        <div id="ContentsBox">
+          <div class="myinfo">
+            <div class="innerWrap">
+              <div class="info-area">
+                @@include('../include/default_filed.html', {
+                  label: '아이디',
+                  value: 'studen****',
+                  readonly: 'readonly',
+                  validation: false,
+                  inputType: 'text',
+                  })
+                @@include('../include/default_filed.html', {
+                  label: '이름',
+                  placeholder: '김학생',
+                  validation: false,
+                  inputType: 'text',
+                  })
+                @@include('../include/default_filed.html', {
+                  label: '생년월일',
+                  value: 'YYYY/MM/DD',
+                  readonly: 'readonly',
+                  validation: false,
+                  inputType: 'text',
+                  })
+                @@include('../include/button_filed.html', {
+                  label: '휴대폰 번호',
+                  value: '010-####-####',
+                  readonly: 'readonly',
+                  inputType: 'tel',
+                  btnText: '변경',
+                  buttonDisabled: false,
+                  validation: false,
+                  })
+                <div class="field">
+                  <label class="label">휴대폰 번호</label>
+                  <div class="control">
+                    <div class="field is-grouped">
+                      <!-- 
+                        성공시 class="is-success",
+                        실패시 class="is-error"
+                        input line으로 적용 class="is-line"
+                      -->
+                      <div class="control is-expanded">
+                        <input class="input " type="tel" placeholder="숫자만 입력해주세요.">
+                      </div>
+                      <div class="control">
+                        <!-- 버튼 class 변경 : is-light-outline -->
+                        <button class="button is-light-outline" type="button">인증</button> 
+                      </div>
+                    </div>
+                    <div class="field is-grouped">
+                      <!-- 
+                        성공시 class="is-success",
+                        실패시 class="is-error"
+                        input line으로 적용 class="is-line"
+                      -->
+                      <div class="control is-expanded">
+                        <input class="input pd-r" type="tel" placeholder="숫자 6자리 입력"  disabled="disabled">
+                        <span class="time">5:00</span>
+                      </div>
+                      <div class="control">
+                        <!-- 버튼 class 변경 : is-light-outline -->
+                        <button class="button is-light-outline" type="button" disabled="disabled">확인</button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">비밀번호</label>
+                  <!-- 비밀번호 변경 클릭시 pwdChange is-visible 클래스명 추가-->
+                  <div class="pwd-change">
+                    <div class="control">
+                      <input class="input " type="password" placeholder="현재 비밀번호">
+                    </div>
+                    <div class="control">
+                      <input class="input " type="password"  placeholder="새 비밀번호">
+                    </div>
+                    <div class="control">
+                      <input class="input " type="password" placeholder="새 비밀번호 확인">
+                    </div>
+                    <div class="pwdRule">
+                      <div class="rule-title">비밀번호 규칙</div>
+                      <div class="rule-desc">비밀번호는 영문, 숫자, 특수분자(!@#$%^&amp;*)를 포함하여<br>8~16자로 입력해 주세요.</div>
+                    </div>
+                    <div class="buttons">
+                      <button class="button is-full is-large is-gray" onclick="isHidden('.pwd-change')">취소</button>
+                    </div>
+                  </div>
+                  <div class="buttons">
+                    <button class="button is-full is-large is-light-outline" onclick="isVisible('.pwd-change')">비밀번호 변경</button>
+                  </div>
+                </div>
+                
+                <div class="field">
+                  <label class="label">공직자 계정</label>
+                  <div class="control">
+                    <div class="field is-grouped">
+                      <!-- 
+                        성공시 class="is-success",
+                        실패시 class="is-error"
+                        input line으로 적용 class="is-line"
+                      -->
+                      <div class="control is-expanded">
+                        <input class="input " type="email" placeholder="이메일을 입력해주세요.">
+                      </div>
+                      <div class="control">
+                        <!-- 버튼 class 변경 : is-light-outline -->
+                        <button class="button is-light-outline" type="button">인증</button> 
+                      </div>
+                    </div>
+                    <div class="field is-grouped">
+                      <!-- 
+                        성공시 class="is-success",
+                        실패시 class="is-error"
+                        input line으로 적용 class="is-line"
+                      -->
+                      <div class="control is-expanded">
+                        <input class="input pd-r" type="tel" placeholder="숫자 6자리 입력"  disabled="disabled">
+                        <span class="time">5:00</span>
+                      </div>
+                      <div class="control">
+                        <!-- 버튼 class 변경 : is-light-outline -->
+                        <button class="button is-light-outline" type="button" disabled="disabled">확인</button> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chkRule">
+                    <div class="rule-title">인증 번호가 오지 않아요!</div>
+                    <div class="rule-desc">인증 메일이 오지 않으면 스팸으로 분류 되어 있거나,<br>
+                      휴면 계정일 수 있습니다. <br>
+                      계정을 다시 한 번 확인해 주세요.</div>
+                  </div>
+                </div>
+                
+                @@include('../include/button_filed.html', {
+                  label: '공직자 계정',
+                  value: 'student@mail.com',
+                  readonly: 'readonly',
+                  inputType: 'tel',
+                  btnText: '변경',
+                  buttonDisabled: false,
+                  validation: false,
+                  })
+                @@include('../include/school_search.html', {
+                  className: 'is-search',
+                  label: '학교/학원/교습소',
+                  placeholder: '학교 기관의 이름을 입력해주세요.',
+                  required: false,
+                  inputType: 'text',
+                })
+                <div class="field agree-list type-2">
+                  <div class="agree-box">
+                    <div class="all">
+                      <strong>마케팅 수신동의 설정</strong>
+                    </div>
+                    <div class="box agree-item-list">
+                      <ul>
+                        <li class="agree-item">
+                          <label class="checkbox2">
+                            <p class="title">앱 푸시</p>
+                            <input type="checkbox" name="agree">
+                            <i></i>
+                          </label>
+                        </li>
+                        <li class="agree-item">
+                          <label class="checkbox2">
+                            <p class="title">이메일</p>
+                            <input type="checkbox" name="agree">
+                            <i></i>
+                          </label>
+                        </li>
+                        <li class="agree-item">
+                          <label class="checkbox2">
+                            <p class="title">SMS</p>
+                            <input type="checkbox" name="agree">
+                            <i></i>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="pwdRule">
+                  <div class="rule-title">개인정보 유효기간 설정</div>
+                  <div class="rule-desc">개인정보를 파기 또는 분리 보관해야 하는 서비스 미이용 기간을 설정할 수 있습니다. 선택한 기간 동안 서비스를 이용하지 않는 경우 휴면 계정으로 전환됩니다.</div>
+                </div>
+                <div class="radio-wrap">
+                  <label class="radio">
+                    <input type="radio" name="expire" checked="">
+                    <i></i>
+                    <p>1년</p>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="expire">
+                    <i></i>
+                    <p>3년</p>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="expire">
+                    <i></i>
+                    <p>5년</p>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="expire">
+                    <i></i>
+                    <p>탈퇴시까지</p>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="buttons is-fixed">
+                <button class="button is-full is-large is-light">수정</button>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script>
+    function isVisible(target) {
+      const ele = document.querySelector(target);
+      ele.classList.add('is-visible');
+    }
+    function isHidden(target) {
+      const ele = document.querySelector(target);
+      ele.classList.remove('is-visible');
+    }
+  </script> 
+</body>
+
+</html>

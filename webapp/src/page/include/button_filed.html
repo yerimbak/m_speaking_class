@@ -1,0 +1,31 @@
+<div class="field @@if(context.className){@@className}">
+  <label class="label">@@label @@if(context.required){<span class="required">필수입력</span>}</label>
+  <div class="control">
+    <div class="field is-grouped">
+      <!-- 
+        성공시 class="is-success",
+        실패시 class="is-error"
+        input line으로 적용 class="is-line"
+      -->
+      <div class="control is-expanded">
+        <input class="input @@if(context.inputClass){@@inputClass}" type="@@inputType" @@if(context.placeholder){placeholder="@@placeholder" }
+          @@if(context.readonly){readonly="readonly" } @@if(context.value){value="@@value" }>
+        @@if(context.timer){<span class="time">5:00</span>}
+      </div>
+      <div class="control">
+        <!-- 버튼 class 변경 : is-light-outline -->
+        @@if(context.btnText){<button class="button is-light-outline" type="button" @@if(context.buttonDisabled){disabled="disabled" }>@@btnText</button>} 
+      </div>
+    </div>
+  </div>
+  @@if(context.validation != false){
+    <p class="help"><i></i>validation</p>
+    }
+  @@if(context.discription){
+    <p class="discription">@@discription</p>
+  }
+  @@if(context.discriptionError){
+    <p class="discription">@@discriptionError</p>
+  }
+  
+</div>

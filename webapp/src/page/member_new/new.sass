@@ -1,0 +1,1838 @@
+@charset "utf-8"
+
+// @import './0_member.css'
+@import '../../sass/base/_all'
+@import '../../sass/form/_all'
+@import '../../sass/button/_all'
+@import '../../sass/text/_all'
+@import '../../sass/contents/_all'
+
+[data-contents='new']
+  // padding:
+  //   bottom: rem(114px)
+  .notch
+    .container
+      padding: 
+        top: $notch
+  #CommonLayout
+    // padding:
+    //   bottom: rem(40px)
+    height: auto
+  #ContentsBox
+    > div
+      padding:
+        top: rem(32px)
+      &#ClassMain
+        padding: rem(16px) 0 0
+        overflow: inherit
+  .innerWrap
+    display: flex
+    flex-flow: column
+    height: auto
+    min-height: 0
+    margin-bottom: rem(150px)
+
+  /* 로그인 */
+  &#NewLoginConrainer
+    // background: linear-gradient(349.93deg, #00A6BF 75.36%, #6D7CFF 120.62%)
+    #ContentsBox
+      padding: 0
+    #NewLogin
+      padding: 0
+      // background: $point-color
+      background: linear-gradient(180deg, $point-color 100%, $white-color 100%)
+      .boxImagesCont
+        @include Align-middle-column()
+        height: rem(240px)
+        background-size: 100% auto
+        padding: 20px
+        h1
+          width: rem(212px)
+          height: rem(48px)
+          img
+            width: 100%
+            height: auto
+        p
+          color: $white-color
+          font: 
+            size: rem(16px)
+            weight: 500
+          padding: 
+            top: rem(24px)
+      .loginCont
+        @include top-radius-box()
+        .control
+          .input
+            padding: rem(27px) rem(16px)
+        .checkbox
+          i
+            border-radius: rem(6px)
+            box-shadow: 0px 4px 62px rgba(153, 171, 198, 0.18)
+          input[type=checkbox]:checked
+            & + i
+              background: #EBEBEB
+              border-color: #EBEBEB
+              &::before
+                border-color: $black-color
+      .login-button
+        margin:
+          top: rem(32px)
+      .join-link
+        white-space: nowrap
+        margin:
+          top: rem(6px)
+        // &:not(:last-child)
+          // margin:
+          //   bottom: rem($bottom-space)
+        ul
+          @include Align-middle()
+        li
+          @include Align-middle()
+          + li
+            &::before
+              @include before(inline-block, '', 1px, rem(12px))
+              // display: inline-block
+              // content: ''
+              // width: 1px
+              // height: 12px
+              background: #CCC
+        a
+          display: block
+          padding: rem(10px) rem(7px)
+          font: 
+            size: rem(13px)
+            weight: 500
+          color: $black-color
+        &.Terms
+          margin-top: rem(40px)
+          li
+            width: 50%
+            a
+              width: 100%
+              text-align: center
+              font-weight: 700
+          
+      .sns-login
+        margin:
+          top: rem(50px)
+        .title
+          text-align: center
+          font-size: rem(13px)
+          color: $base-color
+        > div
+            margin:
+              top: rem(18px)
+        ul
+          @include Align-middle()
+        li
+          margin:
+            left: rem(20px)
+          &:first-child
+            margin:
+              left: 0
+          &.naver
+            a
+              background:
+                image: url(../../img/memberNew/sns_naver.png)
+          &.kakao
+            a
+              background: 
+                image: url(../../img/memberNew/sns_kakao.png)
+          &.google
+            a
+              background: 
+                image: url(../../img/memberNew/sns_apple.png)
+          &.apple
+            a
+              background: 
+                image: url(../../img/memberNew/sns_google.png)
+        a
+          @include Align-middle()
+          width: rem(40px)
+          height: rem(40px)
+          font-size: 0
+          // border: 1px solid #E6E6E6
+          border-radius: 50%
+          background: 
+            position: center
+            repeat: no-repeat
+            size: 100% auto
+          
+
+  .error-messege
+    text-align: center
+    color: $error-color
+    word-break: keep-all
+    margin:
+      top: rem(40px)
+
+  &#CheckSignUpContainer,
+  &#NewJoinStepContainer
+    background: linear-gradient(to bottom, #F0F2F5 50%, #fff 0%);
+    #ContentsBox
+      padding: 0
+  #SignUpBox
+    @include top-radius-box()
+    margin: 
+      top: rem(16px)
+    max-height: 10000px
+          
+  /* STEP */
+  $step-background-color-active: #444
+  $step-background-color-complete: #F0F2F5
+  $step-background-color-default: #FFF
+  $step-line-color: #D9D9D9
+
+  #step-box
+    @include Align-middle()
+    // display: flex
+    // align-items: center
+    // justify-content: center
+    ol
+      display: flex
+      justify-content: space-between
+      position: relative
+      // &::before,
+      // &::after      
+      //   content: ''
+      //   //width: rem(20px)
+      //   width: calc(100% - #{rem(30px)})
+      //   height: 1px
+      //   position: absolute
+      //   background:
+      //     color: #D9D9D9
+      //   top: rem(15px)
+      //   transform: translateX(-50%)
+      //   left: 50%
+      //&::before
+        //left: 30%
+      //&::after
+        //right: 22%
+      // @for $i from 1 to 3
+      //   &[data-active-step="#{$i}"]
+      //     &::after
+      //       @if $i == 1
+      //         background: linear-gradient(to right,$step-background-color-complete 17%,$step-line-color 17% 37%, $step-background-color-complete 37% 63%, $step-line-color 60% 80%, $step-background-color-complete 80%)
+      //       @else if $i == 2
+      //         background: linear-gradient(90deg,$step-background-color-complete,$step-background-color-complete 0%,$step-line-color 0,$step-line-color)
+      //       @else if $i == 3
+      //         background: linear-gradient(90deg,$step-background-color-complete,$step-background-color-complete 0%,$step-line-color 0,$step-line-color)
+    .item
+      position: relative
+      z-index: 1
+      margin:
+        left: rem(46px)
+      &::before
+        display: block
+        content: ''
+        width: rem(20px)
+        height: rem(1.5px)
+        background: #D9D9D9
+        margin-right: rem(13px)
+        position: absolute
+        right: rem(45px)
+        top: rem(14px)
+      &:first-child
+        margin:
+          left: 0
+        &::before
+          display: none
+      
+      .icon
+        @include Align-middle()
+        width: rem(30px)
+        height: rem(30px)
+        margin: auto
+        background:
+          color: $step-background-color-default
+        border:
+          radius: 100%
+        font-size: rem(13px)
+        
+        span
+          font:
+            size: 0
+      .title
+        display: block
+        margin:
+          top: rem(5px)
+        font:
+          size: rem(12px)
+          weight: 500
+        color: $base-color
+      &.is-complete
+        .icon
+          background:
+            color: $step-background-color-default
+          font: 
+            size: 0
+          &::after
+            content: ''
+            display: block
+            width: rem(11px)
+            height: rem(6px)
+            border: solid #777
+            border-width: 0 0 rem(2px) rem(2px)
+            transform: rotate(-45deg)
+            margin-top: rem(-3px)
+      &.is-active
+        .icon
+          background:
+            color: $step-background-color-active
+          color: $white-color
+        .title
+          font-weight: 700
+    + .field
+      margin:
+        top: rem(40px)
+
+  /* 약관 체크 */
+  .agree-list
+    .all
+      padding: rem(10px) rem(12px) rem(10px) rem(16px)
+    .agree-item-list
+      border:
+        top: 1px solid #DDD
+      padding: rem(10px) rem(12px) rem(10px) rem(16px)
+        //top: rem(10px)
+    .agree-item
+      position: relative
+      .title
+        span
+          color: #999
+      .agree-item-link
+        position: absolute
+        top: rem(5px)
+        right: 0
+        width: rem(20px)
+        height: rem(20px)
+        span
+          border-radius: 2px
+          border-right: 0
+          border-top: 0
+          content: " "
+          display: block
+          pointer-events: none
+          position: absolute
+          top: rem(5px)
+          transform: rotate(-45deg)
+          transform-origin: center
+          font-size: 0
+          width: rem(10px)
+          height: rem(10px)
+          border-left: 2px solid #8e8e8e
+          border-bottom: 2px solid #8e8e8e
+          border-right-width: 2px
+          border-top-width: 2px
+          margin-top: 0
+          transform: rotate(225deg)
+      &.required
+        p
+          text:
+            decoration: underline
+      + .agree-item
+        margin:
+          top: rem(5px)
+
+  /* 선생님,학생 확인 체크박스 */
+  .chk-type
+    li
+      margin:
+        top: rem(7px)
+      &:first-child
+        margin:
+          top: 0
+
+  /* 클래스 만들기 */
+  .class-list
+    margin-bottom: rem(32px)
+    .item
+      margin:
+        top: rem(10px)
+        bottom: rem(10px)
+      &:first-child
+        margin:
+          top: rem(0px)
+    &.class-list-02
+      .class-item
+        .class-lately
+          -webkit-box-shadow: none
+          box-shadow: none
+          .class-lately-title
+            .tit-eng
+              font: 
+                size: rem(16px)
+                weight: 700
+              strong
+                padding-right: rem(16px)
+                background-repeat: no-repeat
+                background-position : 100% center;
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.519862 2.07617C0.201654 1.81099 0.158661 1.33807 0.423834 1.01986C0.689007 0.701654 1.16193 0.658661 1.48014 0.923834L0.519862 2.07617ZM7 6.5L7.48014 5.92383C7.65113 6.06633 7.75 6.27742 7.75 6.5C7.75 6.72259 7.65113 6.93367 7.48014 7.07617L7 6.5ZM1.48014 12.0762C1.16193 12.3413 0.689007 12.2983 0.423834 11.9801C0.158661 11.6619 0.201654 11.189 0.519861 10.9238L1.48014 12.0762ZM1.48014 0.923834L7.48014 5.92383L6.51986 7.07617L0.519862 2.07617L1.48014 0.923834ZM7.48014 7.07617L1.48014 12.0762L0.519861 10.9238L6.51986 5.92383L7.48014 7.07617Z' fill='white'/%3E%3C/svg%3E%0A");
+      .thema-openclass
+       .class-lately
+        .class-lately-title
+          .tit-eng
+            strong
+              background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.519862 2.07617C0.201654 1.81099 0.158661 1.33807 0.423834 1.01986C0.689007 0.701654 1.16193 0.658661 1.48014 0.923834L0.519862 2.07617ZM7 6.5L7.48014 5.92383C7.65113 6.06633 7.75 6.27742 7.75 6.5C7.75 6.72259 7.65113 6.93367 7.48014 7.07617L7 6.5ZM1.48014 12.0762C1.16193 12.3413 0.689007 12.2983 0.423834 11.9801C0.158661 11.6619 0.201654 11.189 0.519861 10.9238L1.48014 12.0762ZM1.48014 0.923834L7.48014 5.92383L6.51986 7.07617L0.519862 2.07617L1.48014 0.923834ZM7.48014 7.07617L1.48014 12.0762L0.519861 10.9238L6.51986 5.92383L7.48014 7.07617Z' fill='%23111111'/%3E%3C/svg%3E%0A");
+    &.slide-list
+      overflow: hidden
+      margin: 0 rem(-16px)
+      padding-bottom: rem(32px)
+      // 개발 코드와 동일하게 수정함 0829
+      .item
+        &.openClass
+          // position: inherit
+          width: 100%
+          padding: 0 rem(16px)
+          z-index: 0
+        &.swiper
+          position: relative
+          display: table
+          width: 100%
+          padding: 0 rem(16px)
+          z-index: 0
+          // 개발 코드와 동일하게 수정함 0829
+          .swiper-wrapper
+            // height: rem(155px)
+            .class-item
+              height: 100%
+              padding: rem(18px) rem(16px) rem(16px)
+          .menu
+            width: rem(80px)
+            margin-left: rem(20px)
+            // height: 100%
+            height: auto
+        // &.is-delete
+        //   .menu
+        //     .action
+        //       margin-left: rem(-15px)
+          
+      .action
+        // position: absolute
+        @include Align-middle-column() 
+        width: rem(78px)
+        height: 100%
+        // top: 0
+        // right: rem(-78px)
+        margin-left: rem(24px)
+        border-radius: rem(24px)
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.16)
+        color: $white-color
+        font: 
+          size: rem(13px)
+        &::after
+          display: block
+          content: ''
+          width: rem(32px)
+          height: rem(32px)
+          background: url(../../img/memberNew/icon_trash.png) center/100% auto no-repeat  
+
+
+    .class-add
+      border: 1.5px dashed $border-color
+      border:
+        radius: rem(12px)
+      background:
+        color: $white-color
+      width: 100%
+      height: rem(80px)
+      span
+        font:
+          size: rem(16px)
+        line:
+          height: rem(23px)
+        display: inline-block
+        vertical-align: top
+        .icon
+          width: rem(20px)
+          height: rem(20px)
+          display: inline-block
+          vertical-align: top
+          border: 1.5px solid $black-color
+          border:
+            radius: 100%
+          position: relative
+          &::before,
+          &::after
+            content: ''
+            width: rem(10px)
+            height: rem(1.5px)
+            background:
+              color: $black-color
+            position: absolute
+            border:
+              radius: 1px
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+          &::after
+            width: rem(1.5px)
+            height: rem(10px)
+      &.spot
+        border-color: $point-color
+        span
+          .icon
+            border-color: $point-color
+            &::before,
+            &::after
+              background-color: $point-color
+
+    .class-item
+      @include Align-column()
+      border:
+        radius: rem(24px)
+      padding: rem(18px) rem(16px) rem(16px)
+      box-shadow: 0px 8px 16px rgba(0,0,0,.12)
+      .info-wrap
+        @include Align-column()
+
+      .class-title
+        font:
+          size: rem(20px)
+        line:
+          height: rem(26px)
+        color: $white-color
+        display: block
+        margin-left: rem(8px)
+      .class-status
+        margin:
+          bottom: rem(16px)
+          left: rem(8px)
+        display: block
+        font: 
+          size: rem(13px)
+        color: $white-color
+        span
+          line-height: rem(20px)        
+          display: inline-block
+          vertical-align: top
+          font: 
+            size: rem(13px)
+          & + span
+            margin-left: rem(8px)
+            &::before
+              display: inline-block
+              content: ''
+              width: 1px
+              height: rem(12px)
+              background:
+                color: $white-color
+              vertical-align: middle
+              margin: 
+                top: rem(-2px)
+                right: rem(8px)
+      .class-lately
+        @include Align-middle-row()
+        background: rgba(0, 0, 0, 0.16)
+        border-radius: rem(60px)
+        padding-left: rem(24px)
+        position: relative
+        height: rem(60px)
+         -webkit-box-shadow: none0px 4px 8px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.15), inset 0px -4px 4px rgba(0, 0, 0, 0.12), inset 0px 4px 4px rgba(255, 255, 255, 0.09)
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.15), inset 0px -4px 4px rgba(0, 0, 0, 0.12), inset 0px 4px 4px rgba(255, 255, 255, 0.09)
+        .ico
+          display: block
+          content: ''
+          width: rem(24px)
+          height: rem(24px)
+          background: 
+            position: 0 0
+            repeat: no-repeat
+            size: 100% auto
+          &.topic
+            background-image: url(../../img/memberNew/icon_topic.png)
+          &.happy
+            background-image: url(../../img/memberNew/icon_happy.png)
+        .class-lately-title
+          color: $white-color
+          width: 70%
+          .tit-eng
+            font: 
+              size: rem(14px)
+              weight: 500
+            line-height: 1
+          .tit-ko
+            font: 
+              size: rem(13px)
+              weight: 400
+            opacity: 0.6
+            weight: 400
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+            display: block
+        // 도넛 그래프
+        .perfection-wrap
+          @include Align-middle()
+          transform: translateY(-50%)
+          position: absolute
+          top: 50%
+          right: rem(-3px)
+          .guage-wrap
+            width: 6rem
+            height: 6rem
+            margin: auto
+            svg
+              width: 6rem
+              height: 6rem
+              stroke-linecap: round 
+              transform: rotate(-90deg) 
+              transform-origin: center
+              .bar 
+                fill:none
+                stroke-width: rem(8px)
+                &.outside-bar 
+                  stroke: rgba(255, 255, 255, 0.4)
+                &.inside-bar 
+                  stroke: $white-color
+          .fraction-wrap 
+            position: absolute
+            text-align: center
+            line-height: 1.4rem
+            color: $white-color
+            strong
+              display:block
+            .bar
+              width: 2.4rem
+              height: 0.1rem
+              margin: 0.1rem 0
+              background: rgba(255, 255, 255, 0.2)
+            span
+              display: block
+              font-size: 1.2rem
+
+      /* 오픈클래스 */
+      &.thema-openclass
+        padding: rem(18px) rem(16px) rem(16px)
+        .class-title
+          color: $black-color
+        .class-status
+          span
+            color: #777
+            & + span
+              &::before
+                background:
+                  color: #777
+        .class-lately
+          background: #F0F2F5
+          .ico
+            &.topic
+              background-image: url(../../img/memberNew/icon_topic_black.png)
+          .class-lately-title
+            color: $black-color
+          .perfection-wrap
+            .guage-wrap
+              svg
+                .bar 
+                  &.outside-bar 
+                    stroke: rgba(19, 160, 189, 0.4)
+                  &.inside-bar 
+                    stroke: $point-color
+          .fraction-wrap 
+            color: $point-color
+            .bar
+              background: $point-color
+        .flag
+          margin-bottom: rem(4px)
+          margin-left: rem(8px)
+
+      
+    
+
+    .no-data
+      @include Align-middle-column()
+      padding: rem(56px) 0 rem(32px)
+      // height: rem(110px)
+      font:
+        size: rem(20px)
+      // line-height: rem(29px)
+      color: $base-color
+      text-align: center
+      word-break: keep-all
+      span
+        padding-top: rem(14px)
+        font: 
+          size: rem(13px)
+
+    
+
+
+  /* 공직자 이메일 인증하기 */
+  .mail-msg-box
+    margin:
+      top: rem(33.5px)
+    position: relative
+    &::before
+      display: inline-block
+      content: ''
+      width: rem(24px)
+      height: rem(24px)
+      background: url(../../img/memberNew/icon_done.png) 0 no-repeat
+      background-size: 100% auto
+      position: absolute
+      top: rem(-4px)
+    p
+      font:
+        size: rem(12px)
+      line:
+        height: rem(17px)
+      color: $base-color
+      padding:
+        left: rem(26px)
+      &:first-child
+        font:
+          size: rem(14px)
+          weight: 700
+        line-height: rem(20px)
+        padding:
+          left: rem(26px)
+      + p       
+        margin:
+          top: rem(2.5px)
+
+  /* Full Page */
+  // .full-area
+  //   height: calc(100vh - #{rem(36px + 54px + 40px)}) // Header 54px, 상단padding 36px, 하단padding 40px
+  //   display: flex
+  //   align-items: center
+  //   justify-content: center
+
+  /* Class Code 입력 */
+  #ContentsBox 
+    .code-area
+      padding:
+        top: rem(80px)
+  .code-area
+    padding: 0 rem(17px)
+    .class-code-title
+      text-align: center
+      font:
+        size: rem(20px)
+      line-height: rem(29px)
+    .class-code-input-area
+      @include Align-between
+      margin:
+        top: rem(32px)
+      > div
+        &:last-child
+          margin:
+            left: rem(15px)
+      input
+        font:
+          size: rem(28px)
+          family: 'Roboto'
+        width: rem(44px)
+        height: rem(56px)
+        line-height: rem(33px)
+        text-align: center
+        border: 1px solid $border-color
+        border:
+          radius: rem(12px)
+        margin:
+          left: rem(4px)
+        &:first-child
+          margin:
+            left: 0
+        &.is-complete
+      + .error-messege
+        margin:
+          top: rem(16px)
+
+  .class-complete
+    // @include Align-middle-column()
+    .img
+      width: 100%
+      height: auto
+      img
+        width: 100%
+        height: auto
+    p
+      color: $black-color
+      font:
+        weight: 700
+        size: rem(24px)
+      line:
+        height: rem(35px)
+      margin:
+        top: rem(32px)
+      text-align: center
+      + p
+        font:
+          weight: 400
+          size: rem(20px)
+        line:
+          height: rem(29px)
+        color: $base-color
+        margin:
+          top: rem(4px)
+    .buttons
+      margin:
+        top: rem(50px)
+      .button
+        + .button
+          margin:
+            top: rem(16px)
+
+  /* 회원가입, 출판사 선택 */
+  // .join-membertype
+  .photo-list
+    .item-wrap
+      @include Align-box()
+      margin: rem(-5px)
+    .item
+      width: calc( 100% / 3 )
+      padding:
+        bottom: 20%
+      position: relative
+    .item-inner
+      position: absolute
+      top: rem(5px)
+      left: rem(5px)
+      right: rem(5px)
+      bottom: rem(5px)
+      height: rem(64px)
+      input
+        display: none
+        &:checked
+          + .item-box
+            border:
+              color: $point-color
+    .item-box
+      display: block
+      padding: rem(5px)
+      height: 100%
+      border: 1px solid $border-color
+      border:
+        radius: rem(8px)
+      transition: all .3s
+      background:
+        color: $white-color
+      span
+        display: block
+        height: 100%
+        position: relative
+      img
+        @include imgCenter()
+    /* 회원가입 */
+    .mem-item
+      width: calc( 100% / 2 )
+      padding:
+        bottom: 50%
+      .mem-inner
+        height: rem(150px)
+        .item-box
+          img
+            top: rem(-20px)
+            width: rem(80px)
+            height: rem(80px)
+          p
+            text-align: center
+            margin-top: rem(-30px)
+
+
+  .class-info-box
+    .class-title
+      font:
+        size: 18px
+      line:
+        height: 22px
+
+  .class-lesson-list
+    padding: 0 rem(16px)
+    .accordion-item
+      border-bottom: 1px solid $border-color
+      &.open
+        .accordion-cont
+          display: block
+        .lesson-num:after
+          transform: rotate(-180deg)
+
+    .accordion-item-title
+      @include Align-between-row
+
+      padding: rem(16px) 0
+      background:
+        color: #FFF
+      
+      //box-shadow: 0px 0px rem(2px) rgba(0, 0, 0, 0.08), 0px rem(6px) rem(12px) rgba(0, 0, 0, 0.12)
+      // border:
+      //   radius: rem(6px)
+    .lesson-title
+      display: block
+      flex: 1
+      padding-right: rem(10px)
+      font:
+        weight: 400
+    .lesson-num
+      &::after
+          display: inline-block
+          content: ''
+          width: rem(13px)
+          height: rem(7px)
+          background: url(../../img/memberNew/icon_arrow.png) 0 0 / 100% auto no-repeat
+          margin: rem(-3px) 0 0 rem(8px)
+          vertical-align: middle
+      .no-act
+        color: $point-color
+        font: 
+          size: rem(14px)
+          weight: 700
+      .no-total
+        &::before
+          display: inline-block
+          content: '/'
+          padding: 0 rem(4px)
+  
+    .accordion-cont
+      display: none
+      margin: 
+        bottom: rem(8px)
+    
+      .study-list-box
+        @include Align-middle-row()
+        // display: flex
+        // flex-direction: row
+        // align-items: center
+        background: #F2F4F7
+        border-radius: rem(12px)
+        padding: rem(8px) rem(16px)
+        margin-bottom: rem(8px)
+        .list-text
+          @include Align-between-row()
+          // display: flex
+          // flex-direction: row
+          // align-items: center
+          // justify-content: space-between
+          flex: 1 0
+          padding-left: rem(12px)
+          .list-text-wrap
+            strong
+              display: block
+              color: $black-color
+              font: 
+                size: rem(14px)
+                weight: 700
+            p
+              color: $base-color
+              font: 
+                size: rem(14px)
+                weight: 400
+          .grade
+            display: none
+        &.complete
+          .grade
+            @include Align-middle()
+            // display: flex
+            // align-items: center
+            // justify-content: center
+            width: rem(30px)
+            height: rem(30px)
+            background: url(../../img/icon_classList_accordion_grade.png) 0 0 no-repeat
+            background-size: 100%
+            color: $black-color
+            font: 
+              size: rem(14px)
+              weight: 700
+            padding-top: rem(3px)
+
+
+
+  #ClassMain
+    .share a
+      display: block
+      position: absolute
+      top: rem(8px)
+      right: rem(8px)
+      background: $kakao-color
+      border-radius: rem(16px)
+      padding: rem(6px) rem(8px) rem(4px)
+      color: $black-color
+      &:before
+        display: inline-block
+        content: ''
+        width: rem(16px)
+        height: rem(16px)
+        background: url(../../img/memberNew/icon_kakao.png) 0 0 no-repeat
+        background-size: 100%
+        vertical-align: middle
+        margin: rem(-3px) rem(2px) 0 0
+
+    .sliderUI
+      .slideBar
+        position: relative
+        height: rem(24px)
+        background: rgba(0, 0, 0, 0.16)
+        // border: 1px solid $border-color
+        border-radius: rem(12px)
+        //box-shadow: 0px rem(-4px) rem(40px) rgba(0, 0, 0, 0.04)
+        .sliderRange
+          position: absolute
+          top: 0
+          left: 0
+          height: 100%
+          background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%)
+          box-shadow: rem(0px) rem(-4px) rem(40px) rgba(0, 0, 0, 0.04)
+          border-radius: rem(12px)
+        .slideCount
+          position: absolute
+          top: rem(2px)
+          right: rem(8px)
+          span
+            font: 
+              size: rem(16px)
+              weight: 700
+            color: $white-color
+            text-shadow: rem(-1px) rem(-1px) 0 #654AAF, rem(1px) rem(-1px) 0 #654AAF, rem(-1px) rem(1px) 0 #654AAF, rem(1px) rem(1px) 0 #654AAF
+            &.slideCount-act
+              color: #80EAFF
+              //font-weight: 700
+            &.slideCount-total
+              &::before
+                display: inline-block
+                content: '/'
+                padding: 0 rem(4px)
+
+    .title-area
+      padding: 
+        bottom: rem(16px)
+      .classCodeBox
+        // background: $thema-purple
+        padding: rem(8px)
+        border-radius: rem(24px) rem(24px) rem(12px) rem(12px)
+        .classCode-info
+          @include Align-middle-column()
+          // display: flex
+          // flex-direction: column
+          // justify-content: center
+          // align-items: center
+          color: $white-color
+          padding: rem(40px) rem(27px) rem(32px)
+        .txt
+          font-size: rem(12px)
+          span + span
+            &::before
+              display: inline-block
+              content: ''
+              width: 1px
+              height: rem(12px)
+              background: $white-color
+              opacity: 0.4
+              margin: rem(-1px) rem(8px) 0
+              vertical-align: middle
+        .tit
+          padding: rem(5px) 0 rem(12px)
+          font: 
+            size: rem(24px)
+            weight: 700
+          line-height: rem(34px)
+          text-align: center
+          word-break: keep-all
+        .code
+          border: rem(1.5px) solid $white-color
+          border-radius: rem(4px)
+          padding: rem(7px) rem(12px)
+
+        &.thema-openclass
+          .classCode-info
+            padding: rem(36px) rem(23px) rem(28px)
+            color: $black-color
+            .flag
+              align-self: center
+          .txt
+            color: #777
+            span + span
+              &::before
+                background: #777
+          .sliderUI
+            .slideBar
+              background: #F0F2F5
+              .sliderRange
+                background: linear-gradient(270deg, #13A0BD 0%, rgba(19, 160, 189, 0.5) 100%)
+              .slideCount
+                span
+                  color: $base-color
+                  text-shadow: rem(-1px) rem(-1px) 0 #fff, rem(1px) rem(-1px) 0 #fff, rem(-1px) rem(1px) 0 #fff, rem(1px) rem(1px) 0 #fff
+      
+  
+
+
+
+  .class-info-box
+    display: block
+    border:
+      radius: rem(6px)
+    padding: rem(20px)
+    padding:
+      right: rem(100px)
+    background:
+      color: #8b72d0
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, .12)
+    position: relative
+    .class-title
+      font:
+        size: rem(20px)
+      line:
+        height: rem(24px)
+      color: $white-color
+      display: block
+    .class-status
+      margin:
+        top: rem(16px)
+      display: block
+    .class-member,
+    .pass-standard
+      font:
+        size: rem(16px)
+      line-height: rem(20px)
+      color: $white-color
+      display: inline-block
+      vertical-align: top
+    .pass-standard
+      padding:
+        left: rem(8px)
+      margin:
+        left: rem(5px)
+      position: relative
+      &::before
+        content: ''
+        width: 1px
+        height: rem(14px)
+        background:
+          color: $white-color
+        position: absolute
+        top: rem(2px)
+        left: 0
+    .class-code
+      margin:
+        top: rem(16px)
+      a
+        display: inline-block
+        vertical-align: top
+        padding: rem(5px) rem(10px)
+        background:
+          color: #ffc000
+        border:
+          radius: rem(6px)
+        em
+          margin:
+            left: rem(5px)
+        color: $white-color
+    .share
+      position: absolute
+      top: rem(20px)
+      right: rem(20px)
+      button
+        width: rem(44px)
+        height: rem(44px)
+        background:
+          color: #ffc000
+
+  .class-code-share
+    padding: 0 rem(16px)
+    .class-code
+      position: relative
+      padding: rem(20px)
+      background:
+        color: #E0F2FF
+      border:
+        radius: rem(12px)
+      strong
+        display: block
+        color: $black-color
+        font:
+          size: rem(20px)
+        text-align: center
+        font:
+          size: rem(24px)
+      a
+        display: inline-block
+        width: rem(24px)
+        height: rem(24px)
+        background: url(../../img/memberNew/icon_copy.png) 0 0 / 100% auto no-repeat
+        font-size: 0
+        position: absolute
+        right: rem(20px)
+        top: calc(100% / 2 - #{rem(12px)})
+    .class-code-text
+      margin:
+        top: rem(20px)
+      background: $white-color
+      border: 1px solid $border-color
+      border-radius: rem(12px)
+      padding: rem(24px)
+      textarea
+        width: 100%
+        text-align: left
+        font: 
+          size: rem(14px)
+        line-height: rem(20px)
+        color: $base-color
+        padding: 0
+    .buttons
+      margin:
+        top: rem(10px)
+
+  .class-choice-list
+    @include Align-between
+    margin: 0 rem(-5px) rem(32px)
+    div
+      width: 50%
+      height: rem(64px)
+      padding: rem(5px)
+      p
+        @include Align-middle
+        width: 100%
+        height: 100%
+        padding: rem(6px) rem(17px)
+        background: #F0F2F5
+        border-radius: rem(8px)
+        color: $base-color
+        font: 
+          size: rem(16px)
+          weight: 500
+        img
+          width: rem(117px)
+          height: auto
+
+  .toast
+    position: fixed
+    //top: rem(-100px)
+    left: calc(100% / 2 - #{rem(176px / 2)})
+    width: rem(176px)
+    height: rem(32px)
+    padding: rem(6px) rem(10px)
+    border: 1px solid $border-color
+    background:
+      color: #000
+    box-shadow: 0 rem(8px) rem(20px) rgba(0, 0, 0, 0.16)
+    border-radius: rem(32px)
+    //transform: translateX(-50%)
+    z-index: 10
+    display: none
+    transition: all .5s
+    &.active
+      display: block
+      bottom: rem(36px)
+    strong
+      display: block
+      font:
+        weight: 400
+      color: $white-color
+      text-align: center
+      &::before
+        content: ''
+        display: inline-block
+        width: rem(12px)
+        height: rem(6px)
+        border: solid $white-color
+        border-width: 0 0 rem(2px) rem(2px)
+        transform: rotate(-45deg)
+        margin-top: rem(-3px)
+        vertical-align: middle
+        margin: rem(-9px) rem(4px) 0 0
+
+
+  .setting-new
+    @include Align-around-column()
+    height: 0
+    min-height: 100%
+    padding: rem(40px) rem(32px) 0
+    .settingCont
+      overflow-y: auto
+      max-height: rem(460px)
+    .setting-title
+      font:
+        size: rem(24px)
+      line-height: rem(35px)
+      text-align: center
+      //padding-top: rem(140px)
+      strong
+        font:
+          size: rem(27px)
+          family: 'Roboto'
+        line-height: rem(32px)
+        display: inline-block
+        vertical-align: baseline
+        color: $point-color3
+        &::before
+          display: inline-block
+          content: ''
+          width: rem(23px)
+          height: rem(31px)
+          background: url(../../img/memberNew/logo_hello.png) 0 0 / 100% auto no-repeat
+          margin: rem(-5px) rem(3px) 0 0
+          vertical-align: middle
+      span
+        font:
+          size: rem(24px)
+        line-height: rem(35px)
+        text-align: center
+        display: inline-block
+        vertical-align: baseline
+    .setting-menu
+      margin:
+        top: rem(40px)
+      border:
+          top: 1px solid $border-color
+      .item
+        border:
+          bottom: 1px solid $border-color
+        a
+          padding: rem(20px) 0
+          display: block
+          font:
+            size: rem(16px)
+          line-height: rem(23px)
+          color: $black-color
+          text-align: center
+          &:active
+            color: $point-color3
+    .setting-button
+      text-align: center
+      margin: 0 rem(32px)
+      button
+        font: 
+          size: rem(14px)
+        color: $base-color
+        &:active
+          color: $point-color
+        + button
+          &::before
+            display: inline-block
+            content: ''
+            width: 1px
+            height: rem(12px)
+            background: #999
+            margin: rem(-2px) rem(16px) 0
+
+
+  #NewAlertPopup
+    .modal-cont
+      padding: rem(16px) 0 0
+      background-color: $white-color
+      border-radius: rem(12px)
+      box-shadow: 0px rem(4px) rem(20px) rgba(0, 0, 0, 0.25)
+      .title-wrap
+        position: relative
+        text-align: center
+        .title
+          display: inline
+          color: $point-color
+          font: 
+            size: rem(18px)
+            weight: 700
+          box-shadow: inset 0 0 0 white, inset 0 rem(-2px) 0 $point-color
+        .btn-menu
+          position: absolute
+          top: 0
+          right: 0
+          width: rem(54px)
+          height: 100%
+          background: url(../../img/icon_actionBar_close.png) center/rem(32px) no-repeat
+          font-size: 0
+      .text-wrap
+        padding: rem(12px) rem(16px) rem(37px)
+        text-align: center
+        .stxt
+          font: 
+            size: rem(13px)
+          padding-top: rem(8px)
+      #CommonButton
+        border:
+          top: 1px solid $border-color
+        height: rem(56px)
+        button
+          color: $black-color
+          font: 
+            size: rem(16px)
+            weight: 500
+          & + button
+            border:
+              left: 1px solid $border-color
+
+  /* 비밀번호 찾기 */
+  .passwordCont
+    padding: 
+      top: rem(80px)
+    .title
+      font: 
+        size: rem(20px)
+        weight: 400
+      color: $base-color
+      line-height: rem(29px)
+      text-align: center
+      strong
+        display: block
+
+    .title-wrap
+      display: flex
+      flex-direction: column
+      align-items: center
+      h2
+        font: 
+          size: rem(24px)
+        color: $black-color
+      p
+        font: 
+          size: rem(14px)
+        color: $black-color
+        text-align: center
+        margin-top: rem(8px)
+    .passwordBoxList
+      @include Align-between()
+      // display: flex
+      // justify-content: space-between
+      margin: rem(40px) 0 rem(32px)
+      > div
+        width: calc( 50% - #{rem(6px)} )
+        background: #E0F2FF
+        border-radius: rem(12px)
+        padding: rem(16px) rem(12px) rem(12px) rem(20px)
+        h3
+          font: 
+            size: rem(16px)
+            weight: 500
+          color: $black-color
+        p
+          font: 
+            size: rem(13px)
+            weight: 400
+          color: $base-color
+          padding-top: rem(8px)
+        .linkNext
+          display: flex
+          flex-flow: column
+          &::after
+            display: block
+            content: ''
+            width: rem(24px)
+            height: rem(24px)
+            background: url(../../img/memberNew/icon_arrow2.png) 0 0 / 100% auto no-repeat
+            align-self: flex-end
+            margin-top: rem(24px)
+    .password-formBox
+      padding: rem(40px) rem(16px)
+      label
+        display: none
+    .password-idBox
+      padding: rem(40px) rem(16px)
+    .notiWrap
+      .tit
+        font: 
+          size: rem(13px)
+          weight: 500
+        color: $base-color
+        &::before
+          display: inline-block
+          content: ''
+          width: rem(20px)
+          height: rem(20px)
+          background: url(../../img/memberNew/icon_warn.png) 0 0 no-repeat
+          background-size: 100% auto
+          margin: rem(-5px) rem(4px) 0 0
+          vertical-align: middle
+      .txt
+        font: 
+          size: rem(12px)
+          weight: 400
+        color: $base-color
+        word-break: keep-all
+    .message-box
+      .complete,
+      .fail
+        display: flex
+        flex-direction: column
+        padding: 0 rem(20px)
+        align-items: center
+        text-align: center
+        .tit
+          font: 
+            size: rem(20px)
+            weight: 400
+          color: $base-color
+          line-height: rem(29px)
+          strong
+            display: block
+        .txt
+          font: 
+            size: rem(13px)
+            weight: 400
+          color: $base-color
+          word-break: keep-all
+          padding-top: rem(13px)
+        &::before
+          display: block
+          content: ''
+          width: rem(72px)
+          height: rem(72px)
+          background: 
+            position: 0 0
+            repeat: no-repeat
+            size: 100% auto
+      .complete
+        &::before
+          background-image: url(../../img/memberNew/icon_complete.png)
+      .fail
+        &::before
+          background-image: url(../../img/memberNew/icon_messg.png)
+        
+        
+      .buttons
+        margin-top: rem(40px)
+        text-align: center
+        justify-content: center
+        .button
+          border-color: $point-color
+          color: $point-color
+
+  /* bottomsheet popup */
+  .btmPopWrap
+    display: block
+    flex: 1
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1002
+    &.on
+      display: block
+      .btmPopInner
+        transform: translateY(0)
+      .dimmed
+        display: block
+    .btmPopInner
+      height: rem(337px)
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      border-radius: rem(13px) rem(13px) 0 0
+      transform: translateY(100%)
+      transition: transform .35s
+      // animation: slideBtmToTop 1s
+      z-index: 1
+    .dimmed
+      overflow: hidden
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      margin: 0 !important
+      background: rgba(0,0,0,0.7)
+      z-index: 0
+      display: none
+
+    .btmButton
+      display: flex
+      flex-flow: row
+      justify-content: space-evenly
+      align-items: center
+      height: rem(52px)
+      height: calc(#{rem(52px)} + env(safe-area-inset-bottom))
+      height: calc(#{rem(52px)} + constant(safe-area-inset-bottom))
+      background: $white-color
+      button
+        width: 50%
+        height: 100%
+        font: 
+          size: rem(14px)
+          weight: 700
+        & + button
+          position: relative
+          &::before
+            display: inline-block
+            content: ''
+            width: 1px
+            height: rem(21px)
+            background: #9D9D9D
+            position: absolute
+            left: 0
+      .layer-stop
+        color: #797979
+      .close
+        color: #0D0000
+          
+
+    .swiper-wrapper
+      .swiper-slide
+        .swiper-item
+          position: relative
+          height: 100%
+        .img-box
+          display: block
+          height: rem(187px)
+          &.box-col
+            background: #08C2CE
+            padding: rem(50px) rem(20px)
+            // height: rem(187px)
+          img
+            width: 100%
+    .swiper
+      height: rem(287px)
+      border-radius: rem(13px) rem(13px) 0 0
+      .swiper-pagination
+        top: rem(20px)
+        //right: rem(20px)
+        bottom: inherit
+        text-align: right
+        padding-right: rem(20px)
+        
+      .swiper-pagination-bullet
+        background: $white-color
+        opacity: 1
+      .swiper-pagination-bullet-active
+        background: #FFD952
+
+  /* 스플래쉬 */
+  .newSplash
+    display: flex
+    .logoWrap
+      margin: auto
+      padding: 0 rem(55px)
+      position: absolute
+      top: calc( 100% / 2 - #{rem(50px)} )
+      img
+        width: 100%
+        display: block
+        padding: rem(5px) 0
+      &.notice
+        top: 15%
+
+  /* 약관 */
+  .terms-wrap-new
+    padding: rem(12px) rem(16px) rem(24px)
+    .terms-box
+      height: rem(300px)
+      padding: rem(14px) rem(16px)
+      border: rem(1px) solid #dee5e9
+      border-radius: rem(6px)
+      background: #ecf3f6
+      font-size: rem(12px)
+      line-height: rem(18px)
+      overflow-y: auto
+      .head-tit
+        font-size: rem(13px)
+        margin-bottom: rem(16px)
+      .terms-tit
+        font-weight: 700
+      .terms-list
+        padding: rem(5px) 0
+        ul
+          padding-bottom: rem(5px)
+          li
+            padding-left: rem(18px)
+            text-indent: rem(-4px)
+            &::before
+              display: inline-block
+              content: '-'
+              padding-right: rem(5px)
+    .buttons
+      margin-top: rem(24px)
+      button
+        font-size: rem(13px)
+    .field
+      + .buttons
+        &.is-between
+          margin: rem(24px) rem(-5px) rem(-5px)
+    .young-txt
+      font-size: rem(13px)
+      padding-bottom: rem(20px)
+      word-break: keep-all
+
+  /* 내정보 */
+  #ContentsBox .myinfo
+    padding: rem(32px) rem(16px) 0
+    .field:not(:last-child) 
+      margin-bottom: rem(16px)
+    .tit-area
+      text-align: center
+      .title
+        font-size: rem(24px)
+        padding: rem(28px) 0 rem(20px)
+      .messege
+        font-size: rem(14px)
+        padding-bottom: rem(40px)
+    .pwdRule
+      line-height: rem(20px)
+      color:#444444
+    .pwdRule .rule-title
+      font-weight: 500 
+      font-size: rem(13px)
+      padding: 0 0 0 rem(22px)
+      background: url("../../img/icon_rule1.png") center left no-repeat
+      background-size: rem(20px)
+    .pwdRule .rule-desc
+      margin: rem(5px) 0 0 0
+      font-size: rem(12px)
+      font-weight: 400
+      line-height: rem(18px)
+    .pwd-change
+      display: none
+      .pwdRule
+         padding: rem(20px) 0 rem(40px)
+      &.is-visible 
+        display: block
+        & + .buttons 
+          display: none
+    .type-2
+      &.agree-list
+        border-top: 1px solid #E6E6E6
+        margin-top: rem(30px)
+      .box
+        border-color: #E6E6E6
+      .all 
+        padding: rem(30px) rem(12px) 0 rem(4px)
+        margin-bottom: rem(8px)
+        strong
+          font-weight: 500
+      .checkbox2 i 
+        width: rem(32px)
+        height: rem(18px)
+        border-radius: rem(100px)
+        background: #ccc
+        border: 0
+        top: rem(5.5px)
+        &::before
+          position: absolute
+          top: rem(2)
+          left: rem(2)
+          width: rem(14px)
+          height: rem(14px)
+          background: #fff
+          border-radius: 50%
+          border: 0
+      .checkbox2 input:checked + i
+        background: #13A0BD
+        &::before
+          left: rem(16px)
+    .chkRule
+      padding-top: rem(20px)
+      color:#444444
+      .rule-title
+        font-weight: 700 
+        line-height: rem(24px)
+        padding: 0 0 0 rem(28px)
+        background: url("../../img/icon_check.png") center left no-repeat
+        background-size: auto 100%
+      .rule-desc
+        margin: rem(0px) 0 0 rem(28px)
+        font-size: rem(12px)
+        font-weight: 400
+        line-height: rem(18px)
+    .radio-wrap
+      display: flex
+      justify-content: space-between
+      border-radius: rem(8px)
+      padding: rem(24px) rem(37px)
+      margin-top: rem(20px)
+      background: #F7F7F7
+      label
+        padding: 0
+        text-align: center
+        i
+          position: relative
+          display: inline-block
+          top: 0
+          margin-bottom: rem(8px)
+
+  /* 휴면계정 */
+  #ContentsBox .dormant
+    padding-top: 0
+    .title
+      font-weight: 400
+      color: #444
+      text-align: center
+      font-size: rem(18px)
+      line-height: rem(26px)
+      margin-top: rem(80px)
+      strong
+        color: #0095B2
+    .passwordCont 
+      padding-top: 0
+      margin-bottom: rem(100px)
+    .passwordCont > .s-txt
+      margin: rem(80px) 0 0
+      text-align: center
+      color: #444
+      font-size: rem(14px)
+    .passwordBoxList > div
+      height: rem(165px)
+      box-sizing: border-box
+      .linkNext
+        height: 100%
+        p
+          flex: 1
+    .mail-msg-box
+      width: rem(307px)
+      margin: 0 auto
+      max-width: 100%
+      p:first-child
+        padding-left: rem(28px)
+    .dormant-form
+      margin-bottom: rem(150px)
+      .form-wrap 
+        padding: 0 rem(16)
+      .title
+        margin-bottom: rem(46px)
+      .mail-msg-box
+        width: 100%
+        margin-top: rem(32px)
+      .radio-wrap
+        display: flex
+        justify-content: space-between
+        border-radius: rem(8px)
+        padding: rem(24px) rem(37px)
+        margin-top: rem(32px)
+        background: #F7F7F7
+        label
+          padding: 0
+          text-align: center
+          i
+            position: relative
+            display: inline-block
+            top: 0
+            margin-bottom: rem(8px)
+    .complete-img
+      width: rem(297px)
+      height: rem(302px)
+      margin: rem(80px) auto 0
+      background: url(../../img/memberNew/dormant_complete.png) no-repeat center center
+      background-size: 100%
+
+.list-checkbox,
+.chk-type
+  .item
+    + .item
+      margin:
+        top: rem(7px)
+  .checkbox,
+  .radio
+    padding: rem(18px) rem(48px) rem(17px)
+    border: 1px solid $border-color
+    border:
+      radius: 12px
+    display: block
+    i
+      top: 18px
+      left: 18px
+      border:
+        radius: 100%
+  .checkbox
+    input[type=checkbox]
+      &:disabled
+          display: block
+          content: ''
+          width: 100%
+          height: 100%
+          background: #777
+          opacity: 0.05
+          position: absolute
+          left: 0
+          top: 0
+          border:
+            radius: 12px
+  
+  
+      

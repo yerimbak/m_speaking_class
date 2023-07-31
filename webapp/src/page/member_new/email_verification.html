@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <!-- container id추가 : CheckSignUpContainer 0725 -->
+    <div class="container" data-contents="new" id="CheckSignUpContainer">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '회원가입',
+          btnClose: true
+        })
+        
+        <div id="ContentsBox">
+          <!-- 스탭 id SignUpVerification 추가 및 스탭번호 추가 0725 -->
+          <div id="SignUpVerification">
+            <!-- 회원가입 스텝리스트 -->
+            @@include('../include/step.html', {
+              itemLength: 3,
+              activeStep: 2,
+              items: [
+                {
+                  no: '1',
+                  title: '유형 선택',
+                  className: 'icon1 is-complete'
+                },
+                {
+                  no: '2',
+                  title: '메일 인증',
+                  className: 'icon4 is-active'
+                },
+                {
+                  no: '3',
+                  title: '정보 입력',
+                  className: 'icon3'
+                }
+              ]
+            })
+            <!-- div SignUpBox 추가 0725 -->
+            <div id="SignUpBox">
+              @@include('../include/button_filed.html', {
+              className: 'is-success',
+              label: '이메일',
+              placeholder: 'abcd@email.com',
+              required: true,
+              inputType: 'text',
+              btnText: '인증',
+              buttonDisabled: true,
+              discription: '<span class="point-color2">올바른 형태의 이메일 주소가 아니에요.<br>이메일 주소는 @가 들어가야 해요.</span>'
+              })
+
+              @@include('../include/button_filed.html', {
+              label: '인증번호',
+              placeholder: '123456',
+              timer: true,
+              required: true,
+              inputType: 'tel',
+              btnText: '확인',
+              buttonDisabled: true,
+              inputClass: 'pd-r',
+              discription: '입력하신 번호로 이메일을 보냈어요. <br />메일이 오지 않았다면 <strong>주소를 다시 확인해 주시거나 재발송 버튼을 눌러주세요.</strong>',
+              discriptionError: '<span class="point-color2">인증번호가 맞지 않아요.<br>번호를 다시 입력해 주세요.</span>'
+              })
+
+              <!-- buttons 추가 0725 -->
+              <div class="buttons is-fixed">
+                <button class="button is-full is-large is-light">다음</button>
+              </div>
+            </div>
+            <!-- //div SignUpBox 추가 0725 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

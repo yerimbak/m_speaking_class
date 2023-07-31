@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="http://speakingclass-svelte-dev.du.r.appspot.com/build/bundle.css">
+    <link rel="stylesheet" href="coach_mark.css">
+  </head>
+
+  <body>
+    <div id="root" class="type-conversation">
+      
+      <div id="textBookContainer" class="">
+        <header class="type2">
+          <button class="btn-back" style=""><span></span></button>
+        </header>
+        <div class="contents-wrap">
+          <div id="stepSelect">
+            <div class="inner">
+              <div class="bg-wrap">
+                <div
+                  class="bg"
+                  style="background-image: url('/img/bg_classStudy_sample.png')"
+                ></div>
+              </div>
+              <div class="mission-title-wrap">
+                <div class="top-text">Lesson 1 &gt; Listen and Repeat</div>
+                <div class="btm-text">p.10 1</div>
+              </div>
+              <div class="learning-type-tab-wrap">
+                <div class="tab-nav-wrap">
+                  <ul>
+                    <li class="on recommend">Listening</li>
+                    <li class=" ">Speaking</li>
+                    <li class=" ">Reading</li>
+                  </ul>
+                </div>
+                <div class="select-title-wrap">
+                  <!-- 카피 변경 : 220907 -->
+                  <div class="title">원하는 단계를 선택하여 학습해보세요.<br>
+                    단계 별 반복한 횟수가 표시 됩니다.</div>
+                </div>
+                <div class="tab-cont-wrap">
+                  <div class="tab-cont on">
+                    <div class="step-select-wrap">
+                      <div class="step-list">
+                        <ul>
+                          <!-- 코치 마크 추가 : 220907 -->
+                          <li class="complete">자막 없이 듣기 <span class="mark-coach">1회</span></li>
+                          <li class="">문장 별로 반복 듣기 <span class="mark-coach">2회</span></li>
+                          <li class="">듣고 문장 완성하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-cont">
+                    <div class="step-select-wrap">
+                      <div class="step-list">
+                        <ul>
+                          <li class="">듣고 말하기</li>
+                          <li class="">문장 별 말하기</li>
+                          <li class="">실전 대화하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-cont">
+                    <div class="step-select-wrap">
+                      <div class="step-list">
+                        <ul>
+                          <li class="">크게 읽어보기</li>
+                          <li class="">문장 해석하기</li>
+                          <li class="">영어 문장 만들기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

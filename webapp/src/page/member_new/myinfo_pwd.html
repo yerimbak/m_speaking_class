@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="0_member.css">
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '내 정보 수정',
+          btnBack: true,
+          btnClose: false
+        })
+        <div id="ContentsBox">
+          <div class="myinfo">
+            <div class="innerWrap">
+              <div class="tit-area">
+                <p class="title">비밀번호 확인</p>
+                <p class="messege">정보를 안전하게 보호하기 위해<br>
+                  비밀번호를 다시 한 번 입력해주세요.</p>
+              </div>
+              <div class="info-area">
+                @@include('../include/default_filed.html', {
+                  label: '김학생님 (student123)',
+                  placeholder: '현재 비밀번호를 다시 한 번 입력해주세요.',
+                  inputType: 'password',
+                  validation: true
+                  })
+                <div class="pwdRule">
+                  <div class="rule-title">비밀번호 규칙</div>
+                  <div class="rule-desc">비밀번호는 영문, 숫자, 특수분자(!@#$%^&amp;*)를 포함하여<br>8~16자로 입력해 주세요.</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="buttons is-fixed">
+              <button class="button is-full is-large is-light" >완료</button>
+              <!-- disabled 추가시 비활성화 스타일 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

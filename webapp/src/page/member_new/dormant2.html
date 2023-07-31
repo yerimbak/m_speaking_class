@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="0_member.css">
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '휴면 계정 해제 안내',
+          btnBack: true,
+          btnClose: false
+        })
+        <div id="ContentsBox">
+          <div class="dormant">
+            <div class="innerWrap dormant-form">
+              <p class="title">본인 인증을 통해 휴면 상태를<br>해제 할 수 있습니다.</p>
+              <div class="form-wrap">
+                @@include('../include/button_filed.html', {
+                  label: '휴대폰 번호',
+                  required: 'required',
+                  placeholder: '휴대폰 번호 (-제외)',
+                  inputType: 'tel',
+                  btnText: '인증',
+                  buttonDisabled: false,
+                  validation: false,
+                  })
+                <div class="field">
+                  <label class="label">인증번호 <span class="required">필수입력</span></label>
+                  <div class="control">
+                    <div class="field is-grouped ">
+                      <!-- 
+                        성공시 class="is-success",
+                        실패시 class="is-error"
+                        input line으로 적용 class="is-line"
+                      -->
+                      <div class="control is-expanded">
+                        <input class="input pd-r" type="number"disabled="disabled">
+                        <span class="time">3:00</span>
+                      </div>
+                      <div class="control">
+                        <!-- 버튼 class 변경 : is-light-outline -->
+                        <button class="button is-light-outline" type="button" disabled="disabled">확인</button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field is-success">
+                  <label class="label">인증번호 <span class="required">필수입력</span></label>
+                  <div class="control">
+                    <div class="field is-grouped ">
+                      <!-- 
+                        성공시 class="is-success",
+                        실패시 class="is-error"
+                        input line으로 적용 class="is-line"
+                      -->
+                      <div class="control is-expanded">
+                        <input class="input pd-r" type="number" value="12121">
+                        <span class="time">3:00</span>
+                      </div>
+                      <div class="control">
+                        <!-- 버튼 class 변경 : is-light-outline -->
+                        <button class="button is-light-outline" type="button">확인</button> 
+                      </div>
+                    </div>
+                  </div>
+                  <p class="help"><i></i>인증되었어요.</p>
+                </div>
+                <div class="mail-msg-box">
+                  <p>개인정보 유효기간 설정</p>
+                  <p>개인정보를 파기 또는 분리 보관해야 하는 서비스 미이용 기간을 설정할 수 있습니다. 선택한 기간 동안 서비스를 이용하지 않는 경우 휴면 계정으로 전환됩니다.
+                  </p>
+                </div>
+
+              </div>
+              <div class="radio-wrap">
+                <label class="radio">
+                  <input type="radio" name="expire" checked>
+                  <i></i>
+                  <p>1년</p>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="expire">
+                  <i></i>
+                  <p>3년</p>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="expire">
+                  <i></i>
+                  <p>5년</p>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="expire">
+                  <i></i>
+                  <p>탈퇴시까지</p>
+                </label>
+              </div>
+            </div>
+            
+            <div class="buttons is-fixed">
+              <button class="button is-full is-large is-light" >휴면 상태 해제하기</button>
+              <!-- disabled 추가시 비활성화 스타일 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script>
+    function selectAll(selectAll)  {
+      const checkboxes 
+          = document.getElementsByName('agree');
+      
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked;
+      })
+    }
+    function isVisible(target) {
+      const ele = document.querySelector(target);
+      ele.classList.add('is-visible');
+    }
+    function isHidden(target) {
+      const ele = document.querySelector(target);
+      ele.classList.remove('is-visible');
+    }
+  </script> 
+</body>
+</html>

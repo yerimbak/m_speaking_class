@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../css/reset.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../0_contents.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="LetsTalkContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+        </div>
+
+        <div id="ContentsBox">
+
+          <div id="LetsTalk">
+            <div class="bg-wrap">
+              <div class="dim"></div>
+              <div class="bg" style="background-image:url('../../../img/bg_letsTalk_sample.jpg');"></div>
+            </div>
+            <div class="lesson-title-wrap">
+              <div class="top-text">BA BA</div>
+              <div class="btm-text">테스트</div>
+            </div>
+            <div class="slide-wrap">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+
+                    <div class="slide-item start-slide">
+                      <!-- 첫번째 슬라이드는 start-slide 추가 -->
+                      <div class="slide-item-inner">
+                        <div class="title-wrap">
+                          <div class="title">Dialogue Preview</div>
+                        </div>
+                        <div class="play-mp3-wrap">
+                          <p>Dialogue Preview</p>
+                          <button class="btn-play-mp3"></button> <!-- wave 클래스 추가시 재생 이미지로 변경 -->
+                        </div>
+                        <p class="desc">Flick this card to check dialogue preview</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="swiper-slide">
+
+                    <div class="slide-item">
+                      <div class="slide-item-inner">
+                        <div class="talk-exam-wrap talk-you">
+                          <div class="talker">You</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to meet you</div>
+                            <div class="btm-text">만나서 반가워 라고 말해 보세요.</div>
+                          </div>
+                        </div>
+                        <div class="talk-exam-wrap talk-ai">
+                          <div class="talker">AI</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to meet you too</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="swiper-slide">
+
+                    <div class="slide-item">
+                      <div class="slide-item-inner">
+                        <div class="talk-exam-wrap talk-you">
+                          <div class="talker">You</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to meet you</div>
+                            <div class="btm-text">만나서 반가워 라고 말해 보세요.</div>
+                          </div>
+                        </div>
+                        <div class="talk-exam-wrap talk-ai">
+                          <div class="talker">AI</div>
+                          <div class="talk-box">
+                            <div class="top-text">Nice to meet you too</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="btn-start-wrap">
+              <button class="btn-start-all">전체학습<br>시작하기</button>
+              <button class="btn-start-step">단계별 학습<br>시작하기</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper', {
+      pagination: { // 페이징 설정
+        el: '.swiper-pagination',
+      },
+    })
+  </script>
+</body>
+
+</html>

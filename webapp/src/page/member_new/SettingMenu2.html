@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="0_member.css">
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '클래스 코드',
+          btnBack: true,
+          btnClose: false
+        })
+        <div id="ContentsBox">
+          <div class="code-area">
+            <p class="class-code-title">클래스 코드를 입력하세요.</p>
+            <div class="class-code-input-area">
+              <div>
+                <!-- 입력 완료시 class="complete" -->
+                <input type="tel" maxlength="1" value="1" class="is-complete">
+                <input type="tel" maxlength="1">
+                <input type="tel" maxlength="1">
+              </div>
+              <div>
+                <input type="tel" maxlength="1">
+                <input type="tel" maxlength="1">
+                <input type="tel" maxlength="1">
+              </div>
+            </div>
+            <p class="error-messege">올바른 코드 입력이 아닙니다.<br>코드를 다시 확인해 주세요.</p>
+            <div class="buttons is-fixed">
+              <button class="button is-full is-large is-light" disabled>확인</button>
+            </div>
+          </div>
+        </div>
+        <div id="SettingMenuPopup">
+          <div class="modal-cont">
+            <div id="SettingMenu">
+              <button class="btn-menu-close"></button>
+              <div class="setting-new">
+                <div class="settingCont">
+                  <p class="setting-title"><strong>Hello,</strong> <span>홍길동</span> 님</p>
+                  <div class="setting-menu">
+                    <ul>
+                      <li class="item">
+                        <a href="#"><span>간편 클래스 등록</span></a>
+                      </li>
+                      <li class="item">
+                        <a href="#"><span>이름, 닉네임 변경</span></a>
+                      </li>
+                      <li class="item">
+                        <a href="#"><span>비밀번호 변경</span></a>
+                      </li>
+                      <li class="item">
+                        <a href="#"><span>속도 조절 (중급)</span></a>
+                      </li>
+                      <li class="item">
+                        <a href="#"><span>커뮤니티</span></a>
+                      </li>
+                      <li class="item">
+                        <a href="#"><span>서비스 이용 약관</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="setting-button">
+                  <button class="">로그아웃</button>
+                  <button class="">회원탈퇴</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+</body>
+
+</html>

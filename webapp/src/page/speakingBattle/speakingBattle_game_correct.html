@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="speakingBattle.css">
+</head>
+
+<body ontouchstart="">
+
+  <div id="speakingBattle-game">
+    <div class="header">
+      <div class="timer-wrap">
+        <div class="icon"></div>
+        <p>59:59</p>
+      </div>
+      <div class="progress-wrap">
+        <strong>14</strong>
+        <span>/ 30</span>
+      </div>
+      <div class="btn-wrap">
+        <button class="btn-exit"></button>
+      </div>
+    </div>
+    <div class="contents">
+      <div class="game-screen-cont-wrap">
+        <div class="bgBar-wrap">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="game-screen-wrap">
+
+          <!-- 텍스트 내리는 곳 -->
+          <div class="word-rain-wrap">
+            <div class="word position-1" style="top:15%">
+              <!-- position-1 ~ 4 까지 좌측 여백 -->
+              <div class="top-text"></div>
+              <div class="btm-text">근처에 좋은 커피숍 있어요?</div>
+            </div>
+            <div class="word position-2" style="top:35%">
+              <!-- top %는 임시 수치 -->
+              <div class="top-text"><span class="success">Is</span><span class="success">there</span></div>
+              <div class="btm-text">근처에 좋은 커피숍 있어요?</div>
+            </div>
+            <div class="word position-3" style="top:65%">
+              <!-- 정확하게 맞추면 correct 클래스 추가 -->
+              <div class="top-text"><span class="success">Is</span><span class="success">there</span><span
+                  class="success">a</span><span class="success">nice</span><span class="success">coffee</span><span
+                  class="success">shop</span><span class="success">around</span><span class="success">here?</span></div>
+              <div class="btm-text">근처에 좋은 커피숍 있어요?</div>
+            </div>
+            <div class="word position-1 incorrect" style="top:95%">
+              <!-- 틀린건 incorrect -->
+              <div class="top-text">
+                <span>Is</span><span>there</span><span>a</span><span>nice</span><span>coffee</span><span>shop</span><span>around</span><span>here?</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="life-wrap">
+        <div class="life"></div> <!-- off 추가시 라이프 깎임표시 -->
+        <div class="life"></div>
+        <div class="life"></div>
+        <div class="life"></div>
+        <div class="life"></div>
+      </div>
+      <div class="btn-mic-wrap">
+        <button class="btn-mic"></button> <!-- on 추가시 말할 준비된 상태 -->
+        <span></span>
+      </div>
+      <div class="missed-toast"></div> <!-- show 클래스 추가시 보임 -->
+    </div>
+  </div>
+  <script>
+    // mic 
+    document.querySelector('.btn-mic-wrap .btn-mic').addEventListener('click', function (e) {
+      this.classList.toggle('on');
+    })
+
+
+    // word correct
+    setTimeout(function () {
+
+      document.querySelectorAll('.word-rain-wrap .word')[2].classList.add('correct');
+
+      // correct 요소의 한글 제거
+      setTimeout(function () {
+        document.querySelector('.word-rain-wrap .word.correct .btm-text').remove();
+      }, 300)
+
+      // correct 요소 제거
+      setTimeout(function () {
+        document.querySelector('.word-rain-wrap .word.correct').remove();
+      }, 2200) // 정답인 .word 에 correct 추가하고 2.2초 뒤에 해당 엘리먼트 삭제
+
+    }, 1000) // 모션을 보여주기 위해, 페이지 진입했을 때 1초 후 애니메이션 동작하게 하는 개발하시는데는 상관없는 setTimeout
+  </script>
+
+</body>
+
+</html>

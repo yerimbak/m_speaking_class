@@ -1,0 +1,35 @@
+/* 왼쪽 붙은 ver word wrap width 값*/
+#speakingBattle-game .contents .word-rain-wrap.word-rain-wrap.is-position-left .word{
+  width: 36rem;
+}
+
+#speakingBattle-game .contents .word-rain-wrap .word.position-1{left:0}
+#speakingBattle-game .contents .word-rain-wrap.is-position-left .word.position-2 {left: 0; } 
+#speakingBattle-game .contents .word-rain-wrap.is-position-left .word.position-3 { left: 0; } 
+#speakingBattle-game .footer { flex-direction: column; height: auto; } 
+.whole-life-wrap { width: 100%; display: flex; } 
+
+/* 상단 문장 컨텐트 내 빈칸 */
+/* #speakingBattle-game .contents .word-rain-wrap .word { width: 34rem; }  */
+.word-game-wrap { display: flex; flex-wrap: wrap; gap: 0.5rem; } 
+.word-game-wrap .word-blank { display: flex; align-items: center; border: 1px solid #ccc; border-radius: 5px; height: 3rem; padding: 0 3rem; background-color: #fff; white-space: pre; } 
+.word-game-wrap .word-text { white-space: pre; display: flex; align-items: center; } 
+.word-game-wrap .word-text.hint { color: tomato; } 
+
+/* 단어: answer */
+.word-game-wrap .word-blank.answer { padding: 0.2rem 0.5rem; background-color: tomato; color: #fff; } 
+
+/* 단어 : hint */
+.word-game-wrap .word-blank.hint { border: none; background-color: unset; color: tomato; } 
+
+/* 하단 단어 버튼 */
+.word-wrap .word-item { display: flex; align-items: center; background-color: tomato; border-radius: 5px; color: #fff; flex: 0 0 auto; white-space: pre; height: 4rem; padding: 0 0.5rem; }
+.word-wrap .word-item:not(:last-child){margin-right:0.7rem;}
+#speakingBattle-game .word-wrap { display: flex; width: 100%; margin-bottom: 1.5rem; flex-wrap: nowrap; overflow-x: auto; padding-right: 1.2rem; } 
+
+/* 하단 word button class : reset */
+.word-wrap .word-item.reset { background-color: #999; } 
+
+/* 하단 word button class : correct */
+.word-wrap .word-item.correct { border: 1px solid #0EB8C2; color: #0EB8C2; background-color: #fff; } 
+#speakingBattle-game .contents .word-rain-wrap .word.position-4.is-left{ left: 9rem; }

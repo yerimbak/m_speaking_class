@@ -1,0 +1,10 @@
+@charset "UTF-8"; 
+
+/* 추가 : 코치 마크 220907 */
+#textBookContainer #stepSelect .learning-type-tab-wrap .tab-cont-wrap {margin: 2rem 0 0 0;}
+#textBookContainer #stepSelect .learning-type-tab-wrap .step-select-wrap .step-list ul li {position: relative;}
+#textBookContainer #stepSelect .learning-type-tab-wrap .step-select-wrap .step-list ul li .mark-coach {position: absolute; top: -30%; right: 10%; display: flex; align-items: center; justify-content: center; width: 3.6rem; height: 3.6rem; color: #fff; font-size: 1.2rem; font-weight: 700; background: url(../../img/bg_coachmark.png) center / 100% auto no-repeat; z-index: 10;} 
+
+/* 추가 : 일반 클래스 코치 마크 220915 */
+.type-conversation #LetsTalk .selectStep-list-wrap .title {margin: 0 0 2.5rem 0;}
+.type-conversation #LetsTalk .selectStep-list-wrap .list-wrap ul li button .mark-coach {position: absolute; top: -30%; right: 10%; display: flex; align-items: center; justify-content: center; width: 3.6rem; height: 3.6rem; color: #fff; font-size: 1.2rem; font-weight: 700; background: url(../../img/bg_coachmark2.png) center / 100% auto no-repeat; z-index: 10;}

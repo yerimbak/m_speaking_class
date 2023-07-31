@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+
+        @@include('../include/header.html', {
+          title: '스피킹 클래스',
+          btnMenu: true,
+          btnRefresh: true,
+          btnSearch: true
+        })
+
+        <div id="ContentsBox">
+          <div>
+            <!-- bottomsheet layerPopup -->
+            <div class="btmPopWrap" id="btmPopWrap">
+              <!-- 활성화시 class="on"  -->
+              <div class="btmPopInner">
+                <div class="swiper">
+                  <div class="swiper-wrapper">                   
+                    <div class="swiper-slide">
+                      <div class="swiper-item">
+                        <a href="#" class="img-box">
+                          <img src="../../img/memberNew/bottomsheet_banner1.png" alt="우리반 영어수업은 스피킹클래스로 공부하면 피자 10판 쏜다. 자세히 보기">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-item">
+                        <a href="#" class="img-box">
+                          <img src="../../img/memberNew/bottomsheet_banner2.png" alt="스피킹클래스 피자 10판 이벤트 소문내면 스벅 커피 쏜다!. 자세히 보기">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-item">
+                        <a href="#" class="img-box box-col">
+                          <img src="../../img/memberNew/bottomsheet_banner_text1.png" alt="모든초중고영어교과서를무료체험가능 영어교과서 무료체험 이벤트">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="btmButton">
+                  <!-- 닫기 버튼 클릭시 btmPopWrap 클래스의 on 클래스 삭제 -->
+                  <button type="button" class="layer-stop">다시보지않기</button>
+                  <button type="button" class="close">닫기</button>
+                </div>
+              </div>
+              
+              <div class="dimmed"></div>
+
+            </div>
+            <!-- // bottomsheet layerPopup -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper', {
+      pagination: { // 페이징 설정
+        el: '.swiper-pagination',
+      },
+    })
+
+    const $bottomSheet = document.querySelector('.btmPopWrap');
+    window.onload = function() {
+      $bottomSheet.classList.add('on');
+    }
+    document.querySelectorAll('.close').forEach(function(element){
+      element.addEventListener('click', function(){
+        $bottomSheet.classList.remove('on');
+      });
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="0_member.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" id="FindIdContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <div class="title">ID 찾기</div>
+          <button class="btn-back"></button>
+        </div>
+
+        <div id="ContentsBox">
+
+          <div id="FindId">
+            <div class="form">
+              <div class="search-input-wrap">
+                <div class="search-wrap">
+                  <input type="text" placeholder="이름">
+                  <button class="btn-search">조회</button>
+                </div>
+              </div>
+              <div class="search-result-wrap">
+
+                <!-- 조회 안될때 -->
+                <div class="result-empty-wrap" style="display:none;">
+                  <div class="img"></div>
+                  <p>가입된 ID가 없습니다.</p>
+                </div>
+
+                <!-- 조회 결과 -->
+                <div class="result-list-wrap">
+                  <div class="list-title">가입 ID</div>
+                  <div class="result-list">
+                    <ul>
+                      <li>
+                        <div class="userId">abc**</div>
+                        <div class="joinDate">2021-09-14</div>
+                      </li>
+                      <li>
+                        <div class="userId">abc**</div>
+                        <div class="joinDate">2021-09-14</div>
+                      </li>
+                      <li>
+                        <div class="userId">abc**</div>
+                        <div class="joinDate">2021-09-14</div>
+                      </li>
+                      <li>
+                        <div class="userId">abc**</div>
+                        <div class="joinDate">2021-09-14</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

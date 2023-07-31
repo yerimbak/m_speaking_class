@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../css/reset.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../0_contents.css">
+</head>
+
+<body>
+  <div id="root" class="type-pattern">
+    <div class="container" id="PatternIntroContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li class="on"></li> <!-- 활성화 된건 on 추가 -->
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="TutorGuideSection" class="speak">
+          <div class="char-wrap">
+            <div class="char default-male"></div>
+            <div class="bg"></div>
+          </div>
+          <div class="text-wrap">
+            <p>영어로 어떻게 표현할지 말해 보세요.</p>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+
+          <div id="PatternIntro">
+
+            <div id="IntroGuideBox">
+              <div class="boundary-box">
+                <div class="box">
+                  <div class="box-inner">
+                    <div class="waiting-wrap">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                    <div class="text-wrap">
+                      <p>만나서 반가워</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div id="stt">
+          <div id="SpeakingPrint">
+            <div class="print-wrap">
+              <p></p>
+            </div>
+          </div>
+          <div id="MicAnimation">
+            <div class="inner">
+              <ul class="">
+                <!-- ready 추가시 활성화 // loading 추가시 로딩 // ready + talking 발화모션 // more 한번 더 말하기 -->
+                <li class="dot dot1"></li>
+                <li class="dot dot2"></li>
+                <li class="dot dot3"></li>
+                <li class="dot dot2"></li>
+                <li class="dot dot1"></li>
+                <li class="loading-li">
+                  <div class="loading-icon"></div>
+                </li>
+                <li class="waiting-li">
+                  <div class="waiting-icon"></div>
+                </li>
+                <li class="more-li">
+                  <div class="more-icon">
+                    <div class="dot"></div>
+                    <div class="dimm"></div>
+                    <div class="svg-wrap">
+                      <svg width="74" height="30" viewBox="0 0 74 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15 1H59C66.732 1 73 7.26801 73 15C73 22.732 66.732 29 59 29H15C7.26801 29 1 22.732 1 15C1 7.26801 7.26801 1 15 1Z"
+                          stroke="#333" stroke-width="2" />
+                      </svg>
+                    </div>
+                    <p class="more-text">Retry</p>
+                  </div>
+                  <p class="more-desc">여기를 터치하면 다시 말할 수 있어요</p>
+                </li>
+              </ul>
+              <p class="press-desc">To speak, press the button</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

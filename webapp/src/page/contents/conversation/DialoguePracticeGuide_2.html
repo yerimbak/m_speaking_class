@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../css/reset.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../0_contents.css">
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="DialoguePracticeGuideContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li></li> <!-- 활성화 된건 on 추가 -->
+              <li class="on"></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="TutorGuideSection">
+          <div class="char-wrap">
+            <div class="char default-male"></div>
+            <div class="bg"></div>
+          </div>
+          <div class="text-wrap">
+            <p>어떻게 말하는지 들어보세요.</p>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+
+          <div id="DialoguePracticeGuide">
+            <div id="NicknameBox" class="onlyBox">
+              <div class="talker-wrap">
+                <div class="talker">abc</div>
+              </div>
+              <div class="boundary-box">
+                <div class="box">
+                  <div class="box-inner">
+                    <div class="text-wrap">
+                      <div class="top-text">nice</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="TrainingSet">
+              <div class="title">추천 답변</div>
+              <div class="training-list">
+                <ul class="">
+                  <!-- autoPlay 추가시 아래 리스트 비활성화 -->
+                  <li class="">
+                    <!-- play 클래스 추가시 재생 아이콘 출력 -->
+                    <p>Nice to meet you</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 다른 상태 -->
+            <div id="TrainingSet">
+              <div class="title">추천 답변</div>
+              <div class="training-list">
+                <ul class="select-complete">
+                  <!-- 아래 li 중 하나를 선택 했을경우 select-complete 추가 -->
+                  <li class="on">
+                    <!-- 선택된건 부모 ul에 select-complete 추가 후 li에 on 클래스 추가  -->
+                    <p>Nice to meet you</p>
+                  </li>
+                  <li class="on play">
+                    <!-- play 클래스 추가시 재생 아이콘 출력 -->
+                    <p>Nice to meet you</p>
+                  </li>
+                  <li class="on check">
+                    <!-- 완료된건 check 클래스 추가  -->
+                    <p>Nice to meet you</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

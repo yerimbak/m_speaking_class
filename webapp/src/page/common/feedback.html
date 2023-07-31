@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="FeedbackContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li class="on"></li> <!-- 활성화 된건 on 추가 -->
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+
+          <div id="Feedback">
+            <div class="motion-wrap">
+              <div class="motion-img"></div>
+              <div class="center-img"></div>
+            </div>
+            <div class="text-wrap">
+              <p>Nice Try!</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="stt">
+          <div id="MicAnimation">
+            <div class="inner">
+              <ul class="">
+                <!-- ready 추가시 활성화 // loading 추가시 로딩 // ready + talking 발화모션 // more 한번 더 말하기 -->
+                <li class="dot dot1"></li>
+                <li class="dot dot2"></li>
+                <li class="dot dot3"></li>
+                <li class="dot dot2"></li>
+                <li class="dot dot1"></li>
+                <li class="loading-li">
+                  <div class="loading-icon"></div>
+                </li>
+                <li class="waiting-li">
+                  <div class="waiting-icon"></div>
+                </li>
+                <li class="more-li">
+                  <div class="more-icon"></div>
+                  <p>여기를 터치하면 다시 말할 수 있어요</p>
+                </li>
+              </ul>
+              <p class="press-desc">To speak, press the button</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

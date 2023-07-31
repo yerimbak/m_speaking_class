@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="CompleteContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li class="on"></li> <!-- 활성화 된건 on 추가 -->
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+
+        </div>
+
+        <div id="SettingMenuPopup">
+          <div class="modal-cont">
+
+            <div id="SettingChangeName">
+              <div class="setting-header">
+                <div class="title">이름, 닉네임 변경</div>
+                <button class="btn-back"></button>
+              </div>
+              <div class="setting-cont">
+                <div class="inner">
+                  <div class="center-wrap">
+                    <div class="input-underline-wrap">
+                      <input type="text" placeholder="이름 (홍길동)">
+                      <input type="text" placeholder="닉네임 (abc)">
+                    </div>
+                  </div>
+                  <div id="CommonButton">
+                    <button class="btn-confirm">완료</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

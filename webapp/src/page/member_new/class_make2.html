@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '스피킹 클래스 만들기',
+          btnClose: true
+        })
+        
+        <div id="ContentsBox">
+          <div>
+            <!-- fixed-button이 있는 경우 innerWrap으로 한번 더 감싸줍니다 -->
+            <div class="innerWrap">
+              @@include('../include/default_filed.html', {
+                label: '클래스 명',
+                required: true,
+                inputType: 'text'
+              })
+
+              <div class="field">
+                <!-- 
+                  성공시 class="is-success",
+                  실패시 class="is-error"
+                  input line으로 적용 class="is-line"
+                -->
+                <label class="label">출판사 <span class="required">필수입력</span></label>
+                <div class="control">
+                  <div class="photo-list">
+                    <ul class="item-wrap">
+                      <li class="item">
+                        <div class="item-inner">
+                          <input type="radio" name="test" id="text1">
+                          <label class="item-box" for="text1">
+                            <span>
+                              <img src="../../img/memberNew/logo_ne.png" alt="능률">
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-inner">
+                          <input type="radio" name="test" id="text2">
+                          <label class="item-box" for="text2">
+                            <span>
+                              <img src="../../img/memberNew/logo_donga.png" alt="동아출판">
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-inner">
+                          <input type="radio" name="test" id="text3">
+                          <label class="item-box" for="text3">
+                            <span>
+                              <img src="../../img/memberNew/logo_daekyo.png" alt="대교">
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-inner">
+                          <input type="radio" name="test" id="text4">
+                          <label class="item-box" for="text4">
+                            <span>
+                              <img src="../../img/memberNew/logo_visang.png" alt="비상">
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-inner">
+                          <input type="radio" name="test" id="text5">
+                          <label class="item-box" for="text5">
+                            <span>
+                              <img src="../../img/memberNew/logo_chenjea.png" alt="천재교육">
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-inner">
+                          <input type="radio" name="test" id="text6">
+                          <label class="item-box" for="text6">
+                            <span>
+                              <img src="../../img/memberNew/logo_ybm.png" alt="YBM교육">
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="item-inner">
+                          <input type="radio" name="test" id="text7">
+                          <label class="item-box" for="text7">
+                            <span>
+                              <img src="../../img/memberNew/logo_mirae.png" alt="미래앤">
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="help">validation</p>
+              </div>
+
+              <div class="field">
+                <!-- 
+                  성공시 class="is-success",
+                  실패시 class="is-error"
+                  input line으로 적용 class="is-line"
+                -->
+                <label class="label">유형 선택 <span class="required">필수입력</span></label>
+                <div class="control">
+                  <div class="list-checkbox">
+                    <ul>
+                      <li class="item">
+                        <label class="checkbox">
+                          <input type="checkbox" disabled>
+                          <i></i>
+                          <strong class="title">초등학교</strong>
+                        </label>
+                      </li>
+                      <li class="item">
+                        <label class="checkbox">
+                          <input type="checkbox">
+                          <i></i>
+                          <strong class="title">중학교</strong>
+                        </label>
+                      </li>
+                      <li class="item">
+                        <label class="checkbox">
+                          <input type="checkbox">
+                          <i></i>
+                          <strong class="title">고등학교</strong>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="help">validation</p>
+              </div>
+            </div>
+            <!-- //fixed-button이 있는 경우 innerWrap으로 한번 더 감싸줍니다 -->
+            <div class="buttons is-fixed">
+              <button class="button is-full is-large is-light" disabled>다음</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

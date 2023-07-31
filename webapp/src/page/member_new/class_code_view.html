@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '클래스 코드',
+          btnBack: true,
+          btnClose: true,
+        })
+        <div id="ContentsBox">
+          <div>
+            <div class="class-code-share">
+              <div class="class-code">
+                <strong>999 999</strong>
+                <a href="#">공유하기</a>
+              </div>
+              <div class="class-code-text">
+                <textarea class="textarea" rows="10" readonly>
+**학교의 왕초보 영어
+클래스의 초대합니다!
+클래스 코드 : 111 111
+
+초대받은 클래스로 바로 가기
+http://www.sclass.ai/sClass111111
+                </textarea>
+
+                <div class="buttons">
+                  <button class="button is-icon"><span class="copy"></span>문구 복사</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 활성화 class="active" -->
+      <div class="toast active">
+        <strong>문구를 복사했어요!</strong>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>

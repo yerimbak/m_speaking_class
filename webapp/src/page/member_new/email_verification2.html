@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          btnClose: true,
+          title: '공직자 이메일 인증하기'
+        })
+        
+        <div id="ContentsBox">
+          <div>
+            @@include('../include/button_filed.html', {
+              label: '이메일',
+              placeholder: 'abcd@email.com',
+              required: true,
+              inputType: 'text',
+              btnText: '인증',
+              buttonDisabled: true
+            })
+
+            @@include('../include/button_filed.html', {
+              label: '인증번호',
+              placeholder: '123456',
+              timer: true,
+              required: true,
+              inputType: 'tel',
+              btnText: '확인',
+              buttonDisabled: true,
+              inputClass: 'pd-r'
+            })
+            <div class="mail-msg-box">
+              <p>인증 메일이 오지 않아요!</p>
+              <p>인증 메일이 오지 않으면 스팸으로 분류 되어 있거나,<br>휴면 계정일 수도 있습니다.<br>계정을 다시 한 번 확인해 주세요!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+
+        @@include('../include/header.html', {
+          title: '스피킹 클래스',
+          btnMenu: true,
+          btnRefresh: true,
+          btnSearch: true
+        })
+
+        <div id="ContentsBox">
+          <div>
+            <div id="list" class="class-list slide-list"><!-- slide-list 추가 -->
+              <!-- ul삭제 li는 div로 변경 -->
+              <div class="item openClass"><!-- openClass 추가 -->
+                <a class="class-item thema-openclass" href="#">
+                  <div class="info-wrap">
+                    <!-- thema-openclass 컬러타입 추가 -->
+                    <div class="flag">OPEN CLASS</div>
+                    <strong class="class-title">윤선생 스피킹</strong>
+                    <p class="class-status">
+                      <span class="class-date">상시운영</span>
+                      <span class="pass-standard">통과기준(낮음)</span>                                         
+                    </p>
+                    <div class="class-lately">
+                      <div class="class-lately-title">
+                        <p class="tit-eng">I Have a Sore Throat</p>
+                        <span class="tit-ko">목이 아파요</span>
+                      </div>
+                      <div class="perfection-wrap">
+                        <div class="guage-wrap">
+                          <svg viewBox="-2 -2 64 64" fill="none">
+                            <circle class="bar outside-bar" cx="30" cy="30" r="26"></circle>
+                            <circle class="bar inside-bar" cx="30" cy="30" r="26" stroke-dasharray="164"
+                              stroke-dashoffset="41"></circle>
+                            <!-- stroke-dashoffset 0% = 164 / 100% = 0 -->
+                          </svg>
+                        </div>
+                        <div class="fraction-wrap">
+                          <strong>180</strong>
+                          <div class="bar"></div>
+                          <span>320</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="item swiper">
+                <!-- 카드 컬러 타입별 클래스 명
+                    1. thema-purple
+                    2. thema-pink
+                    3. thema-green
+                    4. thema-orange
+                    5. thema-yellow
+                    6. thema-coralred
+                    7. thema-red
+                    8. thema-lightgreen
+                    9. thema-deepgreen
+                    10. thema-lightbrown
+                    11. thema-brown
+                    12. thema-skyblue
+                    13. thema-ultrablue
+                    14. thema-cobaltblue
+                  -->
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide content">
+                    <a class="class-item thema-purple" href="#">
+                    <div class="info-wrap">
+                      <!-- thema-purple 컬러타입 추가 -->
+                      <strong class="class-title">EBS 왕초보 영어 2022 하편</strong>
+                      <p class="class-status">
+                        <span class="class-date">22.09.01~22.12.31</span>
+                        <span class="pass-standard">통과기준(중간)</span>                                         
+                      </p>
+                      <div class="class-lately">
+                        <div class="class-lately-title">
+                          <p class="tit-eng">I Have a Sore Throat</p>
+                          <span class="tit-ko">목이 아파요</span>
+                        </div>
+                        <div class="perfection-wrap">
+                          <div class="guage-wrap">
+                            <svg viewBox="-2 -2 64 64" fill="none">
+                              <circle class="bar outside-bar" cx="30" cy="30" r="26"></circle>
+                              <circle class="bar inside-bar" cx="30" cy="30" r="26" stroke-dasharray="164"
+                                stroke-dashoffset="41"></circle>
+                              <!-- stroke-dashoffset 0% = 164 / 100% = 0 -->
+                            </svg>
+                          </div>
+                          <div class="fraction-wrap">
+                            <strong>180</strong>
+                            <div class="bar"></div>
+                            <span>320</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a></div>
+                  <div class="swiper-slide menu">
+                    <!-- 삭제버튼 추가 -->
+                    <button class="action thema-purple">삭제</button>
+                  </div>
+                </div> 
+              </div>
+
+              <div class="item swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide content">
+                    <a class="class-item thema-pink" href="#">
+                      <div class="info-wrap">
+                        <!-- thema-pink 컬러타입 추가 -->
+                        <strong class="class-title">클래스명 길어져서 두줄일 때 클래스명 길어져서 두줄일 때</strong>
+                        <p class="class-status">
+                          <span class="class-date">22.09.01~22.12.31</span>
+                          <span class="pass-standard">통과기준(중간)</span>                                         
+                        </p>
+                        <div class="class-lately">
+                          <div class="class-lately-title">
+                            <p class="tit-eng">I Have a Sore Throat</p>
+                            <span class="tit-ko">목이 아파요</span>
+                          </div>
+                          <div class="perfection-wrap">
+                            <div class="guage-wrap">
+                              <svg viewBox="-2 -2 64 64" fill="none">
+                                <circle class="bar outside-bar" cx="30" cy="30" r="26"></circle>
+                                <circle class="bar inside-bar" cx="30" cy="30" r="26" stroke-dasharray="164"
+                                  stroke-dashoffset="41"></circle>
+                                <!-- stroke-dashoffset 0% = 164 / 100% = 0 -->
+                              </svg>
+                            </div>
+                            <div class="fraction-wrap">
+                              <strong>180</strong>
+                              <div class="bar"></div>
+                              <span>320</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide menu">
+                    <!-- 삭제버튼 추가 -->
+                    <button class="action thema-pink">삭제</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide content">
+                    <a class="class-item thema-green" href="#">
+                      <div class="info-wrap">
+                        <!-- thema-green 컬러타입 추가 -->
+                        <strong class="class-title">PC에서 생성한 클래스</strong>
+                        <p class="class-status">
+                          <span class="class-date">22.09.01~22.12.31</span>
+                          <span class="pass-standard">통과기준(중간)</span>                                         
+                        </p>
+                        <div class="class-lately">
+                          <div class="class-lately-title">
+                            <p class="tit-eng">Let’s start learning</p>
+                          </div>
+                          <div class="perfection-wrap">
+                            <div class="guage-wrap">
+                              <svg viewBox="-2 -2 64 64" fill="none">
+                                <circle class="bar outside-bar" cx="30" cy="30" r="26"></circle>
+                                <circle class="bar inside-bar" cx="30" cy="30" r="26" stroke-dasharray="164"
+                                  stroke-dashoffset="164"></circle>
+                                <!-- stroke-dashoffset 0% = 164 / 100% = 0 -->
+                              </svg>
+                            </div>
+                            <div class="fraction-wrap">
+                              <strong>180</strong>
+                              <div class="bar"></div>
+                              <span>320</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide menu">
+                    <!-- 삭제버튼 추가 -->
+                    <button class="action thema-green">삭제</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item swiper">
+                <div class="swiper-wrapper">
+                  <!-- 삭제버튼 추가 -->
+                  <div class="swiper-slide content">
+                    <a class="class-item thema-orange" href="#">
+                      <div class="info-wrap">
+                        <!-- thema-orange 컬러타입 추가 -->
+                        <strong class="class-title">PC에서 변경한 클래스</strong>
+                        <p class="class-status">
+                          <span class="class-date">22.09.01~22.12.31</span>
+                          <span class="pass-standard">통과기준(중간)</span>                                         
+                        </p>
+                        <div class="class-lately">
+                          <div class="class-lately-title">
+                            <p class="tit-eng">Let’s start learning</p>
+                          </div>
+                          <div class="perfection-wrap">
+                            <div class="guage-wrap">
+                              <svg viewBox="-2 -2 64 64" fill="none">
+                                <circle class="bar outside-bar" cx="30" cy="30" r="26"></circle>
+                                <circle class="bar inside-bar" cx="30" cy="30" r="26" stroke-dasharray="164"
+                                  stroke-dashoffset="164"></circle>
+                                <!-- stroke-dashoffset 0% = 164 / 100% = 0 -->
+                              </svg>
+                            </div>
+                            <div class="fraction-wrap">
+                              <strong>180</strong>
+                              <div class="bar"></div>
+                              <span>320</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide menu">
+                    <button class="action thema-orange">삭제</button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+            <aside class="class-menu"> <!-- 활성화시 class="is-current" -->
+              <div class="dimmed"></div>
+              <div class="class-menu-list">
+                <ul>
+                  <li class="item">
+                    <a href="#">
+                      <span class="class-vist">클래스 참여하기<i></i></span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#">
+                      <span class="class-make">클래스 만들기<i></i></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button class="btn-class-make"><span>클래스 메뉴</span></button>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+      var siblings = function siblings(el) {
+        return [].concat(_toConsumableArray(el.parentElement.children)).filter(function (node) {
+          return node != el;
+        });
+      }
+      var swipers = new Swiper('.item.swiper', {
+        slidesPerView: 'auto',
+        initialSlide: 0,
+        resistanceRatio: 0,
+        slideToClickedSlide: true,
+        speed: 50,
+        on: {
+          init: function () {
+            // console.log('swiper initialized');
+          },
+          transitionEnd: function (swiper) { 
+            if (!swiper.el.swiper.snapIndex) {
+              swiper.el.classList.remove('is-delete')
+              return
+            }else {
+              swiper.el.classList.add('is-delete')
+            }
+            var siblingEl = siblings(swiper.el)
+            siblingEl.forEach(function(el, idx) {
+              if(el.swiper) {
+                el.swiper.slideTo(0)
+              }
+            })
+          },
+        },
+      })
+    })
+	</script>
+</body>
+
+</html>

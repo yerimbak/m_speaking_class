@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+
+        @@include('../include/header.html', {
+          title: '스피킹 클래스',
+          btnMenu: true,
+          btnRefresh: true,
+          btnSearch: true
+        })
+
+        <div id="ContentsBox">
+          <div>
+            <div class="class-list">
+              <!-- 카드 타입 추가 -->
+              <ul>
+                <li class="item">
+                  <a class="class-item thema-openclass" href="#">
+                    <!-- thema-openclass 컬러타입 추가 -->
+                    <div class="flag">OPEN CLASS</div>
+                    <strong class="class-title">윤선생 스피킹</strong>
+                    <p class="class-status">
+                      <span class="class-date">상시운영</span>
+                      <span class="pass-standard">통과기준(낮음)</span>                                         
+                    </p>
+                    <div class="class-lately">
+                      <p class="ico topic"></p>
+                      <div class="class-lately-title">
+                        <p class="tit-eng">I Have a Sore Throat</p>
+                        <span class="tit-ko">목이 아파요</span>
+                      </div>
+                      <div class="perfection-wrap">
+                        <div class="guage-wrap">
+                          <svg viewBox="-2 -2 64 64" fill="none">
+                            <circle class="bar outside-bar" cx="30" cy="30" r="26"></circle>
+                            <circle class="bar inside-bar" cx="30" cy="30" r="26" stroke-dasharray="164"
+                              stroke-dashoffset="41"></circle>
+                            <!-- stroke-dashoffset 0% = 164 / 100% = 0 -->
+                          </svg>
+                        </div>
+                        <div class="fraction-wrap">
+                          <strong>180</strong>
+                          <div class="bar"></div>
+                          <span>320</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- //카드 타입 추가 -->
+
+              <p class="no-data">등록된 클래스가 없습니다.<br>
+                <span>코드를 입력하고<br>나만의 클래스를 등록해보세요.</span></p>
+              <ul>
+                <!-- 기본 유형 -->
+                <li class="item">
+                  <button class="class-add">
+                    <span>
+                      <i class="icon"></i>
+                      클래스 만들기
+                    </span>
+                  </button>
+                </li>
+                <!-- 선생님 -->
+                <li class="item">
+                  <button class="class-add spot">
+                    <span>
+                      <i class="icon"></i>
+                      교과서 클래스 만들기
+                    </span>
+                  </button>
+                </li>
+                <li class="item">
+                  <button class="class-add">
+                    <span>
+                      <i class="icon"></i>
+                      창작 클래스 만들기
+                    </span>
+                  </button>
+                </li>
+                <!-- 학생 -->
+                <li class="item">
+                  <button class="class-add spot">
+                    <span>
+                      <i class="icon"></i>
+                      간편 클래스 등록하기
+                    </span>
+                  </button>
+                </li>
+              </ul>
+              <div class="mail-msg-box">
+                <p>클래스 만들기 꿀팁</p>
+                <p>지금 스튜디오(<a href="https://www.sclass.ai/" target="_blank">sclass.ai</a>)로 접속하시면<br>
+                  더 많은 기능을 사용하여<br>
+                  클래스 만들기가 가능합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

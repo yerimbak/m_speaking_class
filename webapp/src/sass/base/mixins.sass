@@ -1,0 +1,67 @@
+@mixin imgCenter()
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	margin: auto
+	text-align: center
+	max-height: 100%
+	max-width: 100%
+
+@mixin Align-box()
+	display: flex
+	flex-flow: wrap
+
+@mixin Align-column()
+	display: flex
+	flex-flow: column
+
+@mixin Align-middle()
+	display: flex
+	align-items: center
+	justify-content: center
+
+@mixin Align-middle-column() 
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-flow: column
+
+@mixin Align-middle-row()
+	display: flex
+	flex-flow: row
+	align-items: center
+
+@mixin Align-between()
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+@mixin Align-between-row()
+	display: flex
+	flex-flow: row
+	justify-content: space-between
+	align-items: center
+
+@mixin Align-around-column()
+	display: flex
+	flex-flow: column
+	justify-content: space-around	
+
+@mixin border-top-radius()
+	border-top-left-radius: rem(40px)
+	border-top-right-radius: rem(40px)
+
+@mixin top-radius-box()
+	@include border-top-radius()
+	box-shadow: 0 rem(-3px) rem(5px) 0 rgba(0, 0, 0, 0.01)
+	background-color: $white-color
+	padding: rem(32px)
+
+@mixin before($display, $content, $width: null, $height: null)
+	display: $display
+	content: $content
+	width: $width
+	height: $height
+

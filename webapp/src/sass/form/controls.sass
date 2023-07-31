@@ -1,0 +1,299 @@
+[data-contents='new']
+  .field
+    &:not(:last-child)
+      margin:
+        bottom: rem($bottom-space)
+    &.is-success
+      .input
+        border:
+          color: $success-color2
+      .help
+        //color: $success-color
+        position: relative
+        font: 
+          size: rem(12px)
+          weight: 500
+        vertical-align: middle
+        color: $success-color2
+        i
+          display: inline-block
+          width: rem(16px)
+          height: rem(16px)
+          border: 1px solid
+          border: 
+            color: $success-color2
+          border-radius: rem(4px)
+          vertical-align: middle
+          margin:
+            top: rem(-2px)
+            right: rem(3px)
+          &::before
+            content: ''
+            display: block
+            position: absolute
+            width: rem(7px)
+            height: rem(4px)
+            border: solid $success-color2
+            border-width: 0 0 rem(2px) rem(2px)
+            transform: rotate(-45deg)
+            top: 0.5rem
+            left: 0.4rem
+    &.is-error
+      .input
+        border:
+          color: $point-color2
+      .help
+        color: $point-color2
+        position: relative
+        font: 
+          size: rem(12px)
+          weight: 500
+        vertical-align: middle
+        i
+          display: inline-block
+          width: rem(16px)
+          height: rem(16px)
+          border: 1px solid
+          border-radius: rem(4px)
+          vertical-align: middle
+          margin:
+            top: rem(-2px)
+            right: rem(3px)
+          &::before,
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            width: rem(10px)
+            height: rem(2px)
+            background-color: $point-color2
+            transform: rotate(45deg)
+            top: 0.85rem
+            left: 0.33rem
+          &::after
+            transform: rotate(-45deg)
+    &.is-line
+      .input
+        border:
+          top:
+            color: transparent
+          left:
+            color: transparent
+          right:
+            color: transparent
+        box:
+          shadow: none
+        border:
+          radius: 0
+    &.is-grouped
+      display: flex
+      justify-content: flex-start
+      > .control
+        flex:
+          shrink: 0
+        &:not(:last-child)
+          margin:
+            bottom: 0
+            right: 0.75rem
+        &.is-expanded
+          flex:
+            grow: 1
+            shrink: 1
+    + .buttons
+      margin:
+        top: rem(50px)
+      &.is-between
+        margin: rem(45px) rem(-5px) rem(-5px)
+        
+    &.is-search
+      position: relative
+      .input
+        padding:
+          right: rem(40px)
+    &.is-position
+      position: relative
+  .label
+    display: block
+    font:
+      size: rem(14px)
+      weight: 500
+    color: $base-color
+    &:not(:last-child)
+      margin:
+        bottom: rem(8px)
+    .required
+      font:
+        size: 0
+      position: relative
+      &::after
+        content: '*'
+        font:
+          size: rem(14px)
+          weight: 700
+        color: $point-color
+        
+  .control
+    box:
+      sizing: border-box
+    font:
+      size: rem(14px)
+    position: relative
+    text:
+      align: inherit
+    .btn-search
+      position: absolute
+      top: rem(5px)
+      right: 0
+      width: rem(40px)
+      height: rem(40px)
+      &::before
+        content: ''
+        display: block
+        width: rem(24px)
+        height: rem(24px)
+        background: url('../../img/memberNew/icon_search.png') 0 0 / 100% auto no-repeat
+          // image: url('../../img/memberNew/icon_search.png')
+          // size: 100%
+          // repeat: no-repeat
+          // top: 50%
+    &:not(.is-expanded)
+      + .control,
+      + .search-result
+        margin:
+          top: 8px
+    .button
+      width: rem(80px)
+      height: rem(48px)
+    .input 
+      height: rem(48px)
+  .search-result
+    position: absolute
+    width: 100%
+    z-index: 10
+    background: #fff
+    ul
+      display: flex 
+      flex-direction: column
+      border: 1px solid $border-color
+      max-height: rem(120px)
+      overflow-y: auto
+    .item
+      &:not(:last-child)
+        border-bottom: 1px solid #DBDBDB
+    .option
+      display: block
+      padding: rem(10px) rem(20px)
+      .school-area
+        color: #ccc
+    .option-self
+      padding: rem(10px) rem(20px)
+      width: 100%
+      text:
+        align: left
+      border: 1px solid $border-color
+      border:
+        top: none
+    + .control
+      margin:
+        top: 8px
+
+  .help
+    // display: block
+    font:
+      size: rem(12px)
+    margin:
+      top: rem(4px)
+  .discription
+    font:
+      size: rem(12px)
+      weight: 400
+    margin:
+      top: rem(8px)
+    color: $base-color
+    strong
+      font-weight: 500
+
+  .is-birth
+    .select
+      width: 100%
+    .control
+      + .control
+        margin-top: 0
+      .field
+        .control
+          &:nth-of-type(1)
+            width: 45%
+          &:nth-of-type(2)
+            width: 25%
+          &:nth-of-type(3)
+            width: 25%
+
+  .help-layer
+    position: absolute
+    border: 1px solid #BFBFBF
+    background: #fff
+    padding: rem(12px) rem(16px)
+    z-index: 10
+    top: rem(90px)
+    width: 100%
+    li
+      font: 
+        size: rem(12px)
+        weight: 500
+      vertical-align: middle
+      &.is-success
+        position: relative
+        color: $success-color2
+        i
+          display: inline-block
+          width: rem(16px)
+          height: rem(16px)
+          border: 1px solid
+          border: 
+            color: $success-color2
+          border-radius: rem(4px)
+          vertical-align: middle
+          margin:
+            top: rem(-2px)
+            right: rem(3px)
+          &::before
+            content: ''
+            display: block
+            position: absolute
+            width: rem(7px)
+            height: rem(4px)
+            border: solid $success-color2
+            border-width: 0 0 rem(2px) rem(2px)
+            transform: rotate(-45deg)
+            top: 0.5rem
+            left: 0.4rem
+      &.is-error
+        color: $point-color2
+        position: relative
+        font: 
+          size: rem(12px)
+          weight: 500
+        vertical-align: middle
+        i
+          display: inline-block
+          width: rem(16px)
+          height: rem(16px)
+          border: 1px solid
+          border-radius: rem(4px)
+          vertical-align: middle
+          margin:
+            top: rem(-2px)
+            right: rem(3px)
+          &::before,
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            width: rem(10px)
+            height: rem(2px)
+            background-color: $point-color2
+            transform: rotate(45deg)
+            top: 0.85rem
+            left: 0.33rem
+          &::after
+            transform: rotate(-45deg)

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+
+        @@include('../include/header.html', {
+          title: '스피킹 클래스',
+          btnMenu: true,
+          btnRefresh: true,
+          btnSearch: true
+        })
+
+        <div id="ContentsBox">
+          <div>
+            <div class="class-list">
+              <p class="no-data">등록된 클래스가 없습니다.</p>
+              <ul>
+                <li class="item">
+                  <button class="class-add">
+                    <span>
+                      <i class="icon"></i>
+                      클래스 만들기
+                    </span>
+                  </button>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+
+        <div id="NewAlertPopup" class="modal">
+            <div class="modal-inner">
+                <div class="modal-cont">
+                    <div class="title-wrap">
+                        <div class="title">알림</div>
+                    </div>
+                    <div class="text-wrap">
+                        <p>창작 클래스는<br>
+                            스튜디오에서 이용 가능합니다.<br>
+                            스튜디오로 이동하시겠습니까?
+                        </p>
+                        <p class="stxt">※ 스튜디오는 PC 크롬 브라우저에<br>
+                            최적화 되어 있습니다.</p>
+                    </div>
+                    <div id="CommonButton">
+                        <button>취소</button>
+                        <button>확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

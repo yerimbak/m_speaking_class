@@ -1,0 +1,32 @@
+/* button style half version */
+#ClassMain .speakingBattle-wrap.is-half-width{
+  display: flex;
+}
+#ClassMain .speakingBattle-wrap.is-half-width button{
+  width : 50%;
+}
+#ClassMain .speakingBattle-wrap.is-half-width button:not(:last-of-type){
+  margin-right:0.9rem;
+}
+
+
+/* button style full-width version */
+#ClassMain .speakingBattle-wrap.is-full-width{
+  display: flex;
+  flex-direction: column;
+}
+#ClassMain .speakingBattle-wrap.is-full-width button:not(:last-of-type){
+  margin-bottom:0.9rem;
+}
+
+/* button style position-fixed-bottom */
+#ClassMain .speakingBattle-wrap.is-fixed{
+  position: fixed;
+  width: 80%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#ClassMain .speakingBattle-wrap.is-fixed button:not(:last-child){
+  margin-bottom:0.9rem ;
+}

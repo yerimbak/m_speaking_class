@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+
+        @@include('../include/header.html', {
+          title: '스피킹 클래스',
+          btnMenu: true,
+          btnRefresh: true,
+          btnSearch: true
+        })
+
+        <div id="ContentsBox">
+          <div>
+            <div class="class-list">
+              
+            </div>
+          </div>
+        </div>
+
+        <div id="NewAlertPopup" class="modal">
+            <div class="modal-inner">
+                <div class="modal-cont">
+                    <div class="title-wrap">
+                        <div class="title">14세 미만 법정대리인 인증</div>
+                    </div>
+                    <div class="terms-wrap-new">
+                        <div class="young-txt">
+                            <strong>{이름}</strong>님은 14세 미만 가입자로서 법정대리인 인증이 필요합니다. 부모님 또는 보호자의 전화번호 입력 후 인증을 진행해주세요.
+                        </div>
+                        <div class="young-agree">
+                            @@include('../include/button_filed.html', {
+                              label: '법정대리인 인증',
+                              placeholder: '숫자만 입력해주세요',
+                              required: true,
+                              inputType: 'tel',
+                              btnText: '인증',
+                              buttonDisabled: true
+                              })
+                            @@include('../include/button_filed.html', {
+                              className: 'is-error',
+                              label: '인증번호',
+                              placeholder: '123456',
+                              timer: true,
+                              required: true,
+                              inputType: 'tel',
+                              btnText: '확인',
+                              buttonDisabled: true,
+                              inputClass: 'pd-r',
+                              discription: '입력하신 번호로 문자메세지를 보냈어요. <br />문자가 오지 않았다면 <strong>번호를 다시 확인해 주시거나 재발송 버튼을 눌러주세요.</strong>'
+                              })
+                          </div>
+                        <div class="buttons">
+                          <button class="button is-full is-light">완료</button>
+                        </div>
+                    </div>
+                    
+                    <!-- <div id="CommonButton">
+                        <button>다시 보지 않기</button>
+                        <button>동의하기</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

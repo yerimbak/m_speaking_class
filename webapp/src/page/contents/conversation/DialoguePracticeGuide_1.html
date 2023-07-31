@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../css/reset.css">
+  <link rel="stylesheet" href="../../../css/common.css">
+  <link rel="stylesheet" href="../0_contents.css">
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="DialoguePracticeGuideContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li></li> <!-- 활성화 된건 on 추가 -->
+              <li class="on"></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="TutorGuideSection">
+          <div class="char-wrap">
+            <div class="char default-male"></div>
+            <div class="bg"></div>
+          </div>
+          <div class="text-wrap">
+            <p>이렇게 말했네요.</p>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+
+          <div id="DialoguePracticeGuide">
+            <div id="NicknameBox">
+              <div class="turn-wrap">
+                Turn <span class="currentTurn">1</span>/<span class="maxTurn">2</span>
+              </div>
+              <div class="talker-wrap">
+                <div class="talker">abc</div>
+              </div>
+              <div class="boundary-box">
+                <div class="box">
+                  <div class="box-inner">
+                    <div class="text-wrap">
+                      <div class="top-text">nice</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="PromptBox">
+              <div class="talker-wrap">
+                <div class="talker talkerMale"></div> <!-- talkerMale / talkerFemale-->
+              </div>
+              <div class="boundary-box">
+                <div class="box">
+                  <div class="box-inner">
+                    <div class="text-wrap">
+                      <div class="top-text">Nice to see you too</div>
+                      <div class="btm-text">나도 만나서 반가워</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

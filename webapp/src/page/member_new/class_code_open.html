@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="../class/0_class.css">
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '스피킹 클래스',
+          btnBack: true
+        })
+        <div id="ContentsBox">
+          <div id="ClassMain">
+            <div class="innerWrap">
+              <div class="title-area">
+                <div class="classCodeBox thema-openclass">
+                  <!-- thema-openclass 컬러타입 추가 -->
+                  <div class="classCode-info">
+                    <p class="txt">
+                      <span>상시운영</span>
+                      <span>통과기준(낮음)</span>
+                    </p>
+                    <h2 class="tit">윤선생 스피킹</h2>
+                    <div class="flag">OPEN CLASS</div>
+                  </div>
+                  <div class="sliderUI">
+                    <div class="slideBar">
+                      <div class="sliderRange" style="width: 50%;"></div>
+                      <div class="slideCount">
+                        <span class="slideCount-act">34</span>
+                        <span class="slideCount-total">50</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 아코디언 리스트 -->
+              <div class="class-lesson-list">
+                <div class="accordion-item">
+                  <!-- 아코디언 펼침 open 추가 -->
+                  <div class="accordion-item-title">
+                    <strong class="lesson-title">영어회화</strong>
+                    <p class="lesson-num">
+                      <span class="no-act">10</span>
+                      <span class="no-total">10</span>
+                    </p>
+                  </div>
+                  <div class="accordion-cont">
+                    <div class="study-list-box">
+                      <!-- 완료는 complete 추가 -->
+                      <p class="list-num">1.</p>
+                      <div class="list-text">
+                        <div class="list-text-wrap">
+                          <strong>I Have a Sore Throat</strong>
+                          <p>목이 아파요</p>
+                        </div>
+                        <div class="grade">4</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item open">
+                  <!-- 아코디언 펼침 open 추가 -->
+                  <div class="accordion-item-title">
+                    <strong class="lesson-title">영어회화</strong>
+                    <p class="lesson-num">
+                      <span class="no-act">10</span>
+                      <span class="no-total">10</span>
+                    </p>
+                  </div>
+                  <div class="accordion-cont">
+                    <div class="study-list-box complete">
+                      <!-- 완료는 complete 추가 -->
+                      <p class="list-num">1.</p>
+                      <div class="list-text">
+                        <div class="list-text-wrap">
+                          <strong>I Have a Sore Throat</strong>
+                          <p>목이 아파요</p>
+                        </div>
+                        <div class="grade">4</div>
+                      </div>
+                    </div>
+                    <div class="study-list-box complete">
+                      <p class="list-num">2.</p>
+                      <div class="list-text">
+                        <div class="list-text-wrap">
+                          <strong>I Have a Sore Throat</strong>
+                          <p>방과 후에 계획 있니?</p>
+                        </div>
+                        <div class="grade">5</div>
+                      </div>
+                    </div>
+                    <div class="study-list-box">
+                      <p class="list-num">3.</p>
+                      <div class="list-text">
+                        <div class="list-text-wrap">
+                          <strong>It Must Have Been Difficult</strong>
+                          <p>정말 힘들었겠다</p>
+                        </div>
+                        <div class="grade">5</div>
+                      </div>
+                    </div>
+                    <div class="study-list-box">
+                      <p class="list-num">4.</p>
+                      <div class="list-text">
+                        <div class="list-text-wrap">
+                          <strong>I’m Getting Hungry Too</strong>
+                          <p>정말 힘들었겠다</p>
+                        </div>
+                        <div class="grade">1</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <!-- 아코디언 펼침 open 추가 -->
+                  <div class="accordion-item-title">
+                    <strong class="lesson-title">영어회화</strong>
+                    <p class="lesson-num">
+                      <span class="no-act">10</span>
+                      <span class="no-total">10</span>
+                    </p>
+                  </div>
+                  <div class="accordion-cont">
+                    <div class="study-list-box">
+                      <!-- 완료는 complete 추가 -->
+                      <p class="list-num">1.</p>
+                      <div class="list-text">
+                        <div class="list-text-wrap">
+                          <strong>I Have a Sore Throat</strong>
+                          <p>목이 아파요</p>
+                        </div>
+                        <div class="grade">4</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <!-- 아코디언 펼침 open 추가 -->
+                  <div class="accordion-item-title">
+                    <strong class="lesson-title">영어회화</strong>
+                    <p class="lesson-num">
+                      <span class="no-act">10</span>
+                      <span class="no-total">10</span>
+                    </p>
+                  </div>
+                  <div class="accordion-cont">
+                    <div class="study-list-box">
+                      <!-- 완료는 complete 추가 -->
+                      <p class="list-num">1.</p>
+                      <div class="list-text">
+                        <div class="list-text-wrap">
+                          <strong>I Have a Sore Throat</strong>
+                          <p>목이 아파요</p>
+                        </div>
+                        <div class="grade">4</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- //아코디언 리스트 -->
+            </div>
+
+            <div class="buttons is-fixed">
+              <!-- 단건 배틀일 경우 -->
+              <div class="is-center-full">
+                <button class="is-seapking-large">스피킹 배틀 하기</button>
+                <!-- <button class="is-listening-large">리스닝 배틀 하기</button> -->
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CommunityMainAccordion = document.querySelectorAll(
+      '#ClassMain .class-lesson-list .accordion-item .accordion-item-title');
+
+    function CommunityMainAccordionOnOff() {
+      this.parentNode.classList.toggle('open')
+    }
+    CommunityMainAccordion.forEach(item => item.addEventListener('click', CommunityMainAccordionOnOff));
+  </script>
+</body>
+
+</html>

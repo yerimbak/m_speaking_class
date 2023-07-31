@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+
+        @@include('../include/header.html', {
+          title: '스피킹 클래스',
+          btnMenu: true,
+          btnRefresh: true,
+          btnSearch: true
+        })
+
+        <div id="ContentsBox">
+          <div>
+            <div class="class-list">
+              
+            </div>
+          </div>
+        </div>
+
+        <div id="NewAlertPopup" class="modal">
+            <div class="modal-inner">
+                <div class="modal-cont">
+                    <div class="title-wrap">
+                        <div class="title">약관 동의</div>
+                        <button class="btn-menu">닫기</button>
+                    </div>
+                    <div class="terms-wrap-new">
+                        <div class="field agree-list">
+                              <div class="box agree-box">
+                                <div class="all">
+                                  <div class="agree-item">
+                                    <label class="checkbox2">
+                                      <p class="title"><strong>모두 확인, 동의합니다.</strong> </p>
+                                      <input type="checkbox" name="agree" value='selectall' onclick='selectAll(this)'>
+                                      <i></i>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="agree-item-list">
+                                  <ul>
+                                    <!-- 필수일경우 class="required" -->
+                                    <li class="agree-item required">
+                                      <label class="checkbox2">
+                                        <p class="title">스피킹클래스 이용약관 동의 <span>(필수)</span></p>
+                                        <input type="checkbox" name="agree">
+                                        <i></i>
+                                      </label>
+                                    </li>
+                                    <li class="agree-item required">
+                                      <label class="checkbox2">
+                                        <p class="title">개인정보 수집 및 이용 동의 <span>(필수)</span></p>
+                                        <input type="checkbox" name="agree">
+                                        <i></i>
+                                      </label>
+                                    </li>
+                                    <li class="agree-item">
+                                      <label class="checkbox2">
+                                        <p class="title">개인정보 수집 및 이용 동의 <span>(선택)</span></p>
+                                        <input type="checkbox" name="agree">
+                                        <i></i>
+                                      </label>
+                                    </li>
+                                    <li class="agree-item">
+                                      <label class="checkbox2">
+                                        <p class="title">마케팅 수신 동의 <span>(선택)</span></p>
+                                        <input type="checkbox" name="agree">
+                                        <i></i>
+                                      </label>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        <div class="buttons">
+                          <button class="button is-full is-light">동의하기</button>
+                        </div>
+                    </div>
+                    
+                    <!-- <div id="CommonButton">
+                        <button>다시 보지 않기</button>
+                        <button>동의하기</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div> 
+  <script>
+    function selectAll(selectAll)  {
+      const checkboxes 
+          = document.getElementsByName('agree');
+      
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked;
+      })
+    }
+  </script>
+</body>
+
+</html>

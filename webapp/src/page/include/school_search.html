@@ -1,0 +1,24 @@
+<div class="field @@if(context.className){@@className}">
+  <label class="label">@@label @@if(context.required){<span class="required">필수입력</span>}</label>
+  <div class="control">
+    <input class="input " type="@@inputType" @@if(context.placeholder){placeholder="@@placeholder"}  @@if(context.readonly){readonly="readonly"}  @@if(context.value){value="@@value"}>    
+    <button type="button" class="btn-search"></button>
+  </div>
+  <!--  -->
+  <div class="search-result" style="display: none;">
+    <ul>
+      @@for(var i=0; i < 7; i++){
+      <li class="item">
+        <a class="option" href="javascript:;">
+          스피킹 중학교
+          <span class="school-area">(인천)</span>
+        </a>
+      </li>
+      }
+    </ul>
+    <button class="option-self">직접입력</button>
+  </div>
+  <div class="control">
+    <input class="input " type="text" placeholder="학교/학원/교습소를 입력해주세요.">
+  </div>
+</div>

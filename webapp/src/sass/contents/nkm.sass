@@ -1,0 +1,261 @@
+// 온보딩 메인화면
+[data-contents='new']
+  &#OnBoarding
+    .hero-contents
+      display: flex
+      flex-direction: column
+      height: 100%
+      flex: 1
+      .hero-banner
+        flex: 1
+        height: 80%
+      .bottom-box
+        position: fixed
+        bottom: 0
+        width: 100%
+        background: #fff
+        border-radius: rem(40px) rem(40px) 0 0
+        box-shadow: 0 rem(-4px) rem(40px) rgba(0, 0, 0, 0.04)
+        padding: rem(48px) rem(32px) rem(56px)
+        z-index: 10
+      .buttons
+        flex: 0 auto
+        //margin: rem(70px) 0
+        display: flex
+        justify-content: center
+        position: relative
+        .is-kakao
+          margin-bottom: rem(16px)
+        .join-balloon
+          border: 1px solid #000
+          border-radius: rem(4px)
+          box-shadow: 0 4px 62px rgba(153, 171, 198, 0.18)
+          padding: rem(6px) rem(16px) rem(6px) rem(12px)
+          text-align: center
+          position: absolute
+          background-color: $white-color
+          top: rem(-20px)
+          left: rem(1px)
+          color: $base-color
+          font: 
+            size: rem(14px)
+            weight: 700
+          &::after
+            border-right: rem(1px) solid #000
+            border-bottom: rem(1px) solid #000
+            transform: rotate(45deg)
+            width: rem(10px)
+            height: rem(10px)
+            background: #fff
+            box-shadow: 0 4px 62px rgba(153, 171, 198, 0.18)
+            content: ""
+            position: absolute
+            bottom: rem(-6px)
+            left: rem(25px)
+          &:before
+            display: inline-block
+            content: ""
+            background: url(../../img/memberNew/ico_lightning.png) no-repeat 0 0 / rem(20px) auto
+            //background-size: rem(20px) auto
+            width: rem(20px)
+            height: rem(20px)
+            vertical-align: middle
+        &.is-app
+          .button
+            font: 
+              size: rem(14px)
+              weight: 500
+            color: $black-color
+          .is-kakao
+            &::before
+              display: inline-block
+              content: ''
+              width: rem(18px)
+              height: rem(17px)
+              margin-right: rem(6px)
+              background: url(../../img/memberNew/icon_app_kakao.png) no-repeat 0 0 / 100% auto
+              vertical-align: middle
+          .is-apple
+            margin-bottom: rem(16px)
+            color: $white-color
+            &::before
+              display: inline-block
+              content: ''
+              width: rem(12px)
+              height: rem(14px)
+              margin:
+                top: rem(-5px)
+                right: rem(6px)
+              background: url(../../img/memberNew/icon_app_apple.png) no-repeat 0 0 / 100% auto
+              vertical-align: middle
+          .join-balloon
+            top: rem(-25px)
+
+      .swiper-wrapper
+        .swiper-slide
+          min-height: 100%
+          // font-size: rem(50px)  
+          // text-align: center
+          // line-height: rem(550px)
+          
+          .swiper-item
+            position: relative
+            background: #F8FEFF
+            height: 100%
+            //height: rem(620px)
+            .txt-ani
+              @include Align-middle-column()
+              z-index: 20
+              padding-top: rem(40px)
+              p
+                height: rem(36px)
+                // padding: 0 rem(23px)
+                text-align: center
+                opacity: 0
+                font: 
+                  size: rem(24px)
+                  weight: 500
+                color: #252525
+                letter-spacing: rem(-1px)
+                strong
+                  color: #2CB1BC
+                  font-weight: 700
+                img
+                  display: block
+                  width: 100%
+                  // 스플래쉬 이미지 텍스트
+              // &.tit-part1
+              //   p
+              //     &:nth-child(1)
+              //       width: rem(312px)
+              //     &:nth-child(2)
+              //       width: rem(205px)
+              //     &:nth-child(3)
+              //       width: rem(244px)
+              // &.tit-part2
+              //   p
+              //     &:nth-child(1)
+              //       width: rem(288px)
+              //     &:nth-child(2)
+              //       width: rem(197px)
+              //     &:nth-child(3)
+              //       width: rem(329px)
+              // &.tit-part3
+              //   p
+              //     &:nth-child(1)
+              //       width: rem(275px)
+              //     &:nth-child(2)
+              //       width: rem(265px)
+              //     &:nth-child(3)
+              //       width: rem(120px)
+              // &.tit-part4
+              //   p
+              //     &:nth-child(1)
+              //       width: rem(254px)
+              //     &:nth-child(2)
+              //       width: rem(133px)
+              //     &:nth-child(3)
+              //       width: rem(281px)
+              // &.tit-part5
+              //   p
+              //     &:nth-child(1)
+              //       width: rem(275px)
+              //     &:nth-child(2)
+              //       width: rem(260px)
+              //     &:nth-child(3)
+              //       width: rem(130px)
+            @keyframes showUp
+              from
+                top: 20px
+                opacity: 0                
+              to
+                top: 0
+                opacity: 1
+
+            // #lottie
+            //   position: absolute
+            //   bottom: 13%
+            //   left: calc( 100% / 2 - #{rem(180px)} )
+              // display: flex
+              // justify-content: center
+            
+            .ani-img
+              position: absolute
+              bottom: 20%
+              left: calc( 100% / 2 - #{rem(180px)} )
+              display: none
+              img
+                width: rem(375px)
+                height: rem(296px)
+                display: block
+
+          &.is-active
+            .txt-ani
+              p
+                position: relative
+                animation: showUp 1s forwards
+                // animation-fill-mode: forwards
+                &:nth-child(1)
+                  animation-delay: .5s
+                &:nth-child(2)
+                  animation-delay: 1s
+                &:nth-child(3)
+                  animation-delay: 1.5s
+            .ani-img 
+              display: flex
+              justify-content: center
+
+      .swiper
+        height: calc(100% - #{rem(190px)})
+        .swiper-pagination
+          // bottom: rem(50px) 심사전
+          bottom: rem(110px)
+        .swiper-pagination-bullet
+          background: none
+          border: rem(1px) solid #999
+          opacity: 1
+        .swiper-pagination-bullet-active
+          background: $point-color
+          border: none
+          width: rem(24px)
+          border-radius: rem(4px)
+    
+  // 휴대폰 번호 인증
+  .blind
+    font: 0/0 a !important  
+
+  // 휴대폰인증 인증타이머 
+  .field
+    .control
+      .time
+        color: $point-color2
+        position: absolute
+        right: rem(10px)
+        top: rem(15px)
+        font:
+          size: rem(14px)
+          weight: 500
+
+  @media screen and (max-height: 667px)
+    &#OnBoarding
+      .hero-contents
+        .hero-banner
+          height: 100%
+        .swiper
+          height: 100%
+          .swiper-pagination
+            bottom: rem(25px)
+        .bottom-box
+          position: initial
+          margin-top: rem(-20px)
+
+        .swiper-wrapper 
+          .swiper-slide
+            .swiper-item
+              .txt-ani
+                padding-top: rem(20px)
+              .ani-img
+                // bottom: 8% 심사전
+                bottom: -3%
+
+  

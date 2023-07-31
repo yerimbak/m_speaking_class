@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html')
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="container" data-contents="new">
+      <div id="CommonLayout">
+        @@include('../include/header.html', {
+          title: '스피킹 클래스 만들기',
+          btnClose: true
+        })
+        
+        <div id="ContentsBox">
+          <div>
+            <!-- fixed-button이 있는 경우 innerWrap으로 한번 더 감싸줍니다 -->
+            <div class="innerWrap">
+              <div class="class-choice-list">
+                <div class="classlistBox">
+                  <p><img src="../../img/memberNew/logo_donga.png" alt="동아출판"></p>
+                </div>
+                <div class="classlistBox">
+                  <p>초등학교</p>
+                </div>
+              </div>
+              <div class="field">
+                <!-- 
+                  성공시 class="is-success",
+                  실패시 class="is-error"
+                  input line으로 적용 class="is-line"
+                -->
+                <label class="label">교과서 선택 <span class="required">필수입력</span></label>
+                <div class="control">
+                  <div class="chk-type">
+                    <ul>
+                      @@for(var i = 0; i < 10; i++){
+                      <li class="item">
+                        <label class="radio">
+                          <input type="radio" name="identify">
+                          <i></i>
+                          <strong class="title">능률출판 중학교 1학년 (양형권)</strong>
+                        </label>
+                      </li>
+                      }
+                    </ul>
+                  </div>
+                </div>
+                <p class="help">validation</p>
+              </div>
+
+            </div>
+            <!-- //fixed-button이 있는 경우 innerWrap으로 한번 더 감싸줍니다 -->
+            <div class="buttons is-fixed">
+              <div class="is-between">
+                <div><button class="button is-full is-large">이전</button></div>
+                <div><button class="button is-full is-large is-light" disabled>생성</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

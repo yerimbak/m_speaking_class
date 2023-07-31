@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="CompleteContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li class="on"></li> <!-- 활성화 된건 on 추가 -->
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+          <div id="CommonButton">
+            <button class="btn-confirm">완료</button>
+          </div>
+        </div>
+
+        <div id="CommunityPopup">
+          <div class="modal-cont">
+
+            <div id="CommunityReply">
+              <div class="community-header">
+                <div class="title">댓글 3</div>
+                <button class="btn-back"></button>
+              </div>
+              <div class="community-cont">
+                <div class="inner">
+                  <div class="inputReply-wrap">
+                    <textarea placeholder="댓글을 입력해주세요."></textarea>
+                    <div class="btn-wrap">
+                      <button class="btn-reply-cancel">취소</button>
+                      <button class="btn-reply-add">댓글</button>
+                    </div>
+                  </div>
+                  <div class="replyList-wrap">
+                    <div class="reply-item">
+                      <div class="write-info">
+                        <div class="user">@Hayden</div>
+                        <div class="bar"></div>
+                        <div class="date">1시간 전</div>
+                      </div>
+                      <div class="reply-cont">
+                        <p>AI 찬성이요</p>
+                      </div>
+                      <div class="etc-info">
+                        <div class="like">
+                          <dl>
+                            <!-- on 추가시 하트 색 변경 -->
+                            <dt></dt>
+                            <dd>4</dd>
+                          </dl>
+                        </div>
+                        <div class="edit-wrap">
+                          <button class="btn-edit"></button>
+                          <div class="edit-popup-wrap">
+                            <button>수정하기</button>
+                            <button>삭제하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reply-item">
+                      <div class="write-info">
+                        <div class="user">@Hayden</div>
+                        <div class="bar"></div>
+                        <div class="date">1시간 전</div>
+                      </div>
+                      <div class="reply-cont">
+                        <p>AI 찬성이요</p>
+                      </div>
+                      <div class="etc-info">
+                        <div class="like">
+                          <dl class="on">
+                            <!-- on 추가시 하트 색 변경 -->
+                            <dt></dt>
+                            <dd>4</dd>
+                          </dl>
+                        </div>
+                        <div class="report">
+                          <button class="btn-report"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reply-item">
+                      <div class="write-info">
+                        <div class="user">@Hayden</div>
+                        <div class="bar"></div>
+                        <div class="date">1시간 전</div>
+                      </div>
+                      <div class="reply-cont">
+                        <p>AI 찬성이요</p>
+                      </div>
+                      <div class="etc-info">
+                        <div class="like">
+                          <dl>
+                            <!-- on 추가시 하트 색 변경 -->
+                            <dt></dt>
+                            <dd>4</dd>
+                          </dl>
+                        </div>
+                        <div class="report">
+                          <button class="btn-report"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reply-item">
+                      <div class="write-info">
+                        <div class="user">@Hayden</div>
+                        <div class="bar"></div>
+                        <div class="date">1시간 전</div>
+                      </div>
+                      <div class="reply-cont">
+                        <p>AI 찬성이요</p>
+                      </div>
+                      <div class="etc-info">
+                        <div class="like">
+                          <dl>
+                            <!-- on 추가시 하트 색 변경 -->
+                            <dt></dt>
+                            <dd>4</dd>
+                          </dl>
+                        </div>
+                        <div class="edit-wrap">
+                          <button class="btn-edit"></button>
+                          <div class="edit-popup-wrap">
+                            <button>수정하기</button>
+                            <button>삭제하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    // 댓글 textarea
+    const replyTextarea = document.querySelectorAll('.inputReply-wrap textarea');
+
+    function replyTextareaFocus() {
+      this.classList.add('on');
+    }
+
+    function replyTextareaBlur() {
+      const textareaValue = this.value;
+
+      if (textareaValue.length == 0 || textareaValue.trim().length == 0) {
+        this.value = '';
+        this.classList.remove('on');
+      } else {
+        this.classList.add('on');
+      }
+    }
+    replyTextarea.forEach(item => item.addEventListener('focus', replyTextareaFocus));
+    replyTextarea.forEach(item => item.addEventListener('blur', replyTextareaBlur));
+
+
+    // 점3개 버튼
+    const btnEdit = document.querySelectorAll('.etc-info .edit-wrap .btn-edit');
+
+    function btnEditToggle() {
+      this.parentNode.classList.toggle('on');
+    }
+
+    function btnEditClose(e) {
+      btnEdit.forEach(item => {
+        if (!item.contains(e.target)) {
+          item.parentNode.classList.remove('on');
+        }
+      })
+    }
+    btnEdit.forEach(item => item.addEventListener('click', btnEditToggle));
+    window.addEventListener('mouseup', btnEditClose);
+  </script>
+</body>
+
+</html>

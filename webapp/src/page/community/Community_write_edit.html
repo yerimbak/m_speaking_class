@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+  <div id="root" class="type-conversation">
+    <div class="container" id="CompleteContainer">
+      <div id="CommonLayout">
+
+        <div id="ActionBarSection">
+          <button class="btn-back"></button>
+          <button class="btn-more"></button>
+          <div class="learning-nav-wrap">
+            <ul>
+              <li class="on"></li> <!-- 활성화 된건 on 추가 -->
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="ContentsBox">
+          <div id="CommonButton">
+            <button class="btn-confirm">완료</button>
+          </div>
+        </div>
+
+        <div id="CommunityPopup">
+          <div class="modal-cont">
+
+            <div id="CommunityWrite">
+              <div class="community-header">
+                <div class="title">수정하기</div>
+                <button class="btn-back"></button>
+              </div>
+              <div class="community-cont">
+                <div class="inner">
+                  <div class="radio-cont-wrap">
+                    <div class="radio-wrap">
+                      <input type="radio" name="community-write-type-radio" id="radio-1" checked="" disabled>
+                      <label for="radio-1">문의</label>
+                    </div>
+                    <div class="radio-wrap">
+                      <input type="radio" name="community-write-type-radio" id="radio-2" disabled>
+                      <label for="radio-2">개선 제안</label>
+                    </div>
+                  </div>
+                  <div class="select-wrap">
+                    <select disabled>
+                      <option value="" hidden="" disabled="">카테고리 선택(필수)</option>
+                      <option value="" selected="">카테고리 1</option>
+                      <option value="">카테고리 2</option>
+                    </select>
+                  </div>
+                  <div class="input-wrap">
+                    <input type="text" placeholder="제목을 입력해주세요." value="abc">
+                  </div>
+                  <div class="textarea-wrap">
+                    <textarea placeholder="질문 내용을 입력해주세요.">abc</textarea>
+                  </div>
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" id="write-type-secret">
+                    <label for="write-type-secret">비밀글로 작성하기</label>
+                  </div>
+                  <div id="CommonButton">
+                    <button class="btn-confirm">완료</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
